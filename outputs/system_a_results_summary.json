@@ -1,0 +1,10 @@
+{
+  "execution_accuracy": 0.39593908629441626,
+  "valid_sql_rate": 0.7411167512690355,
+  "n_scored": 197,
+  "by_difficulty": {
+    "simple": 0.4297520661157025,
+    "moderate": 0.36666666666666664,
+    "challenging": 0.21052631578947367
+  }
+}

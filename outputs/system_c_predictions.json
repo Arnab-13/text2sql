@@ -1,0 +1,1602 @@
+[
+  {
+    "db_id": "formula_1",
+    "question_id": 998,
+    "gold_sql": "SELECT SUM(CASE WHEN points = 91 THEN wins ELSE 0 END) FROM driverStandings",
+    "pred_sql": "SELECT SUM(wins) AS total_wins\nFROM driverStandings\nWHERE position = 91;",
+    "difficulty": "simple",
+    "prompt_tokens": 851
+  },
+  {
+    "db_id": "financial",
+    "question_id": 190,
+    "gold_sql": "SELECT COUNT(T1.client_id) FROM client AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id WHERE STRFTIME('%Y', T1.birth_date) = '1920' AND T2.A3 = 'east Bohemia'",
+    "pred_sql": "SELECT COUNT(T1.client_id) FROM client AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id WHERE T1.birth_date LIKE '1920%' AND T2.A3 = 'East Bohemia';",
+    "difficulty": "simple",
+    "prompt_tokens": 763
+  },
+  {
+    "db_id": "california_schools",
+    "question_id": 42,
+    "gold_sql": "SELECT T2.EdOpsName FROM satscores AS T1 INNER JOIN schools AS T2 ON T1.cds = T2.CDSCode ORDER BY T1.AvgScrMath DESC LIMIT 1",
+    "pred_sql": "SELECT DISTINCT T2.EdOpsName FROM satscores AS T1 INNER JOIN schools AS T2 ON T1.cds = T2.CDSCode ORDER BY T1.AvgScrMath DESC LIMIT 1;",
+    "difficulty": "simple",
+    "prompt_tokens": 1186
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1228,
+    "gold_sql": "SELECT T1.ID, T1.Diagnosis FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.TG > 300",
+    "pred_sql": "SELECT T1.ID, T1.Diagnosis FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.TG > 300;",
+    "difficulty": "simple",
+    "prompt_tokens": 970
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 456,
+    "gold_sql": "SELECT DISTINCT subtypes, supertypes FROM cards WHERE name = 'Molimo, Maro-Sorcerer'",
+    "pred_sql": "SELECT DISTINCT T2.supertypes, T2.subtypes FROM foreign_data AS T1 INNER JOIN cards AS T2 ON T1.uuid = T2.uuid WHERE T1.name = 'Molimo, Maro-Sorcerer';",
+    "difficulty": "simple",
+    "prompt_tokens": 1480
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 418,
+    "gold_sql": "SELECT DISTINCT availability FROM cards WHERE artist = 'Daren Bader'",
+    "pred_sql": "SELECT DISTINCT availability FROM cards WHERE artist = 'Daren Bader';",
+    "difficulty": "simple",
+    "prompt_tokens": 1326
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 384,
+    "gold_sql": "SELECT T1.uuid, T3.language FROM cards AS T1 INNER JOIN legalities AS T2 ON T1.uuid = T2.uuid INNER JOIN foreign_data AS T3 ON T1.uuid = T3.uuid WHERE T2.format = 'legacy'",
+    "pred_sql": "SELECT T1.uuid, T2.language FROM cards AS T1 INNER JOIN foreign_data AS T2 ON T1.uuid = T2.uuid WHERE T1.format = 'legacy';",
+    "difficulty": "simple",
+    "prompt_tokens": 1511
+  },
+  {
+    "db_id": "toxicology",
+    "question_id": 252,
+    "gold_sql": "SELECT T2.atom_id, T2.atom_id2 FROM atom AS T1 INNER JOIN connected AS T2 ON T1.atom_id = T2.atom_id WHERE T1.element = 'pb'",
+    "pred_sql": "SELECT DISTINCT T1.atom_id FROM atom AS T1 INNER JOIN connected AS T2 ON T1.atom_id = T2.atom_id2 WHERE T1.element = 'pb';",
+    "difficulty": "simple",
+    "prompt_tokens": 341
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1220,
+    "gold_sql": "SELECT DISTINCT T1.ID, T1.SEX, T1.Birthday FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.UN = 29",
+    "pred_sql": "SELECT ID, SEX, Birthday FROM Patient WHERE UN = 29;",
+    "difficulty": "simple",
+    "prompt_tokens": 961
+  },
+  {
+    "db_id": "financial",
+    "question_id": 172,
+    "gold_sql": "SELECT SUM(type = 'OWNER') , SUM(type = 'DISPONENT') FROM disp WHERE account_id BETWEEN 1 AND 10",
+    "pred_sql": "SELECT COUNT(*) FROM disp WHERE account_id BETWEEN 1 AND 10;",
+    "difficulty": "simple",
+    "prompt_tokens": 559
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1069,
+    "gold_sql": "SELECT player_name FROM player ORDER BY height ASC LIMIT 1",
+    "pred_sql": "SELECT player_name FROM Player ORDER BY height ASC LIMIT 1;",
+    "difficulty": "simple",
+    "prompt_tokens": 2584
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1226,
+    "gold_sql": "SELECT T1.ID, T2.`T-CHO` FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID ORDER BY T2.`T-CHO` DESC, T1.Birthday ASC LIMIT 1",
+    "pred_sql": "SELECT ID, T-CHO FROM Patient WHERE Birthday = (SELECT MIN(Birthday) FROM Patient) AND T-CHO = (SELECT MAX(T-CHO) FROM Laboratory);",
+    "difficulty": "simple",
+    "prompt_tokens": 961
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 857,
+    "gold_sql": "SELECT DISTINCT T1.lat, T1.lng FROM circuits AS T1 INNER JOIN races AS T2 ON T2.circuitID = T1.circuitId WHERE T2.name = 'Abu Dhabi Grand Prix'",
+    "pred_sql": "SELECT T3.lat, T3.lng FROM races AS T1 INNER JOIN circuits AS T3 ON T1.circuitId = T3.circuitId WHERE T1.name = 'Abu Dhabi Grand Prix';",
+    "difficulty": "simple",
+    "prompt_tokens": 876
+  },
+  {
+    "db_id": "financial",
+    "question_id": 153,
+    "gold_sql": "SELECT COUNT(T1.card_id) FROM card AS T1 INNER JOIN disp AS T2 ON T1.disp_id = T2.disp_id WHERE T1.type = 'classic' AND T2.type = 'OWNER'",
+    "pred_sql": "SELECT COUNT(card.card_id) FROM card INNER JOIN disp ON card.disp_id = disp.disp_id INNER JOIN account ON disp.account_id = account.account_id WHERE card.type = 'CLASSIC' AND account.frequency = 'OWNER';",
+    "difficulty": "simple",
+    "prompt_tokens": 562
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 921,
+    "gold_sql": "SELECT DISTINCT T1.url FROM circuits AS T1 INNER JOIN races AS T2 ON T2.circuitID = T1.circuitId WHERE T1.name = 'Silverstone Circuit'",
+    "pred_sql": "SELECT T1.url FROM races AS T1 INNER JOIN circuits AS T2 ON T1.circuitId = T2.circuitId WHERE T2.name = 'Silverstone Circuit';",
+    "difficulty": "simple",
+    "prompt_tokens": 1223
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 671,
+    "gold_sql": "SELECT T1.DisplayName FROM users AS T1 INNER JOIN badges AS T2 ON T1.Id = T2.UserId WHERE T2.`Name` = 'Autobiographer' ORDER BY T2.Date LIMIT 1",
+    "pred_sql": "SELECT T2.DisplayName FROM badges AS T1 INNER JOIN users AS T2 ON T1.UserId = T2.Id WHERE T1.Name = 'Autobiographer' ORDER BY T1.Date ASC LIMIT 1;",
+    "difficulty": "simple",
+    "prompt_tokens": 1036
+  },
+  {
+    "db_id": "california_schools",
+    "question_id": 54,
+    "gold_sql": "SELECT School, MailZip FROM schools WHERE AdmFName1 = 'Avetik' AND AdmLName1 = 'Atoian'",
+    "pred_sql": "SELECT DISTINCT T1.School, T1.MailZip\nFROM schools AS T1\nJOIN administrators AS T2 ON T1.CDSCode = T2.CDSCode\nWHERE T2.AdmFName1 = 'Avetik' AND T2.AdmLName1 = 'Atoian';",
+    "difficulty": "simple",
+    "prompt_tokens": 1011
+  },
+  {
+    "db_id": "california_schools",
+    "question_id": 52,
+    "gold_sql": "SELECT COUNT(T1.cds) FROM satscores AS T1 INNER JOIN schools AS T2 ON T1.cds = T2.CDSCode WHERE T2.MailCity = 'Lakeport' AND (T1.AvgScrRead + T1.AvgScrMath + T1.AvgScrWrite) >= 1500",
+    "pred_sql": "SELECT COUNT(*) AS TotalSchools\nFROM satscores\nJOIN schools ON satscores.cds = schools.CDSCode\nWHERE schools.MailCity = 'Lakeport' AND satscores.NumGE1500 > 0;",
+    "difficulty": "simple",
+    "prompt_tokens": 1215
+  },
+  {
+    "db_id": "financial",
+    "question_id": 159,
+    "gold_sql": "SELECT T4.trans_id FROM client AS T1 INNER JOIN disp AS T2 ON T1.client_id = T2.client_id INNER JOIN account AS T3 ON T2.account_id = T3.account_id INNER JOIN trans AS T4 ON T3.account_id = T4.account_id WHERE T1.client_id = 3356 AND T4.operation = 'VYBER'",
+    "pred_sql": "SELECT DISTINCT T1.amount FROM trans AS T1 INNER JOIN account AS T2 ON T1.account_id = T2.account_id WHERE T2.client_id = 3356 AND T1.operation = 'VYBER';",
+    "difficulty": "simple",
+    "prompt_tokens": 855
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 379,
+    "gold_sql": "SELECT id FROM cards WHERE duelDeck = 'a'",
+    "pred_sql": "SELECT DISTINCT c.id FROM cards c JOIN legalities l ON c.uuid = l.uuid WHERE l.duelDeck = 'a';",
+    "difficulty": "simple",
+    "prompt_tokens": 1363
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 395,
+    "gold_sql": "SELECT COUNT(id) FROM cards WHERE hAND = '-1' AND artist = 'UDON' AND Availability = 'mtgo' ",
+    "pred_sql": "SELECT COUNT(*) FROM cards WHERE artist = 'UDON' AND availability = 'mtgo' AND hand = -1;",
+    "difficulty": "simple",
+    "prompt_tokens": 1759
+  },
+  {
+    "db_id": "superhero",
+    "question_id": 793,
+    "gold_sql": "SELECT COUNT(*) FROM superhero AS T1 INNER JOIN race AS T2 ON T1.race_id = T2.id INNER JOIN gender AS T3 ON T3.id = T1.gender_id WHERE T1.race_id = 21 AND T1.gender_id = 1",
+    "pred_sql": "SELECT COUNT(T1.id) FROM superhero AS T1 INNER JOIN race AS T2 ON T1.race_id = T2.id INNER JOIN gender AS T3 ON T1.gender_id = T3.id WHERE T2.race = 'god/eternal' AND T3.gender = 'male'",
+    "difficulty": "simple",
+    "prompt_tokens": 536
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 937,
+    "gold_sql": "SELECT T1.time FROM results AS T1 INNER JOIN races AS T2 on T1.raceId = T2.raceId WHERE T1.rank = 2 AND T2.name = 'Chinese Grand Prix' AND T2.year = 2008",
+    "pred_sql": "SELECT T2.time FROM results AS T1 INNER JOIN races AS T2 ON T1.raceId = T2.raceId WHERE T1.year = 2008 AND T2.name = 'Chinese Grand Prix' AND T1.positionOrder = 2;",
+    "difficulty": "simple",
+    "prompt_tokens": 872
+  },
+  {
+    "db_id": "california_schools",
+    "question_id": 46,
+    "gold_sql": "SELECT T2.School FROM frpm AS T1 INNER JOIN schools AS T2 ON T1.CDSCode = T2.CDSCode WHERE T2.DOC = 31 ORDER BY T1.`Enrollment (K-12)` DESC LIMIT 1",
+    "pred_sql": "SELECT s.State, COUNT(*) AS Enrollments\nFROM frpm f\nJOIN schools s ON f.CDSCode = s.CDSCode\nWHERE s.DOC = 31 AND f.`Low Grade` = 'K' AND f.`High Grade` = '12'\nGROUP BY s.State\nORDER BY Enrollments DESC\nLIMIT 1;",
+    "difficulty": "simple",
+    "prompt_tokens": 1535
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 876,
+    "gold_sql": "SELECT COUNT(T2.driverId) FROM races AS T1 INNER JOIN results AS T2 ON T2.raceId = T1.raceId WHERE T1.date = '2015-11-29' AND T2.time IS NULL",
+    "pred_sql": "SELECT COUNT(DISTINCT driverId) FROM results WHERE time IS NULL AND date = '2015-11-29';",
+    "difficulty": "simple",
+    "prompt_tokens": 880
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 357,
+    "gold_sql": "SELECT promoTypes FROM cards WHERE name = 'Duress' AND promoTypes IS NOT NULL",
+    "pred_sql": "SELECT DISTINCT T2.promoTypes FROM foreign_data AS T1 INNER JOIN cards AS T2 ON T1.uuid = T2.uuid WHERE T1.name = 'Duress';",
+    "difficulty": "simple",
+    "prompt_tokens": 1451
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1155,
+    "gold_sql": "SELECT DISTINCT T1.ID, T1.SEX, T1.Birthday FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.LDH > 500",
+    "pred_sql": "SELECT ID, SEX, Birthday FROM Patient WHERE ID IN (SELECT ID FROM Laboratory WHERE LDH > 500);",
+    "difficulty": "simple",
+    "prompt_tokens": 949
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 1018,
+    "gold_sql": "SELECT AVG(milliseconds) FROM pitStops AS T1 INNER JOIN drivers AS T2 on T1.driverId = T2.driverId WHERE T2.forename = 'Lewis' AND T2.surname = 'Hamilton'",
+    "pred_sql": "SELECT AVG(T2.milliseconds) AS average_pit_stop_time\nFROM drivers AS T1\nJOIN pitStops AS T2 ON T1.driverId = T2.driverId\nWHERE T1.forename = 'Lewis' AND T1.surname = 'Hamilton';",
+    "difficulty": "simple",
+    "prompt_tokens": 1012
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1129,
+    "gold_sql": "SELECT DISTINCT t1.team_long_name FROM Team AS t1 INNER JOIN Team_Attributes AS t2 ON t1.team_api_id = t2.team_api_id WHERE t2.buildUpPlaySpeedClass = 'Slow'",
+    "pred_sql": "SELECT T1.team_long_name FROM Team_Attributes AS T1 INNER JOIN Team AS T2 ON T1.team_api_id = T2.team_api_id WHERE T1.buildUpPlaySpeedClass = 'Slow';",
+    "difficulty": "simple",
+    "prompt_tokens": 2601
+  },
+  {
+    "db_id": "debit_card_specializing",
+    "question_id": 1514,
+    "gold_sql": "SELECT DISTINCT T3.Currency FROM transactions_1k AS T1 INNER JOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID INNER JOIN customers AS T3 ON T1.CustomerID = T3.CustomerID WHERE T1.Date = '2012-08-24' AND T1.Time = '16:25:00'",
+    "pred_sql": "SELECT T3.Currency FROM transactions_1k AS T1 INNER JOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID INNER JOIN customers AS T3 ON T2.CustomerID = T3.CustomerID WHERE T1.Date = '2012-08-24' AND T1.Time = '16:25:00';",
+    "difficulty": "simple",
+    "prompt_tokens": 361
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 668,
+    "gold_sql": "SELECT T1.DisplayName FROM users AS T1 INNER JOIN badges AS T2 ON T1.Id = T2.UserId GROUP BY T1.DisplayName ORDER BY COUNT(T1.Id) DESC LIMIT 1",
+    "pred_sql": "SELECT T2.DisplayName FROM badges AS T1 INNER JOIN users AS T2 ON T1.UserId = T2.Id GROUP BY T1.UserId ORDER BY COUNT(T1.Name) DESC LIMIT 1;",
+    "difficulty": "simple",
+    "prompt_tokens": 1028
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 381,
+    "gold_sql": "SELECT T1.artist FROM cards AS T1 INNER JOIN foreign_data AS T2 ON T1.uuid = T2.uuid WHERE T2.language = 'Chinese Simplified'",
+    "pred_sql": "SELECT DISTINCT T1.artist FROM cards AS T1 INNER JOIN foreign_data AS T2 ON T1.uuid = T2.uuid WHERE T2.language = 'Chinese Simplified';",
+    "difficulty": "simple",
+    "prompt_tokens": 1499
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 705,
+    "gold_sql": "SELECT T2.Reputation, T2.UpVotes FROM comments AS T1 INNER JOIN users AS T2 ON T1.UserId = T2.Id WHERE T1.Text = 'fine, you win :)'",
+    "pred_sql": "SELECT u.Reputation, u.UpVotes\nFROM users u\nJOIN comments c ON u.Id = c.UserId\nWHERE c.Text = 'fine, you win :)';",
+    "difficulty": "simple",
+    "prompt_tokens": 899
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 920,
+    "gold_sql": "SELECT DISTINCT T2.year FROM circuits AS T1 INNER JOIN races AS T2 ON T2.circuitID = T1.circuitId WHERE T1.name = 'Silverstone Circuit'",
+    "pred_sql": "SELECT DISTINCT T2.year FROM circuits AS T1 INNER JOIN races AS T2 ON T1.circuitId = T2.circuitId WHERE T1.name = 'Silverstone Circuit';",
+    "difficulty": "simple",
+    "prompt_tokens": 811
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 460,
+    "gold_sql": "SELECT artist FROM cards WHERE flavorName = 'Battra, Dark Destroyer'",
+    "pred_sql": "SELECT T2.artist FROM foreign_data AS T1 INNER JOIN cards AS T2 ON T1.uuid = T2.uuid WHERE T1.flavorName = 'Battra, Dark Destroyer';",
+    "difficulty": "simple",
+    "prompt_tokens": 1462
+  },
+  {
+    "db_id": "student_club",
+    "question_id": 1377,
+    "gold_sql": "SELECT COUNT(member_id) FROM member WHERE position = 'President'",
+    "pred_sql": "SELECT COUNT(member_id) FROM member WHERE position = 'President';",
+    "difficulty": "simple",
+    "prompt_tokens": 923
+  },
+  {
+    "db_id": "california_schools",
+    "question_id": 8,
+    "gold_sql": "SELECT NumTstTakr FROM satscores WHERE cds = ( SELECT CDSCode FROM frpm ORDER BY `FRPM Count (K-12)` DESC LIMIT 1 )",
+    "pred_sql": "SELECT COUNT(*) FROM frpm INNER JOIN schools ON frpm.CDSCode = schools.CDSCode WHERE frpm.`FRPM Count (K-12)` = (SELECT MAX(`FRPM Count (K-12)`) FROM frpm);",
+    "difficulty": "simple",
+    "prompt_tokens": 1693
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1301,
+    "gold_sql": "SELECT DISTINCT T1.ID FROM Laboratory AS T1 INNER JOIN Examination AS T2 ON T1.ID = T2.ID WHERE T2.Thrombosis = 0 AND T1.CPK < 250",
+    "pred_sql": "SELECT ID FROM Patient WHERE Thrombosis = 0 AND CPK < 250;",
+    "difficulty": "simple",
+    "prompt_tokens": 972
+  },
+  {
+    "db_id": "student_club",
+    "question_id": 1372,
+    "gold_sql": "SELECT T2.date_received FROM member AS T1 INNER JOIN income AS T2 ON T1.member_id = T2.link_to_member WHERE T1.first_name = 'Casey' AND T1.last_name = 'Mason'",
+    "pred_sql": "SELECT date_received FROM income WHERE link_to_member = (SELECT member_id FROM member WHERE first_name = 'Casey' AND last_name = 'Mason');",
+    "difficulty": "simple",
+    "prompt_tokens": 969
+  },
+  {
+    "db_id": "toxicology",
+    "question_id": 293,
+    "gold_sql": "SELECT COUNT(T1.atom_id) FROM atom AS T1 INNER JOIN molecule AS T2 ON T1.molecule_id = T2.molecule_id WHERE T2.label = '+'",
+    "pred_sql": "SELECT COUNT(DISTINCT atom_id) FROM atom WHERE molecule_id IN (SELECT molecule_id FROM molecule WHERE label = '+')",
+    "difficulty": "simple",
+    "prompt_tokens": 331
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1122,
+    "gold_sql": "SELECT DISTINCT t1.player_name FROM Player AS t1 INNER JOIN Player_Attributes AS t2 ON t1.player_api_id = t2.player_api_id WHERE t2.overall_rating = (SELECT MAX(overall_rating) FROM Player_Attributes)",
+    "pred_sql": "SELECT T1.player_name FROM Player AS T1 INNER JOIN Player_Attributes AS T2 ON T1.player_api_id = T2.player_api_id ORDER BY T2.overall_rating DESC LIMIT 1;",
+    "difficulty": "simple",
+    "prompt_tokens": 2589
+  },
+  {
+    "db_id": "debit_card_specializing",
+    "question_id": 1511,
+    "gold_sql": "SELECT AVG(T1.Price) FROM transactions_1k AS T1 INNER JOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID INNER JOIN customers AS T3 ON T1.CustomerID = T3.CustomerID WHERE T3.Currency = 'EUR'",
+    "pred_sql": "SELECT AVG(T1.Price) AS AveragePrice\nFROM transactions_1k AS T1\nJOIN customers AS T2 ON T1.CustomerID = T2.CustomerID\nWHERE T2.Currency = 'EUR';",
+    "difficulty": "simple",
+    "prompt_tokens": 346
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 566,
+    "gold_sql": "SELECT T1.Reputation FROM users AS T1 INNER JOIN posts AS T2 ON T1.Id = T2.OwnerUserId WHERE T2.Id = 65041",
+    "pred_sql": "SELECT Reputation FROM users WHERE Id = (SELECT OwnerUserId FROM posts WHERE Id = 65041);",
+    "difficulty": "simple",
+    "prompt_tokens": 1010
+  },
+  {
+    "db_id": "debit_card_specializing",
+    "question_id": 1488,
+    "gold_sql": "SELECT T2.CustomerID, SUM(T2.Consumption) FROM customers AS T1 INNER JOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID WHERE T1.Segment = 'KAM' GROUP BY T2.CustomerID ORDER BY SUM(T2.Consumption) DESC LIMIT 1",
+    "pred_sql": "SELECT c.Segment, SUM(y.Consumption) AS TotalConsumption\nFROM customers c\nJOIN yearmonth y ON c.CustomerID = y.CustomerID\nWHERE c.Segment = 'KAM'\nGROUP BY c.Segment\nORDER BY TotalConsumption DESC\nLIMIT 1;",
+    "difficulty": "simple",
+    "prompt_tokens": 343
+  },
+  {
+    "db_id": "toxicology",
+    "question_id": 288,
+    "gold_sql": "SELECT T2.label AS flag_carcinogenic FROM atom AS T1 INNER JOIN molecule AS T2 ON T1.molecule_id = T2.molecule_id WHERE T1.atom_id = 'TR001_1'",
+    "pred_sql": "SELECT T1.label FROM molecule AS T1 INNER JOIN connected AS T2 ON T1.molecule_id = T2.molecule_id INNER JOIN atom AS T3 ON T2.atom_id2 = T3.atom_id WHERE T3.atom_id = 'TR001_1';",
+    "difficulty": "simple",
+    "prompt_tokens": 336
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 376,
+    "gold_sql": "SELECT layout FROM cards WHERE keywords = 'Flying'",
+    "pred_sql": "SELECT DISTINCT layout FROM cards WHERE keywords LIKE '%Flying%'",
+    "difficulty": "simple",
+    "prompt_tokens": 1301
+  },
+  {
+    "db_id": "student_club",
+    "question_id": 1312,
+    "gold_sql": "SELECT T2.major_name FROM member AS T1 INNER JOIN major AS T2 ON T1.link_to_major = T2.major_id WHERE T1.first_name = 'Angela' AND T1.last_name = 'Sanders'",
+    "pred_sql": "SELECT T2.major_name FROM member AS T1 INNER JOIN major AS T2 ON T1.link_to_major = T2.major_id WHERE T1.first_name = 'Angela' AND T1.last_name = 'Sanders';",
+    "difficulty": "simple",
+    "prompt_tokens": 940
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 560,
+    "gold_sql": "SELECT COUNT(Id) FROM badges WHERE Name = 'Revival'",
+    "pred_sql": "SELECT COUNT(Id) FROM badges WHERE Name = 'Revival';",
+    "difficulty": "simple",
+    "prompt_tokens": 893
+  },
+  {
+    "db_id": "debit_card_specializing",
+    "question_id": 1518,
+    "gold_sql": "SELECT T2.Country FROM transactions_1k AS T1 INNER JOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID WHERE T1.Date = '2012-08-24' AND T1.Time = '12:42:00'",
+    "pred_sql": "SELECT T3.Country FROM transactions_1k AS T1 INNER JOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID INNER JOIN gasstations AS T3 ON T1.GasStationID = T3.GasStationID WHERE T2.Date = '2012-08-24' AND T1.Time = '12:42:00'",
+    "difficulty": "simple",
+    "prompt_tokens": 401
+  },
+  {
+    "db_id": "financial",
+    "question_id": 158,
+    "gold_sql": "SELECT T3.district_id FROM `order` AS T1 INNER JOIN account AS T2 ON T1.account_id = T2.account_id INNER JOIN district AS T3 ON T2.district_id = T3.district_id WHERE T1.order_id = 33333",
+    "pred_sql": "SELECT T1.district_id FROM account AS T1 INNER JOIN order AS T2 ON T1.account_id = T2.account_id WHERE T2.order_id = 33333;",
+    "difficulty": "simple",
+    "prompt_tokens": 689
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 618,
+    "gold_sql": "SELECT T1.Age FROM users AS T1 INNER JOIN badges AS T2 ON T1.Id = T2.UserId WHERE T1.Location = 'Vienna, Austria'",
+    "pred_sql": "SELECT DISTINCT T1.Age FROM users AS T1 INNER JOIN badges AS T2 ON T1.Id = T2.UserId WHERE T1.Location = 'Vienna, Austria'",
+    "difficulty": "simple",
+    "prompt_tokens": 1039
+  },
+  {
+    "db_id": "financial",
+    "question_id": 164,
+    "gold_sql": "SELECT T3.client_id FROM `order` AS T1 INNER JOIN account AS T2 ON T1.account_id = T2.account_id INNER JOIN disp AS T4 ON T4.account_id = T2.account_id  INNER JOIN client AS T3 ON T4.client_id = T3.client_id WHERE T1.order_id = 32423",
+    "pred_sql": "SELECT T1.client_id FROM client AS T1 INNER JOIN order AS T2 ON T1.client_id = T2.client_id WHERE T2.order_id = 32423;",
+    "difficulty": "simple",
+    "prompt_tokens": 743
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 592,
+    "gold_sql": "SELECT COUNT(UserId) FROM ( SELECT UserId, COUNT(Name) AS num FROM badges GROUP BY UserId ) T WHERE T.num > 5",
+    "pred_sql": "SELECT COUNT(UserId) FROM badges GROUP BY UserId HAVING COUNT(Name) > 5;",
+    "difficulty": "simple",
+    "prompt_tokens": 987
+  },
+  {
+    "db_id": "student_club",
+    "question_id": 1442,
+    "gold_sql": "SELECT CAST(SUM(CASE WHEN remaining < 0 THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(budget_id) FROM budget",
+    "pred_sql": "SELECT CAST(SUM(CASE WHEN T2.remaining < 0 THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(T2.event_id) AS percentage_over_budget\nFROM event AS T1\nJOIN budget AS T2 ON T1.event_id = T2.link_to_event;",
+    "difficulty": "simple",
+    "prompt_tokens": 874
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 570,
+    "gold_sql": "SELECT T2.Name FROM users AS T1 INNER JOIN badges AS T2 ON T1.Id = T2.UserId WHERE T1.DisplayName = 'DatEpicCoderGuyWhoPrograms'",
+    "pred_sql": "SELECT T2.Name FROM users AS T1 INNER JOIN badges AS T2 ON T1.Id = T2.UserId WHERE T1.DisplayName = 'DatEpicCoderGuyWhoPrograms';",
+    "difficulty": "simple",
+    "prompt_tokens": 1052
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 945,
+    "gold_sql": "SELECT COUNT(circuitId) FROM circuits WHERE location = 'Adelaide' AND country = 'Australia'",
+    "pred_sql": "SELECT COUNT(*) FROM circuits WHERE country = 'Australia' AND location = 'Melbourne';",
+    "difficulty": "simple",
+    "prompt_tokens": 878
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 443,
+    "gold_sql": "SELECT T2.setCode FROM sets AS T1 INNER JOIN set_translations AS T2 ON T2.setCode = T1.code WHERE T1.type = 'expansion' GROUP BY T2.setCode",
+    "pred_sql": "SELECT DISTINCT setCode FROM sets WHERE type = 'expansion';",
+    "difficulty": "simple",
+    "prompt_tokens": 1794
+  },
+  {
+    "db_id": "student_club",
+    "question_id": 1373,
+    "gold_sql": "SELECT COUNT(T2.member_id) FROM zip_code AS T1 INNER JOIN member AS T2 ON T1.zip_code = T2.zip WHERE T1.state = 'Maryland'",
+    "pred_sql": "SELECT COUNT(member_id) FROM member WHERE zip IN (SELECT zip_code FROM zip_code WHERE state = 'Maryland')",
+    "difficulty": "simple",
+    "prompt_tokens": 960
+  },
+  {
+    "db_id": "california_schools",
+    "question_id": 70,
+    "gold_sql": "SELECT COUNT(School) FROM schools WHERE (StatusType = 'Closed' OR StatusType = 'Active') AND SOC = 69 AND County = 'Alpine'",
+    "pred_sql": "SELECT COUNT(*) AS TotalSchools\nFROM frpm\nJOIN schools ON frpm.CDSCode = schools.CDSCode\nWHERE schools.County = 'Alpine'\n  AND schools.StatusType IN ('Active', 'Closed')\n  AND schools.DistrictType = 'District Community Day School';",
+    "difficulty": "simple",
+    "prompt_tokens": 1507
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1199,
+    "gold_sql": "SELECT COUNT(ID) FROM Laboratory WHERE (ALB <= 6.0 OR ALB >= 8.5) AND STRFTIME('%Y', Date) = '1997'",
+    "pred_sql": "SELECT COUNT(T1.ID) FROM Laboratory AS T1 INNER JOIN Patient AS T2 ON T1.ID = T2.ID WHERE YEAR(T1.Date) = '1997' AND T1.TP > 6 AND T1.TP < 8.5;",
+    "difficulty": "simple",
+    "prompt_tokens": 979
+  },
+  {
+    "db_id": "superhero",
+    "question_id": 720,
+    "gold_sql": "SELECT DISTINCT T1.full_name FROM superhero AS T1 INNER JOIN hero_power AS T2 ON T1.id = T2.hero_id GROUP BY T1.full_name HAVING COUNT(T2.power_id) > 15",
+    "pred_sql": "SELECT superhero.full_name FROM superhero \nJOIN hero_power ON superhero.id = hero_power.hero_id \nGROUP BY superhero.id \nHAVING COUNT(hero_power.power_id) > 15;",
+    "difficulty": "simple",
+    "prompt_tokens": 524
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 847,
+    "gold_sql": "SELECT T2.surname FROM qualifying AS T1 INNER JOIN drivers AS T2 ON T2.driverId = T1.driverId WHERE T1.raceId = 19 ORDER BY T1.q2 ASC LIMIT 1",
+    "pred_sql": "SELECT T2.surname FROM qualifying AS T1 INNER JOIN drivers AS T2 ON T1.driverId = T2.driverId WHERE T1.raceId = 19 AND T1.q2 = ( SELECT MIN(q2) FROM qualifying WHERE raceId = 19 )",
+    "difficulty": "simple",
+    "prompt_tokens": 921
+  },
+  {
+    "db_id": "toxicology",
+    "question_id": 214,
+    "gold_sql": "SELECT DISTINCT T2.label FROM atom AS T1 INNER JOIN molecule AS T2 ON T1.molecule_id = T2.molecule_id WHERE T1.element != 'sn'",
+    "pred_sql": "SELECT label FROM molecule WHERE molecule_id IN (SELECT molecule_id FROM atom WHERE element != 'Sn') AND label != '+';",
+    "difficulty": "simple",
+    "prompt_tokens": 352
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 616,
+    "gold_sql": "SELECT T1.Score FROM comments AS T1 INNER JOIN posts AS T2 ON T1.PostId = T2.Id WHERE T1.CreationDate = '2010-07-19 19:19:56.0'",
+    "pred_sql": "SELECT T2.Score FROM posts AS T1 INNER JOIN comments AS T2 ON T1.Id = T2.PostId WHERE T1.CreationDate = '2010-07-19 19:19:56.0'",
+    "difficulty": "simple",
+    "prompt_tokens": 1190
+  },
+  {
+    "db_id": "financial",
+    "question_id": 133,
+    "gold_sql": "SELECT district_id, A2 FROM district ORDER BY A13 DESC LIMIT 1",
+    "pred_sql": "SELECT T2.A2, T2.A13\nFROM account AS T1\nJOIN district AS T2 ON T1.district_id = T2.district_id\nWHERE strftime('%Y', T1.date) = '1996'\nORDER BY T2.A13 DESC\nLIMIT 1;",
+    "difficulty": "simple",
+    "prompt_tokens": 458
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 864,
+    "gold_sql": "SELECT COUNT(T2.driverId) FROM races AS T1 INNER JOIN results AS T2 ON T2.raceId = T1.raceId WHERE T1.date = '2015-11-29' AND T2.time IS NOT NULL",
+    "pred_sql": "SELECT COUNT(DISTINCT driverId) FROM results WHERE date = '2015-11-29';",
+    "difficulty": "simple",
+    "prompt_tokens": 883
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 491,
+    "gold_sql": "SELECT mcmName FROM sets WHERE releaseDate = '2017-06-09'",
+    "pred_sql": "SELECT mcmName FROM sets WHERE releaseDate = '2017-06-09';",
+    "difficulty": "simple",
+    "prompt_tokens": 1736
+  },
+  {
+    "db_id": "student_club",
+    "question_id": 1411,
+    "gold_sql": "SELECT T2.expense_description FROM member AS T1 INNER JOIN expense AS T2 ON T1.member_id = T2.link_to_member WHERE T1.first_name = 'Sacha' AND T1.last_name = 'Harrison'",
+    "pred_sql": "SELECT T2.expense_description FROM member AS T1 INNER JOIN expense AS T2 ON T1.member_id = T2.link_to_member WHERE T1.first_name = 'Sacha' AND T1.last_name = 'Harrison';",
+    "difficulty": "simple",
+    "prompt_tokens": 984
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 979,
+    "gold_sql": "SELECT raceId FROM results GROUP BY raceId ORDER BY COUNT(time IS NOT NULL) DESC LIMIT 1",
+    "pred_sql": "SELECT raceId FROM results WHERE time IS NOT NULL GROUP BY raceId ORDER BY COUNT(*) DESC LIMIT 1;",
+    "difficulty": "simple",
+    "prompt_tokens": 781
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 966,
+    "gold_sql": "SELECT COUNT(driverId) FROM driverStandings WHERE raceId = 18",
+    "pred_sql": "SELECT COUNT(DISTINCT driverId) FROM results WHERE raceId = 18;",
+    "difficulty": "simple",
+    "prompt_tokens": 921
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 596,
+    "gold_sql": "SELECT Name FROM badges AS T1 INNER JOIN comments AS T2 ON T1.UserId = t2.UserId GROUP BY T2.UserId ORDER BY COUNT(T2.UserId) DESC LIMIT 1",
+    "pred_sql": "SELECT u.DisplayName, b.Name\nFROM users u\nJOIN badges b ON u.Id = b.UserId\nWHERE u.Id IN (\n    SELECT UserId\n    FROM comments\n    GROUP BY UserId\n    ORDER BY COUNT(Id) DESC\n    LIMIT 1\n);",
+    "difficulty": "simple",
+    "prompt_tokens": 1042
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 907,
+    "gold_sql": "SELECT DISTINCT T2.name, T1.country FROM circuits AS T1 INNER JOIN races AS T2 ON T2.circuitID = T1.circuitId WHERE T2.year = 2017 ORDER BY T2.date ASC",
+    "pred_sql": "SELECT r.name, c.nationality\nFROM races r\nJOIN circuits c ON r.circuitId = c.circuitId\nWHERE r.year = 2017\nORDER BY r.date;",
+    "difficulty": "simple",
+    "prompt_tokens": 898
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 348,
+    "gold_sql": "SELECT T2.text FROM cards AS T1 INNER JOIN rulings AS T2 ON T1.uuid = T2.uuid WHERE T1.name = 'Sublime Epiphany' AND T1.number = '74s'",
+    "pred_sql": "SELECT text FROM cards WHERE name = 'Sublime Epiphany' AND number = '74s';",
+    "difficulty": "simple",
+    "prompt_tokens": 1803
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1133,
+    "gold_sql": "SELECT COUNT(id) FROM Player WHERE birthday > '1990' AND player_name LIKE 'Aaron%'",
+    "pred_sql": "SELECT COUNT(T1.player_api_id) FROM Player AS T1 INNER JOIN Player_Attributes AS T2 ON T1.player_api_id = T2.player_api_id WHERE T1.player_name LIKE 'Aaron%' AND STRFTIME('%Y', T1.birthday) > '1990';",
+    "difficulty": "simple",
+    "prompt_tokens": 2158
+  },
+  {
+    "db_id": "financial",
+    "question_id": 113,
+    "gold_sql": "SELECT T4.birth_date FROM loan AS T1 INNER JOIN account AS T2 ON T1.account_id = T2.account_id INNER JOIN disp AS T3 ON T2.account_id = T3.account_id INNER JOIN client AS T4 ON T3.client_id = T4.client_id WHERE T1.date = '1996-01-03' AND T1.amount = 98832",
+    "pred_sql": "SELECT T1.birth_date FROM client AS T1 INNER JOIN loan AS T2 ON T1.client_id = T2.account_id WHERE T2.amount = 98832 AND T2.date LIKE '1996-01-03';",
+    "difficulty": "simple",
+    "prompt_tokens": 852
+  },
+  {
+    "db_id": "california_schools",
+    "question_id": 73,
+    "gold_sql": "SELECT T1.`FRPM Count (Ages 5-17)` FROM frpm AS T1 INNER JOIN schools AS T2 ON T1.CDSCode = T2.CDSCode WHERE T2.MailStreet = 'PO Box 1040' AND T2.SOCType = 'Youth Authority Facilities'",
+    "pred_sql": "SELECT T1.FRPM_Count_Ages_5_17 FROM frpm AS T1 INNER JOIN schools AS T2 ON T1.CDSCode = T2.CDSCode WHERE T2.MailingStreet = 'PO Box 1040' AND T2.School = 'Youth Authority School';",
+    "difficulty": "simple",
+    "prompt_tokens": 1526
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1045,
+    "gold_sql": "SELECT DISTINCT t2.attacking_work_rate FROM Player AS t1 INNER JOIN Player_Attributes AS t2 ON t1.player_api_id = t2.player_api_id WHERE t1.player_name = 'Franco Zennaro'",
+    "pred_sql": "SELECT T2.attacking_work_rate FROM Player AS T1 INNER JOIN Player_Attributes AS T2 ON T1.player_api_id = T2.player_api_id WHERE T1.player_name = 'Franco Zennaro';",
+    "difficulty": "simple",
+    "prompt_tokens": 2584
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 389,
+    "gold_sql": "SELECT T1.id, T2.date FROM cards AS T1 INNER JOIN rulings AS T2 ON T1.uuid = T2.uuid WHERE T1.originalType = 'Creature - Elf'",
+    "pred_sql": "SELECT DISTINCT T1.name, T1.originalReleaseDate FROM cards AS T1 INNER JOIN foreign_data AS T2 ON T1.uuid = T2.uuid WHERE T1.originalType = 'Creature - Elf';",
+    "difficulty": "simple",
+    "prompt_tokens": 1863
+  },
+  {
+    "db_id": "student_club",
+    "question_id": 1329,
+    "gold_sql": "SELECT T2.county FROM member AS T1 INNER JOIN zip_code AS T2 ON T1.zip = T2.zip_code WHERE T1.first_name = 'Sherri' AND T1.last_name = 'Ramsey'",
+    "pred_sql": "SELECT T2.county FROM member AS T1 INNER JOIN zip_code AS T2 ON T1.zip = T2.zip_code WHERE T1.first_name = 'Sherri' AND T1.last_name = 'Ramsey';",
+    "difficulty": "simple",
+    "prompt_tokens": 918
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 485,
+    "gold_sql": "SELECT T2.date FROM cards AS T1 INNER JOIN rulings AS T2 ON T2.uuid = T1.uuid WHERE T1.name = 'Reminisce'",
+    "pred_sql": "SELECT T1.date FROM rulings AS T1 INNER JOIN cards AS T2 ON T1.uuid = T2.uuid WHERE T2.name = 'Reminisce';",
+    "difficulty": "simple",
+    "prompt_tokens": 1786
+  },
+  {
+    "db_id": "financial",
+    "question_id": 134,
+    "gold_sql": "SELECT COUNT(T2.account_id) FROM district AS T1 INNER JOIN account AS T2 ON T1.district_id = T2.district_id GROUP BY T1.A16 ORDER BY T1.A16 DESC LIMIT 1",
+    "pred_sql": "SELECT COUNT(account_id) FROM account WHERE district_id = (SELECT district_id FROM district ORDER BY A16 DESC LIMIT 1)",
+    "difficulty": "simple",
+    "prompt_tokens": 777
+  },
+  {
+    "db_id": "debit_card_specializing",
+    "question_id": 1504,
+    "gold_sql": "SELECT AVG(Amount) FROM transactions_1k WHERE Date LIKE '2012-01%'",
+    "pred_sql": "SELECT AVG(T1.Price) AS AveragePrice\nFROM transactions_1k AS T1\nJOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID\nWHERE T2.Date LIKE '2012-01-%';",
+    "difficulty": "simple",
+    "prompt_tokens": 379
+  },
+  {
+    "db_id": "financial",
+    "question_id": 170,
+    "gold_sql": "SELECT COUNT(account_id) FROM trans WHERE STRFTIME('%Y', date) > '1995' AND operation = 'VYBER KARTOU'",
+    "pred_sql": "SELECT COUNT(*) FROM trans WHERE operation = 'VYBER KARTOU' AND date > '1995-01-01';",
+    "difficulty": "simple",
+    "prompt_tokens": 672
+  },
+  {
+    "db_id": "student_club",
+    "question_id": 1459,
+    "gold_sql": "SELECT T2.major_name, T2.department FROM member AS T1 INNER JOIN major AS T2 ON T2.major_id = T1.link_to_major WHERE T1.first_name = 'Garrett' AND T1.last_name = 'Gerke'",
+    "pred_sql": "SELECT T1.major_name, T2.department FROM major AS T1 INNER JOIN member AS T2 ON T1.major_id = T2.link_to_major WHERE T2.first_name = 'Garrett' AND T2.last_name = 'Gerke';",
+    "difficulty": "simple",
+    "prompt_tokens": 1043
+  },
+  {
+    "db_id": "student_club",
+    "question_id": 1468,
+    "gold_sql": "SELECT T2.city FROM member AS T1 INNER JOIN zip_code AS T2 ON T2.zip_code = T1.zip WHERE T1.first_name = 'Garrett' AND T1.last_name = 'Gerke'",
+    "pred_sql": "SELECT T2.city FROM member AS T1 INNER JOIN zip_code AS T2 ON T1.zip = T2.zip_code WHERE T1.first_name = 'Garrett' AND T1.last_name = 'Gerke';",
+    "difficulty": "simple",
+    "prompt_tokens": 962
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 712,
+    "gold_sql": "SELECT T2.Id, T1.Text FROM comments AS T1 INNER JOIN posts AS T2 ON T1.PostId = T2.Id WHERE T2.Title = 'Group differences on a five point Likert item'",
+    "pred_sql": "SELECT p.Id, c.Id AS CommentId\nFROM posts p\nJOIN comments c ON p.Id = c.PostId\nWHERE p.Title = 'Group differences on a five point Likert item';",
+    "difficulty": "simple",
+    "prompt_tokens": 1087
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 991,
+    "gold_sql": "SELECT forename, surname, dob FROM drivers WHERE nationality = 'Austrian' AND STRFTIME('%Y', dob) BETWEEN '1981' AND '1991'",
+    "pred_sql": "SELECT T1.forename, T1.surname, T1.dob FROM drivers AS T1 INNER JOIN constructors AS T2 ON T1.nationality = T2.nationality WHERE T2.nationality = 'Austrian' AND T1.dob BETWEEN '1981-01-01' AND '1991-12-31';",
+    "difficulty": "simple",
+    "prompt_tokens": 1119
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 600,
+    "gold_sql": "SELECT T1.ViewCount FROM posts AS T1 INNER JOIN postLinks AS T2 ON T1.Id = T2.PostId WHERE T2.PostId = 61217",
+    "pred_sql": "SELECT T2.Title, T2.ViewCount\nFROM postLinks AS T1\nJOIN posts AS T2 ON T1.RelatedPostId = T2.Id\nWHERE T1.PostId = 61217;",
+    "difficulty": "simple",
+    "prompt_tokens": 1168
+  },
+  {
+    "db_id": "toxicology",
+    "question_id": 296,
+    "gold_sql": "SELECT T2.molecule_id, T2.bond_id, T1.atom_id FROM connected AS T1 INNER JOIN bond AS T2 ON T1.bond_id = T2.bond_id WHERE T1.atom_id = 'TR000_1' AND T2.bond_id = 'TR000_1_2'",
+    "pred_sql": "SELECT T3.molecule_id FROM connected AS T1 INNER JOIN bond AS T2 ON T1.bond_id = T2.bond_id INNER JOIN atom AS T3 ON T1.atom_id2 = T3.atom_id WHERE T1.atom_id = 'TR000_1' AND T2.bond_type = 'TR000_1_2';",
+    "difficulty": "simple",
+    "prompt_tokens": 340
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 607,
+    "gold_sql": "SELECT COUNT(id) FROM comments WHERE score > 60",
+    "pred_sql": "SELECT COUNT(*) FROM comments WHERE Score > 60;",
+    "difficulty": "simple",
+    "prompt_tokens": 968
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 588,
+    "gold_sql": "SELECT COUNT(Id) FROM comments WHERE UserId = 13",
+    "pred_sql": "SELECT COUNT(*) FROM comments WHERE UserId = 13;",
+    "difficulty": "simple",
+    "prompt_tokens": 1027
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 369,
+    "gold_sql": "SELECT COUNT(T1.id) FROM cards AS T1 INNER JOIN foreign_data AS T2 ON T1.uuid = T2.uuid WHERE T2.language = 'German' AND T1.isReprint = 1",
+    "pred_sql": "SELECT COUNT(T1.id) FROM cards AS T1 INNER JOIN foreign_data AS T2 ON T1.uuid = T2.uuid WHERE T2.language = 'German' AND T1.isReprint = 1;",
+    "difficulty": "simple",
+    "prompt_tokens": 1932
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1060,
+    "gold_sql": "SELECT COUNT(id) FROM Player WHERE STRFTIME('%Y', birthday) > '1990'",
+    "pred_sql": "SELECT COUNT(*) FROM Player WHERE strftime('%Y', birthday) > '1990';",
+    "difficulty": "simple",
+    "prompt_tokens": 821
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 447,
+    "gold_sql": "SELECT T2.setCode FROM sets AS T1 INNER JOIN set_translations AS T2 ON T2.setCode = T1.code WHERE T1.type = 'commander'",
+    "pred_sql": "SELECT DISTINCT setCode FROM sets WHERE type = 'Commander';",
+    "difficulty": "simple",
+    "prompt_tokens": 1790
+  },
+  {
+    "db_id": "debit_card_specializing",
+    "question_id": 1495,
+    "gold_sql": "SELECT T1.CustomerID FROM customers AS T1 INNER JOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID WHERE T2.Date = '201309' GROUP BY T1.CustomerID ORDER BY SUM(T2.Consumption) DESC LIMIT 1",
+    "pred_sql": "SELECT T1.CustomerID FROM yearmonth AS T1 INNER JOIN customers AS T2 ON T1.CustomerID = T2.CustomerID WHERE T1.Date LIKE '201309%' ORDER BY T1.Consumption DESC LIMIT 1;",
+    "difficulty": "simple",
+    "prompt_tokens": 361
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1081,
+    "gold_sql": "SELECT t1.name FROM Country AS t1 INNER JOIN League AS t2 ON t1.id = t2.country_id WHERE t2.name = 'Belgium Jupiler League'",
+    "pred_sql": "SELECT T2.name FROM League AS T1 INNER JOIN Country AS T2 ON T1.country_id = T2.id WHERE T1.name = 'Belgium Jupiler League';",
+    "difficulty": "simple",
+    "prompt_tokens": 2694
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 1012,
+    "gold_sql": "SELECT T1.position FROM lapTimes AS T1 INNER JOIN drivers AS T2 on T1.driverId = T2.driverId WHERE T2.forename = 'Lewis' AND T2.surname = 'Hamilton' ORDER BY T1.time ASC LIMIT 1",
+    "pred_sql": "SELECT T3.position FROM results AS T1 INNER JOIN drivers AS T2 ON T1.driverId = T2.driverId INNER JOIN qualifying AS T3 ON T1.qualifyId = T3.qualifyId WHERE T2.forename = 'Lewis' AND T2.surname = 'Hamilton' ORDER BY T1.milliseconds ASC LIMIT 1;",
+    "difficulty": "simple",
+    "prompt_tokens": 1004
+  },
+  {
+    "db_id": "financial",
+    "question_id": 121,
+    "gold_sql": "SELECT T1.account_id, T1.date FROM account AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id WHERE T2.A2 = 'Prachatice'",
+    "pred_sql": "SELECT T1.account_id, T1.date FROM account AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id WHERE T2.A2 = 'Prachatice';",
+    "difficulty": "simple",
+    "prompt_tokens": 691
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 950,
+    "gold_sql": "SELECT T2.name FROM constructorStandings AS T1 INNER JOIN constructors AS T2 on T1.constructorId = T2.constructorId WHERE T1.points = 0 AND T1.raceId = 291",
+    "pred_sql": "SELECT T2.name FROM constructorStandings AS T1 INNER JOIN constructors AS T2 ON T1.constructorId = T2.constructorId WHERE T1.raceId = 291 AND T1.points = 0;",
+    "difficulty": "simple",
+    "prompt_tokens": 941
+  },
+  {
+    "db_id": "student_club",
+    "question_id": 1392,
+    "gold_sql": "SELECT source FROM income WHERE date_received BETWEEN '2019-09-01' and '2019-09-30' ORDER BY source DESC LIMIT 1",
+    "pred_sql": "SELECT source FROM income WHERE date_received BETWEEN '2019-09-01' AND '2019-09-30' GROUP BY source ORDER BY SUM(amount) DESC LIMIT 1;",
+    "difficulty": "simple",
+    "prompt_tokens": 756
+  },
+  {
+    "db_id": "toxicology",
+    "question_id": 312,
+    "gold_sql": "SELECT DISTINCT T2.label FROM atom AS T1 INNER JOIN molecule AS T2 ON T1.molecule_id = T2.molecule_id INNER JOIN bond AS T3 ON T2.molecule_id = T3.molecule_id WHERE T3.bond_id = 'TR001_2_4'",
+    "pred_sql": "SELECT T1.label FROM molecule AS T1 INNER JOIN bond AS T2 ON T1.molecule_id = T2.molecule_id WHERE T2.bond_id = 'TR001_2_4';",
+    "difficulty": "simple",
+    "prompt_tokens": 335
+  },
+  {
+    "db_id": "superhero",
+    "question_id": 842,
+    "gold_sql": "SELECT AVG(T1.height_cm) FROM superhero AS T1 INNER JOIN alignment AS T2 ON T1.alignment_id = T2.id WHERE T2.alignment = 'Neutral'",
+    "pred_sql": "SELECT AVG(superhero.height_cm) AS average_height\nFROM superhero\nJOIN alignment ON superhero.alignment_id = alignment.id\nWHERE alignment.alignment = 'Neutral';",
+    "difficulty": "simple",
+    "prompt_tokens": 501
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1198,
+    "gold_sql": "SELECT COUNT(ID) FROM Patient WHERE SEX = 'F' AND Diagnosis = 'APS'",
+    "pred_sql": "SELECT COUNT(T1.ID) FROM Patient AS T1 INNER JOIN Examination AS T2 ON T1.ID = T2.ID WHERE T1.SEX = 'F' AND T2.Diagnosis = 'APS';",
+    "difficulty": "simple",
+    "prompt_tokens": 943
+  },
+  {
+    "db_id": "debit_card_specializing",
+    "question_id": 1524,
+    "gold_sql": "SELECT T2.Country FROM transactions_1k AS T1 INNER JOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID WHERE T1.Date = '2012-08-24' AND T1.Price = 548.4",
+    "pred_sql": "SELECT T3.Country FROM transactions_1k AS T1 INNER JOIN customers AS T2 ON T1.CustomerID = T2.CustomerID INNER JOIN gasstations AS T3 ON T1.GasStationID = T3.GasStationID WHERE T1.Date = '2012-08-24' AND T1.Amount = 548.4;",
+    "difficulty": "simple",
+    "prompt_tokens": 381
+  },
+  {
+    "db_id": "toxicology",
+    "question_id": 297,
+    "gold_sql": "SELECT T1.atom_id FROM atom AS T1 INNER JOIN molecule AS T2 ON T1.molecule_id = T2.molecule_id WHERE T1.element = 'c' AND T2.label = '-'",
+    "pred_sql": "SELECT T1.atom_id FROM atom AS T1 INNER JOIN molecule AS T2 ON T1.molecule_id = T2.molecule_id WHERE T1.element = 'c' AND T2.label = '-';",
+    "difficulty": "simple",
+    "prompt_tokens": 346
+  },
+  {
+    "db_id": "superhero",
+    "question_id": 725,
+    "gold_sql": "SELECT COUNT(T1.id) FROM superhero AS T1 INNER JOIN publisher AS T2 ON T1.publisher_id = T2.id WHERE T2.publisher_name = 'Marvel Comics'",
+    "pred_sql": "SELECT COUNT(*) FROM superhero WHERE publisher_id = (SELECT id FROM publisher WHERE publisher_name = 'Marvel Comics')",
+    "difficulty": "simple",
+    "prompt_tokens": 515
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 617,
+    "gold_sql": "SELECT T1.Text FROM comments AS T1 INNER JOIN posts AS T2 ON T1.PostId = T2.Id WHERE T1.CreationDate = '2010-07-19 19:37:33.0'",
+    "pred_sql": "SELECT T2.Text FROM posts AS T1 INNER JOIN comments AS T2 ON T1.Id = T2.PostId WHERE T1.CreationDate = '2010-07-19 19:37:33.0'",
+    "difficulty": "simple",
+    "prompt_tokens": 1199
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 451,
+    "gold_sql": "SELECT SUM(CASE WHEN availability = 'paper' AND hAND = '3' THEN 1 ELSE 0 END) FROM cards",
+    "pred_sql": "SELECT COUNT(*) FROM cards WHERE availability LIKE '%paper%' AND hand = '3';",
+    "difficulty": "simple",
+    "prompt_tokens": 1741
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 999,
+    "gold_sql": "SELECT T1.name FROM races AS T1 INNER JOIN results AS T2 ON T1.raceId = T2.raceId WHERE T2.fastestLapTime IS NOT NULL ORDER BY T2.fastestLapTime ASC LIMIT 1",
+    "pred_sql": "SELECT T1.name FROM races AS T1 INNER JOIN results AS T2 ON T1.raceid = T2.raceid WHERE T2.fastestlapspeed = ( SELECT MIN(fastestlapspeed) FROM results )",
+    "difficulty": "simple",
+    "prompt_tokens": 667
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1089,
+    "gold_sql": "SELECT COUNT(t2.id) FROM Country AS t1 INNER JOIN Match AS t2 ON t1.id = t2.country_id WHERE t1.name = 'Belgium' AND t2.season = '2008/2009'",
+    "pred_sql": "SELECT COUNT(*) FROM Match WHERE season = '2008/2009' AND country_id = (SELECT id FROM Country WHERE name = 'Belgium');",
+    "difficulty": "simple",
+    "prompt_tokens": 2684
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 872,
+    "gold_sql": "SELECT T2.code FROM qualifying AS T1 INNER JOIN drivers AS T2 ON T2.driverId = T1.driverId WHERE T1.raceId = 45 AND T1.q3 LIKE '1:33%'",
+    "pred_sql": "SELECT T2.driverRef FROM qualifying AS T1 INNER JOIN results AS T2 ON T1.raceId = T2.raceId WHERE T1.q3 LIKE '33%' AND T1.raceId = 45;",
+    "difficulty": "simple",
+    "prompt_tokens": 788
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 380,
+    "gold_sql": "SELECT edhrecRank FROM cards WHERE frameVersion = 2015",
+    "pred_sql": "SELECT edhrecRank FROM cards WHERE frameVersion = '2015';",
+    "difficulty": "simple",
+    "prompt_tokens": 1306
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1083,
+    "gold_sql": "SELECT t1.player_name FROM Player AS t1 INNER JOIN Player_Attributes AS t2 ON t1.player_api_id = t2.player_api_id ORDER BY t2.overall_rating DESC LIMIT 1",
+    "pred_sql": "SELECT T1.player_name FROM Player AS T1 INNER JOIN Player_Attributes AS T2 ON T1.player_api_id = T2.player_api_id ORDER BY T2.overall_rating DESC LIMIT 1;",
+    "difficulty": "simple",
+    "prompt_tokens": 2593
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 547,
+    "gold_sql": "SELECT COUNT(T1.Id) FROM posts AS T1 INNER JOIN users AS T2 ON T1.OwnerUserId = T2.Id WHERE T1.Score >= 20 AND T2.Age > 65",
+    "pred_sql": "SELECT COUNT(T1.Id) FROM posts AS T1 INNER JOIN users AS T2 ON T1.OwnerUserId = T2.Id WHERE T2.Age > 65 AND T1.Score > 19;",
+    "difficulty": "simple",
+    "prompt_tokens": 915
+  },
+  {
+    "db_id": "student_club",
+    "question_id": 1319,
+    "gold_sql": "SELECT T2.college FROM member AS T1 INNER JOIN major AS T2 ON T1.link_to_major = T2.major_id WHERE T1.position LIKE 'vice president'",
+    "pred_sql": "SELECT T2.college FROM member AS T1 INNER JOIN major AS T2 ON T1.link_to_major = T2.major_id WHERE T1.position = 'vice president';",
+    "difficulty": "simple",
+    "prompt_tokens": 933
+  },
+  {
+    "db_id": "student_club",
+    "question_id": 1333,
+    "gold_sql": "SELECT T2.city, T2.state FROM member AS T1 INNER JOIN zip_code AS T2 ON T1.zip = T2.zip_code WHERE T1.position = 'President'",
+    "pred_sql": "SELECT T2.city, T2.state FROM member AS T1 INNER JOIN zip_code AS T2 ON T1.zip = T2.zip_code WHERE T1.position = 'President';",
+    "difficulty": "simple",
+    "prompt_tokens": 934
+  },
+  {
+    "db_id": "financial",
+    "question_id": 96,
+    "gold_sql": "SELECT COUNT(T1.account_id) FROM account AS T1 INNER JOIN disp AS T2 ON T1.account_id = T2.account_id WHERE T2.type = 'OWNER' AND T1.frequency = 'POPLATEK TYDNE'",
+    "pred_sql": "SELECT COUNT(T1.client_id) FROM client AS T1 INNER JOIN account AS T2 ON T1.client_id = T2.client_id INNER JOIN district AS T3 ON T2.district_id = T3.district_id WHERE T3.A2 = 'POPLATEK TYDNE' AND T1.gender = 'Owner';",
+    "difficulty": "simple",
+    "prompt_tokens": 783
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 390,
+    "gold_sql": "SELECT T1.colors, T2.format FROM cards AS T1 INNER JOIN legalities AS T2 ON T1.uuid = T2.uuid WHERE T1.id BETWEEN 1 AND 20",
+    "pred_sql": "SELECT DISTINCT colors, layout FROM cards WHERE id BETWEEN 1 AND 20;",
+    "difficulty": "simple",
+    "prompt_tokens": 1741
+  },
+  {
+    "db_id": "debit_card_specializing",
+    "question_id": 1510,
+    "gold_sql": "SELECT AVG(T1.Price) FROM transactions_1k AS T1 INNER JOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID WHERE T2.Country = 'CZE'",
+    "pred_sql": "SELECT AVG(T1.Price) AS AveragePrice\nFROM transactions_1k AS T1\nJOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID\nWHERE T2.Country = 'CZE';",
+    "difficulty": "simple",
+    "prompt_tokens": 360
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 537,
+    "gold_sql": "SELECT COUNT(T1.id) FROM posts AS T1 INNER JOIN users AS T2 ON T1.OwnerUserId = T2.Id WHERE T2.DisplayName = 'csgillespie'",
+    "pred_sql": "SELECT COUNT(*) FROM posts WHERE OwnerUserId = (SELECT Id FROM users WHERE DisplayName = 'csgillespie')",
+    "difficulty": "simple",
+    "prompt_tokens": 937
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 645,
+    "gold_sql": "SELECT COUNT(Id) FROM comments WHERE UserId = 13 AND Score < 60",
+    "pred_sql": "SELECT COUNT(*) FROM comments WHERE UserId = 13 AND Score < 60;",
+    "difficulty": "simple",
+    "prompt_tokens": 937
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 479,
+    "gold_sql": "SELECT SUM(CASE WHEN T1.power LIKE '*' OR T1.power IS NULL THEN 1 ELSE 0 END) FROM cards AS T1 INNER JOIN sets AS T2 ON T2.code = T1.setCode WHERE T2.name = 'Coldsnap' AND T1.convertedManaCost > 5",
+    "pred_sql": "SELECT COUNT(T1.id) FROM cards AS T1 INNER JOIN sets AS T2 ON T1.set_code = T2.code WHERE T2.name = 'Coldsnap' AND T1.converted_mana_cost > 5 AND (T1.power = '*' OR T1.power IS NULL);",
+    "difficulty": "moderate",
+    "prompt_tokens": 1842
+  },
+  {
+    "db_id": "financial",
+    "question_id": 98,
+    "gold_sql": "SELECT T2.account_id FROM loan AS T1 INNER JOIN account AS T2 ON T1.account_id = T2.account_id WHERE STRFTIME('%Y', T1.date) = '1997' AND T2.frequency = 'POPLATEK TYDNE' ORDER BY T1.amount LIMIT 1",
+    "pred_sql": "SELECT DISTINCT T2.account_id FROM loan AS T1 INNER JOIN account AS T2 ON T1.account_id = T2.account_id WHERE strftime('%Y', T1.date) = '1997' ORDER BY T1.amount ASC LIMIT 1;",
+    "difficulty": "moderate",
+    "prompt_tokens": 582
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 347,
+    "gold_sql": "SELECT T1.id, T2.text, T1.hasContentWarning FROM cards AS T1 INNER JOIN rulings AS T2 ON T1.uuid = T2.uuid WHERE T1.artist = 'Stephen Daniele'",
+    "pred_sql": "SELECT id, text, hasContentWarning FROM cards WHERE artist = 'Stephen Daniel';",
+    "difficulty": "moderate",
+    "prompt_tokens": 1353
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1101,
+    "gold_sql": "SELECT CAST(SUM(T1.away_team_goal) AS REAL) / COUNT(T1.id) FROM \"Match\" AS T1 INNER JOIN TEAM AS T2 ON T1.away_team_api_id = T2.team_api_id INNER JOIN Country AS T3 ON T1.country_id = T3.id WHERE T2.team_long_name = 'Parma' AND T3.name = 'Italy'",
+    "pred_sql": "SELECT AVG(T2.away_team_goal) AS AverageGoals\nFROM Team AS T1\nJOIN Match AS T2 ON T1.team_api_id = T2.away_team_api_id\nJOIN Country AS T3 ON T2.country_id = T3.id\nWHERE T1.team_long_name = 'Parma' AND T3.name = 'Italy';",
+    "difficulty": "moderate",
+    "prompt_tokens": 2647
+  },
+  {
+    "db_id": "debit_card_specializing",
+    "question_id": 1473,
+    "gold_sql": "SELECT AVG(T2.Consumption) / 12 FROM customers AS T1 INNER JOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID WHERE SUBSTR(T2.Date, 1, 4) = '2013' AND T1.Segment = 'SME'",
+    "pred_sql": "SELECT AVG(T1.Consumption) / 12 AS AverageMonthlyConsumption\nFROM yearmonth AS T1\nJOIN customers AS T2 ON T1.CustomerID = T2.CustomerID\nWHERE T2.Segment = 'SME' AND T1.Date BETWEEN '201301' AND '201312';",
+    "difficulty": "moderate",
+    "prompt_tokens": 393
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1259,
+    "gold_sql": "SELECT T1.Diagnosis FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE (T2.RA = '-' OR T2.RA = '+-') AND T1.Birthday > '1985-01-01'",
+    "pred_sql": "SELECT DISTINCT T2.Diagnosis FROM Patient AS T1 INNER JOIN Examination AS T2 ON T1.ID = T2.ID WHERE YEAR(T1.Birthday) > 1985 AND T2.RA = '-';",
+    "difficulty": "moderate",
+    "prompt_tokens": 991
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 565,
+    "gold_sql": "SELECT IIF(T2.ClosedDate IS NULL, 'NOT well-finished', 'well-finished') AS resylt FROM comments AS T1 INNER JOIN posts AS T2 ON T1.PostId = T2.Id WHERE T1.UserId = 23853 AND T1.CreationDate = '2013-07-12 09:08:18.0'",
+    "pred_sql": "SELECT COUNT(CASE WHEN T2.ClosedDate IS NOT NULL THEN 1 ELSE 0 END) AS WellFinished, COUNT(CASE WHEN T2.ClosedDate IS NULL THEN 1 ELSE 0 END) AS NotWellFinished\nFROM comments AS T1\nJOIN posts AS T2 ON T1.PostId = T2.Id\nWHERE T1.CreationDate = '2013-07-12 09:08:18.0' AND T1.UserId = '23853';",
+    "difficulty": "moderate",
+    "prompt_tokens": 1132
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1195,
+    "gold_sql": "SELECT AVG(T2.ALB) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.PLT > 400 AND T1.Diagnosis = 'SLE' AND T1.SEX = 'F'",
+    "pred_sql": "SELECT AVG(T2.ALB) AS AverageAlbumin\nFROM Patient AS T1\nJOIN Laboratory AS T2 ON T1.ID = T2.ID\nWHERE T1.SEX = 'F' AND T2.PLT > 400 AND T1.Diagnosis = 'SLE';",
+    "difficulty": "moderate",
+    "prompt_tokens": 995
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 981,
+    "gold_sql": "SELECT T3.year, T3.name, T3.date, T3.time FROM qualifying AS T1 INNER JOIN drivers AS T2 on T1.driverId = T2.driverId INNER JOIN races AS T3 on T1.raceId = T3.raceId WHERE T1.driverId = ( SELECT driverId FROM drivers ORDER BY dob DESC LIMIT 1 ) ORDER BY T3.date ASC LIMIT 1",
+    "pred_sql": "SELECT T1.name, T2.date, T2.time\nFROM drivers AS T1\nJOIN qualifying AS T2 ON T1.driverId = T2.driverId\nWHERE T1.dob = (SELECT MAX(dob) FROM drivers)\nORDER BY T2.date ASC\nLIMIT 1;",
+    "difficulty": "moderate",
+    "prompt_tokens": 1074
+  },
+  {
+    "db_id": "superhero",
+    "question_id": 782,
+    "gold_sql": "SELECT T1.superhero_name FROM superhero AS T1 INNER JOIN colour AS T2 ON T1.eye_colour_id = T2.id AND T1.hair_colour_id = T2.id WHERE T2.colour = 'Black'",
+    "pred_sql": "SELECT superhero.superhero_name FROM superhero \nJOIN colour ON superhero.eye_colour_id = colour.id \nJOIN colour AS hair_colour ON superhero.hair_colour_id = hair_colour.id \nWHERE colour.colour = 'Black' AND hair_colour.colour = 'Black';",
+    "difficulty": "moderate",
+    "prompt_tokens": 564
+  },
+  {
+    "db_id": "debit_card_specializing",
+    "question_id": 1480,
+    "gold_sql": "SELECT SUBSTR(T2.Date, 5, 2) FROM customers AS T1 INNER JOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID WHERE SUBSTR(T2.Date, 1, 4) = '2013' AND T1.Segment = 'SME' GROUP BY SUBSTR(T2.Date, 5, 2) ORDER BY SUM(T2.Consumption) DESC LIMIT 1",
+    "pred_sql": "SELECT T1.Date, MAX(T1.Consumption) AS PeakConsumption\nFROM yearmonth AS T1\nJOIN customers AS T2 ON T1.CustomerID = T2.CustomerID\nWHERE T2.Segment = 'SME' AND T1.Date BETWEEN '201301' AND '201312'\nGROUP BY T1.Date;",
+    "difficulty": "moderate",
+    "prompt_tokens": 394
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1180,
+    "gold_sql": "SELECT T1.SEX FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.GPT = 9.0 AND T2.Date = '1992-06-12'",
+    "pred_sql": "SELECT DISTINCT T1.SEX FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.GPT = 9 AND T2.Date = '1992-06-12'",
+    "difficulty": "moderate",
+    "prompt_tokens": 1012
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 899,
+    "gold_sql": "SELECT DISTINCT T1.name FROM circuits AS T1 INNER JOIN races AS T2 ON T2.circuitID = T1.circuitId WHERE STRFTIME('%Y', T2.date) BETWEEN '1990' AND '2000' GROUP BY T1.name HAVING COUNT(T2.raceId) = 4",
+    "pred_sql": "SELECT T3.name FROM races AS T1 INNER JOIN seasons AS T2 ON T1.year = T2.year INNER JOIN circuits AS T3 ON T1.circuitId = T3.circuitId WHERE T2.year BETWEEN 1990 AND 2000 GROUP BY T3.name HAVING COUNT(T1.raceId) = 4;",
+    "difficulty": "moderate",
+    "prompt_tokens": 806
+  },
+  {
+    "db_id": "toxicology",
+    "question_id": 228,
+    "gold_sql": "SELECT ROUND(CAST(COUNT(CASE WHEN T.element = 'h' THEN T.atom_id ELSE NULL END) AS REAL) * 100 / COUNT(T.atom_id),4) FROM atom AS T WHERE T.molecule_id = 'TR206'",
+    "pred_sql": "SELECT CAST(SUM(CASE WHEN T3.element = 'h' THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(T3.atom_id) AS percent\nFROM molecule AS T1\nJOIN connected AS T2 ON T1.molecule_id = T2.molecule_id\nJOIN atom AS T3 ON T2.atom_id2 = T3.atom_id\nWHERE T1.molecule_id = 'TR206';",
+    "difficulty": "moderate",
+    "prompt_tokens": 381
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 473,
+    "gold_sql": "SELECT IIF(isForeignOnly = 1, 'YES', 'NO') FROM cards AS T1 INNER JOIN sets AS T2 ON T2.code = T1.setCode WHERE T1.name = 'Adarkar Valkyrie'",
+    "pred_sql": "SELECT COUNT(*) FROM cards AS T1 INNER JOIN foreign_data AS T2 ON T1.uuid = T2.uuid WHERE T1.name = 'Adarkar Valkyrie' AND T2.isForeignOnly = 1;",
+    "difficulty": "moderate",
+    "prompt_tokens": 1886
+  },
+  {
+    "db_id": "toxicology",
+    "question_id": 222,
+    "gold_sql": "SELECT COUNT(CASE WHEN T.label = '+' THEN T.molecule_id ELSE NULL END) - COUNT(CASE WHEN T.label = '-' THEN T.molecule_id ELSE NULL END) AS diff_car_notcar FROM molecule t",
+    "pred_sql": "SELECT SUM(CASE WHEN label = '+' THEN 1 ELSE 0 END) - SUM(CASE WHEN label = '-' THEN 1 ELSE 0 END) AS difference FROM molecule;",
+    "difficulty": "moderate",
+    "prompt_tokens": 364
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 446,
+    "gold_sql": "SELECT CAST(SUM(CASE WHEN T1.convertedManaCost = 10 THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(T1.id), T1.name FROM cards AS T1 INNER JOIN sets AS T2 ON T2.code = T1.setCode WHERE T1.name = 'Abyssal Horror'",
+    "pred_sql": "SELECT CAST(SUM(CASE WHEN convertedManaCost = 10 THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(*) FROM cards WHERE setCode = 'ABY';",
+    "difficulty": "moderate",
+    "prompt_tokens": 1765
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1279,
+    "gold_sql": "SELECT COUNT(CASE WHEN T1.Diagnosis LIKE '%SLE%' THEN T1.ID ELSE 0 END) / COUNT(T1.ID) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.`GOT` >= 60",
+    "pred_sql": "SELECT CAST(SUM(CASE WHEN GOT >= 60 AND Diagnosis = 'SLE' THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(ID) FROM Laboratory",
+    "difficulty": "moderate",
+    "prompt_tokens": 1011
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1095,
+    "gold_sql": "SELECT CAST(SUM(t2.buildUpPlaySpeed) AS REAL) / COUNT(t2.id) FROM Team AS t1 INNER JOIN Team_Attributes AS t2 ON t1.team_api_id = t2.team_api_id WHERE t1.team_long_name = 'Heart of Midlothian'",
+    "pred_sql": "SELECT AVG(T1.buildUpPlaySpeed) AS average_build_up_play_speed\nFROM Team_Attributes AS T1\nJOIN Team AS T2 ON T1.team_api_id = T2.team_api_id\nWHERE T2.team_long_name = 'Heart of Midlothian';",
+    "difficulty": "moderate",
+    "prompt_tokens": 2618
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1053,
+    "gold_sql": "SELECT DISTINCT t1.team_short_name FROM Team AS t1 INNER JOIN Team_attributes AS t2 ON t1.team_api_id = t2.team_api_id WHERE t2.chanceCreationPassingClass = 'Risky'",
+    "pred_sql": "SELECT T2.team_short_name FROM Team_Attributes AS T1 INNER JOIN Team AS T2 ON T1.team_api_id = T2.team_api_id WHERE T1.chanceCreationPassingClass = 'Risky';",
+    "difficulty": "moderate",
+    "prompt_tokens": 2634
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 472,
+    "gold_sql": "SELECT COUNT(DISTINCT T1.id) FROM sets AS T1 INNER JOIN set_translations AS T2 ON T2.setCode = T1.code WHERE T1.block = 'Ice Age' AND T2.language = 'Italian' AND T2.translation IS NOT NULL",
+    "pred_sql": "SELECT COUNT(DISTINCT s.id) FROM sets s INNER JOIN set_translations st ON s.code = st.setCode WHERE s.block = 'Ice Age' AND st.language = 'Italian' AND st.translation IS NOT NULL;",
+    "difficulty": "moderate",
+    "prompt_tokens": 1950
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1281,
+    "gold_sql": "SELECT T1.Birthday FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.GOT >= 60 ORDER BY T1.Birthday DESC LIMIT 1",
+    "pred_sql": "SELECT MIN(T2.Birthday) FROM Laboratory AS T1 INNER JOIN Patient AS T2 ON T1.ID = T2.ID WHERE T1.GOT >= 60;",
+    "difficulty": "moderate",
+    "prompt_tokens": 982
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1110,
+    "gold_sql": "SELECT t2.buildUpPlayPassingClass FROM Team AS t1 INNER JOIN Team_Attributes AS t2 ON t1.team_api_id = t2.team_api_id WHERE t1.team_long_name = 'FC Lorient' AND t2.`date` LIKE '2010-02-22%'",
+    "pred_sql": "SELECT T2.buildUpPlayPassingClass FROM Team AS T1 INNER JOIN Team_Attributes AS T2 ON T1.team_api_id = T2.team_api_id WHERE T1.team_long_name = 'FC Lorient' AND T2.date LIKE '2010-02-22%'",
+    "difficulty": "moderate",
+    "prompt_tokens": 2637
+  },
+  {
+    "db_id": "superhero",
+    "question_id": 830,
+    "gold_sql": "SELECT T3.attribute_name FROM superhero AS T1 INNER JOIN hero_attribute AS T2 ON T1.id = T2.hero_id INNER JOIN attribute AS T3 ON T2.attribute_id = T3.id WHERE T1.superhero_name = 'Black Panther' ORDER BY T2.attribute_value ASC LIMIT 1",
+    "pred_sql": "SELECT T3.attribute_name FROM superhero AS T1 INNER JOIN hero_attribute AS T2 ON T1.id = T2.hero_id INNER JOIN attribute AS T3 ON T2.attribute_id = T3.id WHERE T1.superhero_name = 'Black Panther' ORDER BY T2.attribute_value ASC LIMIT 1;",
+    "difficulty": "moderate",
+    "prompt_tokens": 551
+  },
+  {
+    "db_id": "debit_card_specializing",
+    "question_id": 1520,
+    "gold_sql": "SELECT T1.CustomerID, T2.Date, T2.Consumption FROM transactions_1k AS T1 INNER JOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID WHERE T1.Date = '2012-08-24' AND T1.Price = 124.05 AND T2.Date = '201201'",
+    "pred_sql": "SELECT \n    t1.Date AS Date,\n    SUM(t1.Amount) AS TotalSpent\nFROM \n    transactions_1k t1\nJOIN \n    yearmonth t2 ON t1.CustomerID = t2.CustomerID AND t1.Date = t2.Date\nWHERE \n    t1.Date = '2012-08-24' AND t1.Amount = 124.05\nGROUP BY \n    t1.Date;",
+    "difficulty": "moderate",
+    "prompt_tokens": 412
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1109,
+    "gold_sql": "SELECT t2.buildUpPlayDribblingClass FROM Team AS t1 INNER JOIN Team_Attributes AS t2 ON t1.team_api_id = t2.team_api_id WHERE t1.team_short_name = 'LEI' AND SUBSTR(t2.`date`, 1, 10) = '2015-09-10'",
+    "pred_sql": "SELECT T2.buildUpPlayDribblingClass FROM Team AS T1 INNER JOIN Team_Attributes AS T2 ON T1.team_api_id = T2.team_api_id WHERE T1.team_short_name = 'LEI' AND T2.date = '2015-09-10 00:00:00';",
+    "difficulty": "moderate",
+    "prompt_tokens": 2645
+  },
+  {
+    "db_id": "superhero",
+    "question_id": 790,
+    "gold_sql": "SELECT ( SELECT weight_kg FROM superhero WHERE full_name LIKE 'Emil Blonsky' ) - ( SELECT weight_kg FROM superhero WHERE full_name LIKE 'Charles Chandler' ) AS CALCULATE",
+    "pred_sql": "SELECT SUM(CASE WHEN T1.full_name = 'Emil Blonsky' THEN T1.weight_kg ELSE 0 END) - SUM(CASE WHEN T1.full_name = 'Charles Chandler' THEN T1.weight_kg ELSE 0 END) AS difference\nFROM superhero AS T1;",
+    "difficulty": "moderate",
+    "prompt_tokens": 543
+  },
+  {
+    "db_id": "codebase_community",
+    "question_id": 707,
+    "gold_sql": "SELECT Text FROM comments WHERE PostId IN ( SELECT Id FROM posts WHERE ViewCount BETWEEN 100 AND 150 ) ORDER BY Score DESC LIMIT 1",
+    "pred_sql": "SELECT T2.Text FROM posts AS T1 INNER JOIN comments AS T2 ON T1.Id = T2.PostId WHERE T1.ViewCount BETWEEN 100 AND 150 ORDER BY T2.Score DESC LIMIT 1;",
+    "difficulty": "moderate",
+    "prompt_tokens": 1014
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 391,
+    "gold_sql": "SELECT DISTINCT T1.name FROM cards AS T1 INNER JOIN foreign_data AS T2 ON T1.uuid = T2.uuid WHERE T1.originalType = 'Artifact' AND T1.colors = 'B'",
+    "pred_sql": "SELECT DISTINCT T1.name FROM cards AS T1 INNER JOIN foreign_data AS T2 ON T1.uuid = T2.uuid WHERE T1.originalType = 'Artifact' AND T1.colors = 'B' AND T2.language IS NOT NULL;",
+    "difficulty": "moderate",
+    "prompt_tokens": 1569
+  },
+  {
+    "db_id": "toxicology",
+    "question_id": 213,
+    "gold_sql": "SELECT T1.bond_type FROM bond AS T1 INNER JOIN connected AS T2 ON T1.bond_id = T2.bond_id WHERE T2.atom_id = 'TR004_8' AND T2.atom_id2 = 'TR004_20' OR T2.atom_id2 = 'TR004_8' AND T2.atom_id = 'TR004_20'",
+    "pred_sql": "SELECT T3.bond_type FROM connected AS T1 INNER JOIN atom AS T2 ON T1.atom_id = T2.atom_id INNER JOIN bond AS T3 ON T1.bond_id = T3.bond_id WHERE T2.atom_id = 'TR004_8' AND T2.atom_id2 = 'TR004_20' OR T2.atom_id = 'TR004_20' AND T2.atom_id2 = 'TR004_8';",
+    "difficulty": "moderate",
+    "prompt_tokens": 390
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 1003,
+    "gold_sql": "SELECT COUNT(T1.driverId) FROM results AS T1 INNER JOIN races AS T2 on T1.raceId = T2.raceId INNER JOIN status AS T3 on T1.statusId = T3.statusId WHERE T3.statusId = 3 AND T2.name = 'Canadian Grand Prix' GROUP BY T1.driverId ORDER BY COUNT(T1.driverId) DESC LIMIT 1",
+    "pred_sql": "SELECT COUNT(T1.statusId) AS accident_count\nFROM results AS T1\nJOIN races AS T2 ON T1.raceId = T2.raceId\nWHERE T2.name = 'Canadian Grand Prix' AND T1.statusId = 3\nORDER BY COUNT(T1.statusId) DESC\nLIMIT 1;",
+    "difficulty": "moderate",
+    "prompt_tokens": 980
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 972,
+    "gold_sql": "SELECT T2.driverId, T2.code FROM results AS T1 INNER JOIN drivers AS T2 on T1.driverId = T2.driverId WHERE STRFTIME('%Y', T2.dob) = '1971' AND T1.fastestLapTime IS NOT NULL",
+    "pred_sql": "SELECT DISTINCT T1.driverId, T1.code FROM drivers AS T1 INNER JOIN results AS T2 ON T1.driverId = T2.driverId WHERE T1.dob LIKE '1971%' AND T2.fastestLapTime IS NOT NULL;",
+    "difficulty": "moderate",
+    "prompt_tokens": 936
+  },
+  {
+    "db_id": "financial",
+    "question_id": 137,
+    "gold_sql": "SELECT COUNT(T1.account_id) FROM account AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id INNER JOIN loan AS T3 ON T1.account_id = T3.account_id WHERE T1.district_id = 1 AND (T3.status = 'C' OR T3.status = 'D')",
+    "pred_sql": "SELECT COUNT(DISTINCT account_id) FROM loan WHERE status = 'C';",
+    "difficulty": "moderate",
+    "prompt_tokens": 723
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1289,
+    "gold_sql": "SELECT COUNT(T1.ID) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T1.Diagnosis = 'SJS' AND T2.TP > 6.0 AND T2.TP < 8.5",
+    "pred_sql": "SELECT COUNT(T1.ID) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T1.Diagnosis = 'SJS' AND T2.TP BETWEEN 6.0 AND 8.5;",
+    "difficulty": "moderate",
+    "prompt_tokens": 974
+  },
+  {
+    "db_id": "california_schools",
+    "question_id": 74,
+    "gold_sql": "SELECT MIN(T1.`Low Grade`) FROM frpm AS T1 INNER JOIN schools AS T2 ON T1.CDSCode = T2.CDSCode WHERE T2.NCESDist = '0613360' AND T2.EdOpsCode = 'SPECON'",
+    "pred_sql": "SELECT MIN(T1.`Low Grade`) \nFROM frpm AS T1 \nJOIN schools AS T2 ON T1.CDSCode = T2.CDSCode \nWHERE T2.NCESDist = '0613360' AND T2.EdOpsCode = 'SPECON';",
+    "difficulty": "moderate",
+    "prompt_tokens": 1718
+  },
+  {
+    "db_id": "student_club",
+    "question_id": 1452,
+    "gold_sql": "SELECT AVG(T1.cost) FROM expense AS T1 INNER JOIN member as T2 ON T1.link_to_member = T2.member_id WHERE T2.position != 'Member'",
+    "pred_sql": "SELECT AVG(T2.cost) AS average_amount_paid\nFROM member AS T1\nJOIN expense AS T2 ON T1.member_id = T2.link_to_member\nWHERE T1.position != 'Member';",
+    "difficulty": "moderate",
+    "prompt_tokens": 873
+  },
+  {
+    "db_id": "financial",
+    "question_id": 171,
+    "gold_sql": "SELECT SUM(IIF(A3 = 'east Bohemia', A16, 0)) - SUM(IIF(A3 = 'north Bohemia', A16, 0)) FROM district",
+    "pred_sql": "SELECT SUM(CASE WHEN T2.A3 = 'East Bohemia' THEN T2.A16 ELSE 0 END) - SUM(CASE WHEN T2.A3 = 'North Bohemia' THEN T2.A16 ELSE 0 END) AS crime_difference\nFROM district AS T2\nJOIN loan AS T1 ON T2.district_id = T1.account_id;",
+    "difficulty": "moderate",
+    "prompt_tokens": 769
+  },
+  {
+    "db_id": "toxicology",
+    "question_id": 242,
+    "gold_sql": "SELECT DISTINCT T2.molecule_id FROM atom AS T1 INNER JOIN molecule AS T2 ON T1.molecule_id = T2.molecule_id WHERE SUBSTR(T1.atom_id, -2) BETWEEN '21' AND '25' AND T2.label = '+'",
+    "pred_sql": "SELECT DISTINCT T1.molecule_id FROM molecule AS T1 INNER JOIN atom AS T2 ON T1.molecule_id = T2.molecule_id WHERE T2.atom_id BETWEEN '21' AND '25' AND T1.label = '+';",
+    "difficulty": "moderate",
+    "prompt_tokens": 372
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1162,
+    "gold_sql": "SELECT COUNT(*) FROM Patient WHERE STRFTIME('%Y', Description) = '1997' AND SEX = 'F' AND Admission = '-'",
+    "pred_sql": "SELECT COUNT(T1.ID) FROM Patient AS T1 INNER JOIN Examination AS T2 ON T1.ID = T2.ID WHERE T1.Sex = 'F' AND YEAR(T1.Description) = 1997 AND T1.Admission = '-';",
+    "difficulty": "moderate",
+    "prompt_tokens": 983
+  },
+  {
+    "db_id": "toxicology",
+    "question_id": 245,
+    "gold_sql": "SELECT CAST(COUNT(T2.bond_id) AS REAL) / COUNT(T1.atom_id) FROM atom AS T1 INNER JOIN connected AS T2 ON T1.atom_id = T2.atom_id WHERE T1.element = 'i'",
+    "pred_sql": "SELECT AVG(COUNT(bond_id)) / COUNT(atom_id) AS average_bonds\nFROM atom\nJOIN bond ON atom.atom_id = bond.atom_id\nWHERE element = 'i';",
+    "difficulty": "moderate",
+    "prompt_tokens": 358
+  },
+  {
+    "db_id": "student_club",
+    "question_id": 1327,
+    "gold_sql": "SELECT T1.first_name, T1.last_name FROM member AS T1 INNER JOIN attendance AS T2 ON T1.member_id = T2.link_to_member INNER JOIN event AS T3 ON T2.link_to_event = T3.event_id WHERE T3.event_name = 'Laugh Out Loud'",
+    "pred_sql": "SELECT m.first_name, m.last_name\nFROM member m\nJOIN attendance a ON m.member_id = a.link_to_member\nJOIN event e ON a.link_to_event = e.event_id\nWHERE e.event_name = 'Laugh Out Loud';",
+    "difficulty": "moderate",
+    "prompt_tokens": 837
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1219,
+    "gold_sql": "SELECT AVG(T2.UA) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE (T2.UA < 6.5 AND T1.SEX = 'F') OR (T2.UA < 8.0 AND T1.SEX = 'M') AND T2.Date = ( SELECT MAX(Date) FROM Laboratory )",
+    "pred_sql": "SELECT AVG(T1.UA) AS AverageUAIndex\nFROM Laboratory AS T1\nJOIN Patient AS T2 ON T1.ID = T2.ID\nWHERE T1.UA < 8.0 AND T2.SEX = 'M'\n   OR T1.UA < 6.5 AND T2.SEX = 'F'\nGROUP BY T2.ID\nORDER BY T1.Date DESC\nLIMIT 1;",
+    "difficulty": "moderate",
+    "prompt_tokens": 765
+  },
+  {
+    "db_id": "superhero",
+    "question_id": 824,
+    "gold_sql": "SELECT T1.superhero_name FROM superhero AS T1 INNER JOIN hero_power AS T2 ON T1.id = T2.hero_id INNER JOIN superpower AS T3 ON T2.power_id = T3.id WHERE T3.power_name = 'Wind Control' ORDER BY T1.superhero_name",
+    "pred_sql": "SELECT superhero_name FROM superhero WHERE id IN (SELECT hero_id FROM hero_power WHERE power_id = (SELECT id FROM superpower WHERE power_name = 'Wind Control')) ORDER BY superhero_name ASC;",
+    "difficulty": "moderate",
+    "prompt_tokens": 567
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1124,
+    "gold_sql": "SELECT DISTINCT t1.player_name FROM Player AS t1 INNER JOIN Player_Attributes AS t2 ON t1.player_api_id = t2.player_api_id WHERE t2.attacking_work_rate = 'high'",
+    "pred_sql": "SELECT T1.player_name FROM Player AS T1 INNER JOIN Player_Attributes AS T2 ON T1.player_api_id = T2.player_api_id WHERE T2.attacking_work_rate = 'high';",
+    "difficulty": "moderate",
+    "prompt_tokens": 2611
+  },
+  {
+    "db_id": "financial",
+    "question_id": 95,
+    "gold_sql": "SELECT T1.account_id  FROM account AS T1 INNER JOIN disp AS T2 ON T1.account_id = T2.account_id INNER JOIN client AS T3 ON T2.client_id = T3.client_id INNER JOIN district AS T4 on T4.district_id = T1.district_id WHERE T2.client_id = ( SELECT client_id FROM client ORDER BY birth_date DESC LIMIT 1) GROUP BY T4.A11, T1.account_id",
+    "pred_sql": "SELECT T1.account_id FROM client AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id ORDER BY T1.birth_date ASC, T2.A11 DESC LIMIT 1;",
+    "difficulty": "moderate",
+    "prompt_tokens": 731
+  },
+  {
+    "db_id": "superhero",
+    "question_id": 751,
+    "gold_sql": "SELECT T3.power_name FROM superhero AS T1 INNER JOIN hero_power AS T2 ON T1.id = T2.hero_id INNER JOIN superpower AS T3 ON T3.id = T2.power_id INNER JOIN gender AS T4 ON T4.id = T1.gender_id WHERE T4.gender = 'Male' LIMIT 5",
+    "pred_sql": "SELECT DISTINCT sp.power_name \nFROM superhero s \nJOIN hero_power hp ON s.id = hp.hero_id \nJOIN superpower sp ON hp.power_id = sp.id \nJOIN gender g ON s.gender_id = g.id \nWHERE g.gender = 'Male' \nLIMIT 5;",
+    "difficulty": "moderate",
+    "prompt_tokens": 517
+  },
+  {
+    "db_id": "superhero",
+    "question_id": 739,
+    "gold_sql": "SELECT T1.superhero_name FROM superhero AS T1 INNER JOIN hero_power AS T2 ON T1.id = T2.hero_id INNER JOIN superpower AS T3 ON T2.power_id = T3.id WHERE T3.power_name = 'Death Touch'",
+    "pred_sql": "SELECT superhero.superhero_name FROM superhero \nJOIN hero_power ON superhero.id = hero_power.hero_id \nJOIN superpower ON hero_power.power_id = superpower.id \nWHERE superpower.power_name = 'Death Touch';",
+    "difficulty": "moderate",
+    "prompt_tokens": 512
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 928,
+    "gold_sql": "SELECT T3.forename, T3.surname, T3.driverRef FROM races AS T1 INNER JOIN results AS T2 ON T2.raceId = T1.raceId INNER JOIN drivers AS T3 ON T3.driverId = T2.driverId WHERE T1.name = 'Canadian Grand Prix' AND T2.rank = 1 AND T1.year = 2007",
+    "pred_sql": "SELECT T2.driverRef FROM races AS T1 INNER JOIN results AS T2 ON T1.raceId = T2.raceId WHERE T1.name = 'Canadian Grand Prix' AND T1.year = 2007 AND T2.position = 1;",
+    "difficulty": "moderate",
+    "prompt_tokens": 980
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1038,
+    "gold_sql": "SELECT t1.name, SUM(t2.home_team_goal) + SUM(t2.away_team_goal) FROM League AS t1 INNER JOIN Match AS t2 ON t1.id = t2.league_id GROUP BY t1.name ORDER BY SUM(t2.home_team_goal) + SUM(t2.away_team_goal) ASC LIMIT 5",
+    "pred_sql": "SELECT T2.name FROM Match AS T1 INNER JOIN League AS T2 ON T1.league_id = T2.id GROUP BY T2.name ORDER BY SUM(T1.home_team_goal + T1.away_team_goal) ASC LIMIT 5;",
+    "difficulty": "moderate",
+    "prompt_tokens": 2655
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 459,
+    "gold_sql": "SELECT name FROM cards WHERE name IN ('Serra Angel', 'Shrine Keeper') ORDER BY convertedManaCost DESC LIMIT 1",
+    "pred_sql": "SELECT name FROM cards WHERE name IN ('Serra Angel', 'Shrine Keeper') ORDER BY convertedManaCost DESC LIMIT 1;",
+    "difficulty": "moderate",
+    "prompt_tokens": 1529
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1085,
+    "gold_sql": "SELECT t1.player_name, t2.crossing FROM Player AS t1 INNER JOIN Player_Attributes AS t2 ON t1.player_api_id = t2.player_api_id WHERE t1.player_name IN ('Alexis', 'Ariel Borysiuk', 'Arouna Kone') ORDER BY t2.crossing DESC LIMIT 1",
+    "pred_sql": "SELECT T1.player_name FROM Player AS T1 INNER JOIN Player_Attributes AS T2 ON T1.player_api_id = T2.player_api_id WHERE T1.player_name IN ('Alexis', 'Ariel Borysiuk', 'Arouna Kone') ORDER BY T2.crossing DESC LIMIT 1;",
+    "difficulty": "moderate",
+    "prompt_tokens": 2607
+  },
+  {
+    "db_id": "california_schools",
+    "question_id": 25,
+    "gold_sql": "SELECT T1.sname, T2.`Charter Funding Type` FROM satscores AS T1 INNER JOIN frpm AS T2 ON T1.cds = T2.CDSCode WHERE T2.`District Name` LIKE 'Riverside%' GROUP BY T1.sname, T2.`Charter Funding Type` HAVING CAST(SUM(T1.AvgScrMath) AS REAL) / COUNT(T1.cds) > 400",
+    "pred_sql": "SELECT DISTINCT T2.FundingType FROM schools AS T1 INNER JOIN satscores AS T2 ON T1.CDSCode = T2.cds WHERE T1.County = 'Riverside' AND AVG(T2.AvgScrMath) > 400;",
+    "difficulty": "moderate",
+    "prompt_tokens": 1716
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1263,
+    "gold_sql": "SELECT DISTINCT T1.ID FROM Patient AS T1 INNER JOIN Examination AS T2 ON T1.ID = T2.ID INNER JOIN Laboratory AS T3 on T1.ID = T3.ID WHERE (T3.HCT >= 52 OR T3.HCT <= 29) ORDER BY T2.`aCL IgA` DESC LIMIT 1",
+    "pred_sql": "SELECT T1.ID FROM Patient AS T1 INNER JOIN Examination AS T2 ON T1.ID = T2.ID WHERE T1.HCT NOT BETWEEN 29 AND 52 ORDER BY T2.`aCL IgA` DESC LIMIT 1;",
+    "difficulty": "moderate",
+    "prompt_tokens": 988
+  },
+  {
+    "db_id": "financial",
+    "question_id": 180,
+    "gold_sql": "SELECT T1.client_id, T3.account_id FROM client AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id INNER JOIN disp AS T4 ON T1.client_id = T4.client_id INNER JOIN account AS T3 ON T2.district_id = T3.district_id and T4.account_id = T3.account_id WHERE T2.A3 = 'east Bohemia' AND STRFTIME('%Y', T1.birth_date) BETWEEN '1983' AND '1987'",
+    "pred_sql": "SELECT DISTINCT T1.client_id FROM client AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id WHERE T1.birth_date BETWEEN '1983-01-01' AND '1987-12-31' AND T2.A2 = 'East Bohemia';",
+    "difficulty": "moderate",
+    "prompt_tokens": 700
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1225,
+    "gold_sql": "SELECT T1.ID,T1.SEX FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.`T-BIL` >= 2.0 GROUP BY T1.SEX,T1.ID",
+    "pred_sql": "SELECT T1.SEX, GROUP_CONCAT(DISTINCT T1.ID) AS IDs\nFROM Patient AS T1\nJOIN Laboratory AS T2 ON T1.ID = T2.ID\nWHERE T2.`T-BIL` >= 2.0\nGROUP BY T1.SEX;",
+    "difficulty": "moderate",
+    "prompt_tokens": 979
+  },
+  {
+    "db_id": "debit_card_specializing",
+    "question_id": 1487,
+    "gold_sql": "SELECT T1.CustomerID FROM customers AS T1 INNER JOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID WHERE T1.Segment = 'LAM' AND T2.Date = '201310' AND T1.Currency = 'EUR' GROUP BY T1.CustomerID ORDER BY SUM(T2.Consumption) DESC LIMIT 1",
+    "pred_sql": "SELECT c.Segment\nFROM customers c\nJOIN yearmonth y ON c.CustomerID = y.CustomerID\nWHERE c.Currency = 'Euro' AND y.Date LIKE '201310%'\nORDER BY y.Consumption DESC\nLIMIT 1;",
+    "difficulty": "moderate",
+    "prompt_tokens": 371
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1052,
+    "gold_sql": "SELECT COUNT(DISTINCT t1.id) FROM Player AS t1 INNER JOIN Player_Attributes AS t2 ON t1.player_api_id = t2.player_api_id WHERE t1.weight < 130 AND t2.preferred_foot = 'left'",
+    "pred_sql": "SELECT COUNT(T1.player_api_id) FROM Player AS T1 INNER JOIN Player_Attributes AS T2 ON T1.player_api_id = T2.player_api_id WHERE T1.weight < 130 AND T2.preferred_foot = 'left';",
+    "difficulty": "moderate",
+    "prompt_tokens": 2614
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1285,
+    "gold_sql": "SELECT T1.`First Date` FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.LDH >= 500 ORDER BY T1.`First Date` DESC LIMIT 1",
+    "pred_sql": "SELECT MAX(T1.`First Date`) AS LatestDate\nFROM Patient AS T1\nJOIN Laboratory AS T2 ON T1.ID = T2.ID\nWHERE T2.LDH >= 500;",
+    "difficulty": "moderate",
+    "prompt_tokens": 973
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 474,
+    "gold_sql": "SELECT COUNT(T1.id) FROM sets AS T1 INNER JOIN set_translations AS T2 ON T2.setCode = T1.code WHERE T2.translation IS NOT NULL AND T1.baseSetSize < 100 AND T2.language = 'Italian'",
+    "pred_sql": "SELECT COUNT(DISTINCT T2.id) FROM set_translations AS T1 INNER JOIN sets AS T2 ON T1.setCode = T2.code WHERE T1.language = 'Italian' AND T2.baseSetSize < 100;",
+    "difficulty": "moderate",
+    "prompt_tokens": 1964
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1300,
+    "gold_sql": "SELECT T1.Diagnosis FROM Examination AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.TG < 200 ORDER BY T2.TG DESC LIMIT 1",
+    "pred_sql": "SELECT Diagnosis FROM Patient WHERE ID IN (\n    SELECT ID FROM Laboratory WHERE TG < 200 ORDER BY TG DESC LIMIT 1\n)",
+    "difficulty": "moderate",
+    "prompt_tokens": 968
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 1011,
+    "gold_sql": "WITH lap_times_in_seconds AS (SELECT driverId, (CASE WHEN SUBSTR(time, 1, INSTR(time, ':') - 1) <> '' THEN CAST(SUBSTR(time, 1, INSTR(time, ':') - 1) AS REAL) * 60 ELSE 0 END + CASE WHEN SUBSTR(time, INSTR(time, ':') + 1, INSTR(time, '.') - INSTR(time, ':') - 1) <> '' THEN CAST(SUBSTR(time, INSTR(time, ':') + 1, INSTR(time, '.') - INSTR(time, ':') - 1) AS REAL) ELSE 0 END + CASE WHEN SUBSTR(time, INSTR(time, '.') + 1) <> '' THEN CAST(SUBSTR(time, INSTR(time, '.') + 1) AS REAL) / 1000 ELSE 0 END) AS time_in_seconds FROM lapTimes) SELECT T2.forename, T2.surname, T1.driverId FROM (SELECT driverId, MIN(time_in_seconds) AS min_time_in_seconds FROM lap_times_in_seconds GROUP BY driverId) AS T1 INNER JOIN drivers AS T2 ON T1.driverId = T2.driverId ORDER BY T1.min_time_in_seconds ASC LIMIT 20",
+    "pred_sql": "SELECT T1.forename, T1.surname\nFROM drivers AS T1\nJOIN lapTimes AS T2 ON T1.driverId = T2.driverId\nWHERE T2.time = (SELECT MIN(time) FROM lapTimes)\nORDER BY T2.time ASC\nLIMIT 20;",
+    "difficulty": "challenging",
+    "prompt_tokens": 1050
+  },
+  {
+    "db_id": "toxicology",
+    "question_id": 277,
+    "gold_sql": "SELECT T1.element FROM atom AS T1 INNER JOIN connected AS T2 ON T1.atom_id = T2.atom_id WHERE T2.bond_id = 'TR000_1_2'",
+    "pred_sql": "SELECT DISTINCT T3.element FROM bond AS T1 INNER JOIN connected AS T2 ON T1.bond_id = T2.bond_id INNER JOIN atom AS T3 ON T2.atom_id2 = T3.atom_id WHERE T1.bond_id = 'TR000_1_2';",
+    "difficulty": "challenging",
+    "prompt_tokens": 341
+  },
+  {
+    "db_id": "superhero",
+    "question_id": 835,
+    "gold_sql": "SELECT CAST(COUNT(CASE WHEN T3.alignment = 'Good' THEN T1.id ELSE NULL END) AS REAL) * 100 / COUNT(T1.id) FROM superhero AS T1 INNER JOIN publisher AS T2 ON T1.publisher_id = T2.id INNER JOIN alignment AS T3 ON T1.alignment_id = T3.id WHERE T2.publisher_name = 'Marvel Comics'",
+    "pred_sql": "SELECT CAST(SUM(CASE WHEN T2.publisher_name = 'Marvel Comics' AND T3.alignment = 'Good' THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(T2.publisher_name) FROM superhero AS T1 INNER JOIN publisher AS T2 ON T1.publisher_id = T2.id INNER JOIN alignment AS T3 ON T1.alignment_id = T3.id WHERE T2.publisher_name = 'Marvel Comics'",
+    "difficulty": "challenging",
+    "prompt_tokens": 568
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1189,
+    "gold_sql": "SELECT COUNT(*) FROM Examination WHERE Thrombosis = 2 AND `ANA Pattern` = 'S' AND `aCL IgM` > (SELECT AVG(`aCL IgM`) * 1.2 FROM Examination WHERE Thrombosis = 2 AND `ANA Pattern` = 'S')",
+    "pred_sql": "SELECT COUNT(T1.ID) \nFROM Patient AS T1 \nJOIN Examination AS T2 ON T1.ID = T2.ID \nWHERE T2.Thrombosis = 2 AND T2.`ANA Pattern` = 'S' AND T2.`aCL IgM` > (AVG(T2.`aCL IgM`) * 1.2);",
+    "difficulty": "challenging",
+    "prompt_tokens": 1031
+  },
+  {
+    "db_id": "toxicology",
+    "question_id": 330,
+    "gold_sql": "SELECT CAST(SUM(CASE WHEN T1.label = '+' THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(DISTINCT T1.molecule_id) FROM molecule AS T1 INNER JOIN atom AS T2 ON T1.molecule_id = T2.molecule_id INNER JOIN bond AS T3 ON T1.molecule_id = T3.molecule_id WHERE T3.bond_type = '#' AND T2.element = 'h'",
+    "pred_sql": "SELECT CAST(SUM(CASE WHEN T3.element = 'h' AND T4.bond_type = '#' THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(T1.molecule_id) FROM molecule AS T1 INNER JOIN connected AS T2 ON T1.molecule_id = T2.molecule_id INNER JOIN atom AS T3 ON T2.atom_id2 = T3.atom_id INNER JOIN bond AS T4 ON T2.bond_id = T4.bond_id WHERE T1.label = '+'",
+    "difficulty": "challenging",
+    "prompt_tokens": 385
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1202,
+    "gold_sql": "SELECT COUNT(T1.ID) FROM Patient AS T1 INNER JOIN Examination AS T2 ON T1.ID = T2.ID WHERE T2.Diagnosis = 'Behcet' AND T1.SEX = 'M' AND STRFTIME('%Y', T2.`Examination Date`) BETWEEN '1995' AND '1997' AND T1.Admission = '-'",
+    "pred_sql": "SELECT COUNT(T1.ID) \nFROM Patient AS T1 \nJOIN Examination AS T2 ON T1.ID = T2.ID \nWHERE T1.SEX = 'M' \n  AND T2.`Examination Date` BETWEEN '1995' AND '1997' \n  AND T1.Diagnosis LIKE '%Behcet%' \n  AND T1.Admission = '-';",
+    "difficulty": "challenging",
+    "prompt_tokens": 1016
+  },
+  {
+    "db_id": "california_schools",
+    "question_id": 28,
+    "gold_sql": "SELECT T2.School, T2.DOC FROM frpm AS T1 INNER JOIN schools AS T2 ON T1.CDSCode = T2.CDSCode WHERE T2.FundingType = 'Locally funded' AND (T1.`Enrollment (K-12)` - T1.`Enrollment (Ages 5-17)`) > (SELECT AVG(T3.`Enrollment (K-12)` - T3.`Enrollment (Ages 5-17)`) FROM frpm AS T3 INNER JOIN schools AS T4 ON T3.CDSCode = T4.CDSCode WHERE T4.FundingType = 'Locally funded')",
+    "pred_sql": "SELECT DISTINCT T1.School, T1.DOCType\nFROM schools AS T1\nJOIN frpm AS T2 ON T1.CDSCode = T2.CDSCode\nWHERE T1.FundingType = 'Locally Funded'\nAND T1.Enrollment (K-12) - T1.Enrollment (Ages 5-17) > (\n    SELECT AVG(T2.Enrollment (K-12) - T2.Enrollment (Ages 5-17))\n    FROM frpm AS T2\n    JOIN schools AS T1 ON T2.CDSCode = T1.CDSCode\n    WHERE T1.FundingType = 'Locally Funded'\n);",
+    "difficulty": "challenging",
+    "prompt_tokens": 1751
+  },
+  {
+    "db_id": "superhero",
+    "question_id": 772,
+    "gold_sql": "SELECT T1.eye_colour_id, T1.hair_colour_id, T1.skin_colour_id FROM superhero AS T1 INNER JOIN publisher AS T2 ON T2.id = T1.publisher_id INNER JOIN gender AS T3 ON T3.id = T1.gender_id WHERE T2.publisher_name = 'Dark Horse Comics' AND T3.gender = 'Female'",
+    "pred_sql": "SELECT T1.eye_colour_id, T1.hair_colour_id, T1.skin_colour_id \nFROM superhero AS T1 \nJOIN publisher AS T2 ON T1.publisher_id = T2.id \nWHERE T1.gender = 'Female' AND T2.publisher_name = 'Dark Horse Comics';",
+    "difficulty": "challenging",
+    "prompt_tokens": 562
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1292,
+    "gold_sql": "SELECT T3.`aCL IgG`, T3.`aCL IgM`, T3.`aCL IgA` FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID INNER JOIN Examination AS T3 ON T3.ID = T2.ID WHERE T1.SEX = 'F' AND T2.UA > 6.5 ORDER BY T2.UA DESC LIMIT 1",
+    "pred_sql": "SELECT T2.`aCL IgG`, T2.`aCL IgM`, T2.`aCL IgA`\nFROM Patient AS T1\nJOIN Examination AS T2 ON T1.ID = T2.ID\nWHERE T1.Sex = 'F' AND T1.UA > 6.50\nORDER BY T1.UA DESC\nLIMIT 1;",
+    "difficulty": "challenging",
+    "prompt_tokens": 999
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 416,
+    "gold_sql": "SELECT CAST(SUM(CASE WHEN T2.language = 'French' THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(T1.id) FROM cards AS T1 INNER JOIN foreign_data AS T2 ON T1.uuid = T2.uuid WHERE T1.power IS NULL OR T1.power = '*'",
+    "pred_sql": "SELECT CAST(SUM(CASE WHEN language = 'French' AND power IS NULL OR power = '*' THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(CASE WHEN power IS NULL OR power = '*' THEN 1 ELSE 0 END) FROM cards WHERE language = 'French'",
+    "difficulty": "challenging",
+    "prompt_tokens": 1967
+  },
+  {
+    "db_id": "thrombosis_prediction",
+    "question_id": 1295,
+    "gold_sql": "SELECT COUNT(T1.ID) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID INNER JOIN Examination AS T3 ON T1.ID = T3.ID WHERE T2.`T-BIL` >= 2 AND T3.`ANA Pattern` LIKE '%P%'",
+    "pred_sql": "SELECT COUNT(T1.ID) FROM Laboratory AS T1 INNER JOIN Examination AS T2 ON T1.ID = T2.ID WHERE T1.`T-BIL` >= 2.0 AND T2.`ANA Pattern` LIKE '%P%'",
+    "difficulty": "challenging",
+    "prompt_tokens": 994
+  },
+  {
+    "db_id": "toxicology",
+    "question_id": 268,
+    "gold_sql": "SELECT T2.element FROM connected AS T1 INNER JOIN atom AS T2 ON T1.atom_id = T2.atom_id WHERE T1.bond_id = 'TR001_10_11'",
+    "pred_sql": "SELECT T3.element FROM bond AS T1 INNER JOIN connected AS T2 ON T1.bond_id = T2.bond_id INNER JOIN atom AS T3 ON T2.atom_id2 = T3.atom_id WHERE T1.bond_id = 'TR001_10_11';",
+    "difficulty": "challenging",
+    "prompt_tokens": 342
+  },
+  {
+    "db_id": "formula_1",
+    "question_id": 880,
+    "gold_sql": "SELECT (SUM(IIF(T2.raceId = 853, T2.fastestLapSpeed, 0)) - SUM(IIF(T2.raceId = 854, T2.fastestLapSpeed, 0))) * 100 / SUM(IIF(T2.raceId = 853, T2.fastestLapSpeed, 0)) FROM drivers AS T1 INNER JOIN results AS T2 ON T2.driverId = T1.driverId WHERE T1.forename = 'Paul' AND T1.surname = 'di Resta'",
+    "pred_sql": "SELECT \n    (T2.fastestLapSpeed - T1.fastestLapSpeed) * 100 / T1.fastestLapSpeed AS percentage_faster\nFROM \n    drivers AS T1\nJOIN \n    results AS T2 ON T1.driverId = T2.driverId\nWHERE \n    T1.forename = 'Paul' AND T1.surname = 'di Resta' AND T2.raceId = 853\nORDER BY \n    T2.fastestLapSpeed DESC\nLIMIT 1;",
+    "difficulty": "challenging",
+    "prompt_tokens": 1118
+  },
+  {
+    "db_id": "card_games",
+    "question_id": 506,
+    "gold_sql": "SELECT CAST(SUM(CASE WHEN isNonFoilOnly = 1 THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(id) FROM sets WHERE code IN ( SELECT setCode FROM set_translations WHERE language = 'Japanese' )",
+    "pred_sql": "SELECT CAST(SUM(CASE WHEN T2.language = 'Japanese' AND T1.isNonFoilOnly = 1 THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(T2.language) FROM foreign_data AS T1 INNER JOIN set_translations AS T2 ON T1.uuid = T2.setCode WHERE T2.language = 'Japanese'",
+    "difficulty": "challenging",
+    "prompt_tokens": 1983
+  },
+  {
+    "db_id": "toxicology",
+    "question_id": 328,
+    "gold_sql": "SELECT T1.element FROM atom AS T1 INNER JOIN bond AS T2 ON T1.molecule_id = T2.molecule_id WHERE T1.molecule_id = 'TR024' AND T2.bond_type = '='",
+    "pred_sql": "SELECT DISTINCT T3.element FROM molecule AS T1 INNER JOIN bond AS T2 ON T1.molecule_id = T2.molecule_id INNER JOIN connected AS T3 ON T2.bond_id = T3.bond_id WHERE T1.label = 'carcinogenic' AND T2.bond_type = '=' AND T1.molecule_id = 'TR024';",
+    "difficulty": "challenging",
+    "prompt_tokens": 468
+  },
+  {
+    "db_id": "european_football_2",
+    "question_id": 1042,
+    "gold_sql": "SELECT t1.name FROM League AS t1 INNER JOIN Match AS t2 ON t1.id = t2.league_id WHERE t2.season = '2009/2010' GROUP BY t1.name HAVING (CAST(SUM(t2.home_team_goal) AS REAL) / COUNT(DISTINCT t2.id)) - (CAST(SUM(t2.away_team_goal) AS REAL) / COUNT(DISTINCT t2.id)) > 0",
+    "pred_sql": "SELECT T2.name FROM Match AS T1 INNER JOIN League AS T2 ON T1.league_id = T2.id WHERE T1.season = '2009/2010' GROUP BY T2.name HAVING AVG(T1.home_team_goal) > AVG(T1.away_team_goal)",
+    "difficulty": "challenging",
+    "prompt_tokens": 2739
+  },
+  {
+    "db_id": "toxicology",
+    "question_id": 334,
+    "gold_sql": "SELECT T1.element FROM atom AS T1 INNER JOIN molecule AS T2 ON T1.molecule_id = T2.molecule_id WHERE T1.atom_id = 'TR004_7' AND T2.label = '-'",
+    "pred_sql": "SELECT T3.element FROM molecule AS T1 INNER JOIN connected AS T2 ON T1.molecule_id = T2.molecule_id INNER JOIN atom AS T3 ON T2.atom_id2 = T3.atom_id WHERE T1.label = '-' AND T3.atom_id = 'TR004_7';",
+    "difficulty": "challenging",
+    "prompt_tokens": 478
+  },
+  {
+    "db_id": "student_club",
+    "question_id": 1457,
+    "gold_sql": "SELECT DISTINCT T3.first_name, T3.last_name, T3.phone FROM expense AS T1 INNER JOIN budget AS T2 ON T1.link_to_budget = T2.budget_id INNER JOIN member AS T3 ON T3.member_id = T1.link_to_member WHERE T1.cost > ( SELECT AVG(T1.cost) FROM expense AS T1 INNER JOIN budget AS T2 ON T1.link_to_budget = T2.budget_id INNER JOIN member AS T3 ON T3.member_id = T1.link_to_member )",
+    "pred_sql": "SELECT m.first_name, m.last_name, m.phone\nFROM member m\nJOIN expense e ON m.member_id = e.link_to_member\nWHERE e.cost > (SELECT AVG(cost) FROM expense);",
+    "difficulty": "challenging",
+    "prompt_tokens": 881
+  },
+  {
+    "db_id": "student_club",
+    "question_id": 1437,
+    "gold_sql": "SELECT DISTINCT T1.link_to_member, T3.link_to_event FROM expense AS T1 INNER JOIN member AS T2 ON T1.link_to_member = T2.member_id INNER JOIN attendance AS T3 ON T2.member_id = T3.link_to_member WHERE date(SUBSTR(T1.expense_date, 1, 10)) BETWEEN '2019-01-10' AND '2019-11-19' AND T1.approved = 'true'",
+    "pred_sql": "SELECT m.first_name, m.last_name, e.event_name, e.event_id\nFROM member m\nJOIN expense e ON m.member_id = e.link_to_member\nWHERE e.approved = 'true' AND e.expense_date BETWEEN '2019-01-10' AND '2019-11-19';",
+    "difficulty": "challenging",
+    "prompt_tokens": 934
+  }
+]

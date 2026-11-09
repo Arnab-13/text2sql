@@ -1,0 +1,6 @@
+{
+  "avg_column_recall": 0.8128869047619048,
+  "full_coverage_rate": 0.52,
+  "n_questions": 200,
+  "known_limitation": "recall computed on unqualified column names; may overestimate when duplicate column names exist across tables"
+}

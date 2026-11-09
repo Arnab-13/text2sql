@@ -1,0 +1,18 @@
+{
+  "system_a": {
+    "execution_accuracy": 0.39593908629441626,
+    "valid_sql_rate": 0.7411167512690355
+  },
+  "system_c": {
+    "execution_accuracy": 0.39593908629441626,
+    "valid_sql_rate": 0.7360406091370558,
+    "avg_prompt_tokens": 1105.515
+  },
+  "paired_comparison": {
+    "both_correct": 61,
+    "both_wrong": 105,
+    "a_only_correct": 17,
+    "c_only_correct": 17,
+    "mcnemar_pvalue": 1.0
+  }
+}

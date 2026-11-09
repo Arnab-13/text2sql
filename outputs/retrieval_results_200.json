@@ -1,0 +1,5503 @@
+[
+  {
+    "question_id": 998,
+    "db_id": "formula_1",
+    "difficulty": "simple",
+    "gold_cols": [
+      "wins",
+      "points"
+    ],
+    "retrieved_cols": [
+      "fastestlaptime",
+      "points",
+      "time",
+      "q1",
+      "driverid",
+      "grid",
+      "driverref",
+      "name",
+      "q3",
+      "q2",
+      "milliseconds"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 190,
+    "db_id": "financial",
+    "difficulty": "simple",
+    "gold_cols": [
+      "client_id",
+      "birth_date",
+      "district_id",
+      "a3"
+    ],
+    "retrieved_cols": [
+      "client_id",
+      "status",
+      "a5",
+      "issued",
+      "date",
+      "type",
+      "account_id",
+      "a3",
+      "gender",
+      "bank_to",
+      "a2",
+      "a6",
+      "birth_date",
+      "frequency",
+      "district_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 42,
+    "db_id": "california_schools",
+    "difficulty": "simple",
+    "gold_cols": [
+      "edopsname",
+      "avgscrmath",
+      "cds",
+      "cdscode"
+    ],
+    "retrieved_cols": [
+      "edopscode",
+      "latitude",
+      "soctype",
+      "eilcode",
+      "virtual",
+      "doc",
+      "soc",
+      "numtsttakr",
+      "gsserved",
+      "avgscrwrite",
+      "eilname",
+      "avgscrread",
+      "edopsname",
+      "avgscrmath",
+      "gsoffered"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 1228,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "tg",
+      "diagnosis"
+    ],
+    "retrieved_cols": [
+      "fg",
+      "thrombosis",
+      "tg",
+      "gpt",
+      "cre",
+      "id",
+      "plt",
+      "rvvt",
+      "glu",
+      "iga",
+      "t-cho",
+      "t-bil",
+      "lac",
+      "hct"
+    ],
+    "full_coverage": false,
+    "recall": 0.6666666666666666
+  },
+  {
+    "question_id": 456,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "supertypes",
+      "name",
+      "subtypes"
+    ],
+    "retrieved_cols": [
+      "promotypes",
+      "availability",
+      "leadershipskills",
+      "type",
+      "subtypes",
+      "originaltype",
+      "flavorname",
+      "types",
+      "supertypes",
+      "keywords",
+      "printings",
+      "coloridentity",
+      "colorindicator",
+      "colors",
+      "isreserved"
+    ],
+    "full_coverage": false,
+    "recall": 0.6666666666666666
+  },
+  {
+    "question_id": 418,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "artist",
+      "availability"
+    ],
+    "retrieved_cols": [
+      "flavortext",
+      "availability",
+      "leadershipskills",
+      "artist",
+      "isalternative",
+      "rarity",
+      "watermark",
+      "side",
+      "setcode",
+      "otherfaceids",
+      "flavorname",
+      "printings",
+      "ispromo",
+      "colorindicator",
+      "isreserved"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 384,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "language",
+      "uuid",
+      "format"
+    ],
+    "retrieved_cols": [
+      "language",
+      "flavortext",
+      "type",
+      "multiverseid",
+      "originaltype",
+      "types",
+      "otherfaceids",
+      "supertypes",
+      "name",
+      "printings",
+      "uuid",
+      "colors"
+    ],
+    "full_coverage": false,
+    "recall": 0.6666666666666666
+  },
+  {
+    "question_id": 252,
+    "db_id": "toxicology",
+    "difficulty": "simple",
+    "gold_cols": [
+      "atom_id2",
+      "element",
+      "atom_id"
+    ],
+    "retrieved_cols": [
+      "atom_id",
+      "bond_type",
+      "bond_id",
+      "atom_id2",
+      "element",
+      "label",
+      "molecule_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1220,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "birthday",
+      "un",
+      "sex"
+    ],
+    "retrieved_cols": [
+      "got",
+      "un",
+      "gpt",
+      "ua",
+      "birthday",
+      "id",
+      "admission",
+      "diagnosis",
+      "u-pro",
+      "sex",
+      "cpk",
+      "thrombosis",
+      "acl iga"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 172,
+    "db_id": "financial",
+    "difficulty": "simple",
+    "gold_cols": [
+      "account_id",
+      "type"
+    ],
+    "retrieved_cols": [
+      "client_id",
+      "date",
+      "account_to",
+      "type",
+      "account_id",
+      "account",
+      "operation",
+      "disp_id",
+      "district_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1069,
+    "db_id": "european_football_2",
+    "difficulty": "simple",
+    "gold_cols": [
+      "height",
+      "player_name"
+    ],
+    "retrieved_cols": [
+      "overall_rating",
+      "positioning",
+      "short_passing",
+      "potential",
+      "player_fifa_api_id",
+      "agility",
+      "dribbling",
+      "defensive_work_rate",
+      "standing_tackle",
+      "marking",
+      "strength",
+      "jumping",
+      "defenceteamwidth",
+      "height"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 1226,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "simple",
+    "gold_cols": [
+      "birthday",
+      "id",
+      "t-cho"
+    ],
+    "retrieved_cols": [
+      "acl igg",
+      "date",
+      "sex",
+      "birthday",
+      "first date",
+      "admission",
+      "id",
+      "diagnosis",
+      "description",
+      "t-cho",
+      "t-bil",
+      "thrombosis"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 857,
+    "db_id": "formula_1",
+    "difficulty": "simple",
+    "gold_cols": [
+      "lng",
+      "name",
+      "circuitid",
+      "lat"
+    ],
+    "retrieved_cols": [
+      "qualifyid",
+      "lng",
+      "q1",
+      "url",
+      "positiontext",
+      "grid",
+      "position",
+      "name",
+      "location",
+      "lat"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 153,
+    "db_id": "financial",
+    "difficulty": "simple",
+    "gold_cols": [
+      "disp_id",
+      "card_id",
+      "type"
+    ],
+    "retrieved_cols": [
+      "issued",
+      "status",
+      "card_id",
+      "date",
+      "k_symbol",
+      "account_to",
+      "type",
+      "account_id",
+      "payments",
+      "loan_id",
+      "amount",
+      "duration"
+    ],
+    "full_coverage": false,
+    "recall": 0.6666666666666666
+  },
+  {
+    "question_id": 921,
+    "db_id": "formula_1",
+    "difficulty": "simple",
+    "gold_cols": [
+      "name",
+      "url",
+      "circuitid"
+    ],
+    "retrieved_cols": [
+      "qualifyid",
+      "q1",
+      "url",
+      "date",
+      "circuitref",
+      "circuitid",
+      "grid",
+      "raceid",
+      "name",
+      "year",
+      "location",
+      "q2"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 671,
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "gold_cols": [
+      "userid",
+      "date",
+      "displayname",
+      "id",
+      "name"
+    ],
+    "retrieved_cols": [
+      "parentid",
+      "date",
+      "userid",
+      "displayname",
+      "score",
+      "lastaccessdate",
+      "owneruserid",
+      "creaiondate",
+      "creationdate",
+      "name",
+      "lasteditordisplayname",
+      "ownerdisplayname",
+      "tagname"
+    ],
+    "full_coverage": false,
+    "recall": 0.8
+  },
+  {
+    "question_id": 54,
+    "db_id": "california_schools",
+    "difficulty": "simple",
+    "gold_cols": [
+      "admfname1",
+      "mailzip",
+      "admlname1",
+      "school"
+    ],
+    "retrieved_cols": [
+      "edopscode",
+      "doc",
+      "ncesdist",
+      "admemail1",
+      "admlname1",
+      "statustype",
+      "mailcity",
+      "admfname1",
+      "admfname2",
+      "mailstreet",
+      "streetabr",
+      "mailstrabr",
+      "mailstate",
+      "gsserved",
+      "zip",
+      "mailzip",
+      "admemail2"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 52,
+    "db_id": "california_schools",
+    "difficulty": "simple",
+    "gold_cols": [
+      "mailcity",
+      "avgscrwrite",
+      "cdscode",
+      "cds",
+      "avgscrread",
+      "avgscrmath"
+    ],
+    "retrieved_cols": [
+      "soctype",
+      "soc",
+      "avgscrread",
+      "mailcity",
+      "virtual",
+      "numtsttakr",
+      "charternum",
+      "avgscrwrite",
+      "city",
+      "numge1500",
+      "mailstate",
+      "gsserved",
+      "avgscrmath",
+      "mailzip",
+      "gsoffered"
+    ],
+    "full_coverage": false,
+    "recall": 0.6666666666666666
+  },
+  {
+    "question_id": 159,
+    "db_id": "financial",
+    "difficulty": "simple",
+    "gold_cols": [
+      "client_id",
+      "account_id",
+      "trans_id",
+      "operation"
+    ],
+    "retrieved_cols": [
+      "client_id",
+      "status",
+      "issued",
+      "trans_id",
+      "date",
+      "account_to",
+      "type",
+      "account_id",
+      "operation",
+      "bank_to",
+      "loan_id",
+      "disp_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 379,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "dueldeck"
+    ],
+    "retrieved_cols": [
+      "leadershipskills",
+      "format",
+      "types",
+      "side",
+      "otherfaceids",
+      "supertypes",
+      "isstarter",
+      "keywords",
+      "name",
+      "facename",
+      "printings",
+      "colorindicator",
+      "dueldeck",
+      "colors",
+      "isreserved"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 395,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "hand",
+      "artist",
+      "availability"
+    ],
+    "retrieved_cols": [
+      "totalsetsize",
+      "artist",
+      "leadershipskills",
+      "originaltype",
+      "types",
+      "power",
+      "hasalternativedecklimit",
+      "life",
+      "isonlineonly",
+      "printings",
+      "basesetsize",
+      "hand",
+      "loyalty",
+      "isalternative",
+      "uuid",
+      "availability"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 793,
+    "db_id": "superhero",
+    "difficulty": "simple",
+    "gold_cols": [
+      "gender_id",
+      "id",
+      "race_id"
+    ],
+    "retrieved_cols": [
+      "hair_colour_id",
+      "attribute_name",
+      "alignment",
+      "alignment_id",
+      "power_id",
+      "gender",
+      "skin_colour_id",
+      "gender_id",
+      "id",
+      "attribute_id",
+      "hero_id",
+      "race",
+      "race_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 937,
+    "db_id": "formula_1",
+    "difficulty": "simple",
+    "gold_cols": [
+      "time",
+      "rank",
+      "raceid",
+      "name",
+      "year"
+    ],
+    "retrieved_cols": [
+      "qualifyid",
+      "fastestlaptime",
+      "time",
+      "q1",
+      "date",
+      "points",
+      "grid",
+      "name",
+      "duration",
+      "q3",
+      "q2",
+      "milliseconds"
+    ],
+    "full_coverage": false,
+    "recall": 0.4
+  },
+  {
+    "question_id": 46,
+    "db_id": "california_schools",
+    "difficulty": "simple",
+    "gold_cols": [
+      "doc",
+      "enrollment (k-12)",
+      "cdscode",
+      "school"
+    ],
+    "retrieved_cols": [
+      "edopscode",
+      "doc",
+      "soc",
+      "district type",
+      "district name",
+      "charternum",
+      "high grade",
+      "enrollment (k-12)",
+      "doctype",
+      "school type",
+      "mailstate",
+      "gsserved",
+      "district",
+      "state",
+      "gsoffered"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 876,
+    "db_id": "formula_1",
+    "difficulty": "simple",
+    "gold_cols": [
+      "raceid",
+      "time",
+      "date",
+      "driverid"
+    ],
+    "retrieved_cols": [
+      "qualifyid",
+      "time",
+      "q1",
+      "points",
+      "grid",
+      "raceid",
+      "name",
+      "q3",
+      "q2",
+      "milliseconds"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 357,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "promotypes",
+      "name"
+    ],
+    "retrieved_cols": [
+      "manacost",
+      "leadershipskills",
+      "type",
+      "originaltype",
+      "types",
+      "power",
+      "otherfaceids",
+      "isstarter",
+      "side",
+      "layout",
+      "name",
+      "flavorname",
+      "ispromo",
+      "colorindicator"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 1155,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "birthday",
+      "ldh",
+      "sex"
+    ],
+    "retrieved_cols": [
+      "rf",
+      "alp",
+      "thrombosis",
+      "tg",
+      "hgb",
+      "birthday",
+      "id",
+      "admission",
+      "ldh",
+      "diagnosis",
+      "u-pro",
+      "ua",
+      "hct"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 1018,
+    "db_id": "formula_1",
+    "difficulty": "simple",
+    "gold_cols": [
+      "surname",
+      "milliseconds",
+      "driverid",
+      "forename"
+    ],
+    "retrieved_cols": [
+      "fastestlaptime",
+      "time",
+      "q1",
+      "date",
+      "q3",
+      "stop",
+      "grid",
+      "driverref",
+      "duration",
+      "surname",
+      "q2",
+      "milliseconds",
+      "forename"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 1129,
+    "db_id": "european_football_2",
+    "difficulty": "simple",
+    "gold_cols": [
+      "team_api_id",
+      "team_long_name",
+      "buildupplayspeedclass"
+    ],
+    "retrieved_cols": [
+      "defenceaggressionclass",
+      "team_short_name",
+      "buildupplayspeedclass",
+      "buildupplayspeed",
+      "defenceteamwidthclass",
+      "defenceaggression",
+      "chancecreationcrossingclass",
+      "defencepressureclass",
+      "chancecreationshootingclass",
+      "player_name",
+      "sprint_speed",
+      "team_long_name",
+      "buildupplaydribblingclass",
+      "buildupplaypassingclass",
+      "long_passing"
+    ],
+    "full_coverage": false,
+    "recall": 0.6666666666666666
+  },
+  {
+    "question_id": 1514,
+    "db_id": "debit_card_specializing",
+    "difficulty": "simple",
+    "gold_cols": [
+      "time",
+      "date",
+      "customerid",
+      "gasstationid",
+      "currency"
+    ],
+    "retrieved_cols": [
+      "consumption",
+      "time",
+      "date",
+      "country",
+      "cardid",
+      "customerid",
+      "amount",
+      "gasstationid",
+      "price",
+      "currency",
+      "segment",
+      "chainid"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 668,
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "gold_cols": [
+      "displayname",
+      "id",
+      "userid"
+    ],
+    "retrieved_cols": [
+      "favoritecount",
+      "date",
+      "userid",
+      "displayname",
+      "bountyamount",
+      "count",
+      "userdisplayname",
+      "id",
+      "name",
+      "lasteditordisplayname",
+      "ownerdisplayname",
+      "viewcount"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 381,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "language",
+      "uuid",
+      "artist"
+    ],
+    "retrieved_cols": [
+      "language",
+      "leadershipskills",
+      "artist",
+      "watermark",
+      "asciiname",
+      "keywords",
+      "flavorname",
+      "isonlineonly",
+      "name",
+      "facename",
+      "printings",
+      "dueldeck",
+      "colors",
+      "colorindicator"
+    ],
+    "full_coverage": false,
+    "recall": 0.6666666666666666
+  },
+  {
+    "question_id": 705,
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "gold_cols": [
+      "upvotes",
+      "userid",
+      "reputation",
+      "id",
+      "text"
+    ],
+    "retrieved_cols": [
+      "votetypeid",
+      "upvotes",
+      "date",
+      "userid",
+      "reputation",
+      "downvotes",
+      "score",
+      "aboutme",
+      "creationdate",
+      "commentcount",
+      "id",
+      "text",
+      "postid"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 920,
+    "db_id": "formula_1",
+    "difficulty": "simple",
+    "gold_cols": [
+      "year",
+      "name",
+      "circuitid"
+    ],
+    "retrieved_cols": [
+      "qualifyid",
+      "points",
+      "time",
+      "q1",
+      "url",
+      "circuitref",
+      "circuitid",
+      "grid",
+      "position",
+      "name",
+      "year",
+      "location",
+      "q2"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 460,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "artist",
+      "flavorname"
+    ],
+    "retrieved_cols": [
+      "promotypes",
+      "originalreleasedate",
+      "leadershipskills",
+      "artist",
+      "watermark",
+      "asciiname",
+      "flavorname",
+      "isstarter",
+      "name",
+      "facename",
+      "isalternative",
+      "ispromo",
+      "dueldeck",
+      "colorindicator"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1377,
+    "db_id": "student_club",
+    "difficulty": "simple",
+    "gold_cols": [
+      "position",
+      "member_id"
+    ],
+    "retrieved_cols": [
+      "remaining",
+      "notes",
+      "link_to_event",
+      "link_to_major",
+      "type",
+      "source",
+      "event_id",
+      "link_to_member",
+      "t_shirt_size",
+      "position",
+      "location",
+      "college",
+      "budget_id",
+      "email"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 8,
+    "db_id": "california_schools",
+    "difficulty": "simple",
+    "gold_cols": [
+      "numtsttakr",
+      "cds",
+      "cdscode",
+      "frpm count (k-12)"
+    ],
+    "retrieved_cols": [
+      "charter school number",
+      "soctype",
+      "soc",
+      "numtsttakr",
+      "enrollment (k-12)",
+      "free meal count (k-12)",
+      "frpm count (k-12)",
+      "frpm count (ages 5-17)",
+      "numge1500",
+      "free meal count (ages 5-17)",
+      "school type",
+      "percent (%) eligible frpm (k-12)",
+      "gsserved",
+      "ncesschool",
+      "gsoffered"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 1301,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "cpk",
+      "thrombosis"
+    ],
+    "retrieved_cols": [
+      "fg",
+      "sc170",
+      "ana",
+      "cre",
+      "kct",
+      "id",
+      "admission",
+      "plt",
+      "u-pro",
+      "description",
+      "cpk",
+      "thrombosis",
+      "acl iga"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1372,
+    "db_id": "student_club",
+    "difficulty": "simple",
+    "gold_cols": [
+      "date_received",
+      "link_to_member",
+      "member_id",
+      "last_name",
+      "first_name"
+    ],
+    "retrieved_cols": [
+      "link_to_event",
+      "notes",
+      "expense_date",
+      "date_received",
+      "link_to_major",
+      "link_to_member",
+      "source",
+      "city",
+      "phone",
+      "amount",
+      "expense_description",
+      "last_name",
+      "t_shirt_size",
+      "position",
+      "first_name"
+    ],
+    "full_coverage": false,
+    "recall": 0.8
+  },
+  {
+    "question_id": 293,
+    "db_id": "toxicology",
+    "difficulty": "simple",
+    "gold_cols": [
+      "label",
+      "atom_id",
+      "molecule_id"
+    ],
+    "retrieved_cols": [
+      "atom_id",
+      "bond_type",
+      "bond_id",
+      "atom_id2",
+      "element",
+      "label",
+      "molecule_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1122,
+    "db_id": "european_football_2",
+    "difficulty": "simple",
+    "gold_cols": [
+      "overall_rating",
+      "player_name",
+      "player_api_id"
+    ],
+    "retrieved_cols": [
+      "overall_rating",
+      "player_api_id",
+      "buildupplayspeed",
+      "player_fifa_api_id",
+      "defenceaggression",
+      "defensive_work_rate",
+      "id",
+      "player_name",
+      "strength",
+      "attacking_work_rate",
+      "weight",
+      "potential"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1511,
+    "db_id": "debit_card_specializing",
+    "difficulty": "simple",
+    "gold_cols": [
+      "customerid",
+      "currency",
+      "price",
+      "gasstationid"
+    ],
+    "retrieved_cols": [
+      "time",
+      "date",
+      "cardid",
+      "transactionid",
+      "customerid",
+      "amount",
+      "currency",
+      "segment",
+      "price",
+      "productid"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 566,
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "owneruserid",
+      "reputation"
+    ],
+    "retrieved_cols": [
+      "parentid",
+      "favoritecount",
+      "userid",
+      "reputation",
+      "score",
+      "posttypeid",
+      "owneruserid",
+      "id",
+      "ownerdisplayname",
+      "postid"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1488,
+    "db_id": "debit_card_specializing",
+    "difficulty": "simple",
+    "gold_cols": [
+      "consumption",
+      "segment",
+      "customerid"
+    ],
+    "retrieved_cols": [
+      "consumption",
+      "description",
+      "country",
+      "cardid",
+      "transactionid",
+      "customerid",
+      "gasstationid",
+      "price",
+      "currency",
+      "segment",
+      "chainid",
+      "productid"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 288,
+    "db_id": "toxicology",
+    "difficulty": "simple",
+    "gold_cols": [
+      "label",
+      "atom_id",
+      "molecule_id"
+    ],
+    "retrieved_cols": [
+      "atom_id",
+      "bond_type",
+      "bond_id",
+      "atom_id2",
+      "element",
+      "label",
+      "molecule_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 376,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "layout",
+      "keywords"
+    ],
+    "retrieved_cols": [
+      "frameversion",
+      "originaltype",
+      "types",
+      "side",
+      "asciiname",
+      "number",
+      "loyalty",
+      "setcode",
+      "name",
+      "layout",
+      "watermark",
+      "facename",
+      "keywords",
+      "dueldeck",
+      "colors"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1312,
+    "db_id": "student_club",
+    "difficulty": "simple",
+    "gold_cols": [
+      "link_to_major",
+      "major_name",
+      "last_name",
+      "major_id",
+      "first_name"
+    ],
+    "retrieved_cols": [
+      "link_to_event",
+      "department",
+      "link_to_major",
+      "link_to_member",
+      "city",
+      "major_name",
+      "last_name",
+      "major_id",
+      "position",
+      "event_name",
+      "location",
+      "college",
+      "first_name",
+      "state"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 560,
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "name"
+    ],
+    "retrieved_cols": [
+      "upvotes",
+      "favoritecount",
+      "lasteditoruserid",
+      "userid",
+      "date",
+      "downvotes",
+      "answercount",
+      "score",
+      "views",
+      "id",
+      "commentcount",
+      "name",
+      "lasteditordisplayname",
+      "postid"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1518,
+    "db_id": "debit_card_specializing",
+    "difficulty": "simple",
+    "gold_cols": [
+      "country",
+      "time",
+      "date",
+      "gasstationid"
+    ],
+    "retrieved_cols": [
+      "time",
+      "date",
+      "country",
+      "cardid",
+      "transactionid",
+      "customerid",
+      "gasstationid",
+      "amount",
+      "name",
+      "currency",
+      "segment",
+      "price"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 158,
+    "db_id": "financial",
+    "difficulty": "simple",
+    "gold_cols": [
+      "order_id",
+      "account_id",
+      "district_id"
+    ],
+    "retrieved_cols": [
+      "client_id",
+      "issued",
+      "date",
+      "account_to",
+      "type",
+      "account_id",
+      "loan_id",
+      "bank_to",
+      "order_id",
+      "disp_id",
+      "district_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 618,
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "gold_cols": [
+      "age",
+      "id",
+      "userid",
+      "location"
+    ],
+    "retrieved_cols": [
+      "parentid",
+      "upvotes",
+      "date",
+      "userid",
+      "downvotes",
+      "lastaccessdate",
+      "views",
+      "accountid",
+      "creationdate",
+      "name",
+      "age",
+      "location",
+      "postid"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 164,
+    "db_id": "financial",
+    "difficulty": "simple",
+    "gold_cols": [
+      "order_id",
+      "client_id",
+      "account_id"
+    ],
+    "retrieved_cols": [
+      "client_id",
+      "issued",
+      "card_id",
+      "trans_id",
+      "account_to",
+      "k_symbol",
+      "type",
+      "account_id",
+      "loan_id",
+      "bank_to",
+      "order_id",
+      "amount",
+      "disp_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 592,
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "gold_cols": [
+      "num",
+      "name",
+      "userid"
+    ],
+    "retrieved_cols": [
+      "favoritecount",
+      "userid",
+      "date",
+      "reputation",
+      "downvotes",
+      "score",
+      "answercount",
+      "count",
+      "id",
+      "name",
+      "age",
+      "postid"
+    ],
+    "full_coverage": false,
+    "recall": 0.6666666666666666
+  },
+  {
+    "question_id": 1442,
+    "db_id": "student_club",
+    "difficulty": "simple",
+    "gold_cols": [
+      "remaining",
+      "budget_id"
+    ],
+    "retrieved_cols": [
+      "remaining",
+      "category",
+      "date_received",
+      "link_to_event",
+      "link_to_budget",
+      "event_id",
+      "event_status",
+      "amount",
+      "expense_description",
+      "event_date",
+      "spent",
+      "location",
+      "cost",
+      "budget_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 570,
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "gold_cols": [
+      "displayname",
+      "id",
+      "name",
+      "userid"
+    ],
+    "retrieved_cols": [
+      "parentid",
+      "date",
+      "userid",
+      "displayname",
+      "userdisplayname",
+      "id",
+      "name",
+      "lasteditordisplayname",
+      "ownerdisplayname",
+      "postid"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 945,
+    "db_id": "formula_1",
+    "difficulty": "simple",
+    "gold_cols": [
+      "country",
+      "circuitid",
+      "location"
+    ],
+    "retrieved_cols": [
+      "qualifyid",
+      "lng",
+      "points",
+      "q1",
+      "url",
+      "circuitref",
+      "circuitid",
+      "q2",
+      "grid",
+      "position",
+      "name",
+      "location",
+      "country",
+      "lat"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 443,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "code",
+      "setcode",
+      "type"
+    ],
+    "retrieved_cols": [
+      "totalsetsize",
+      "isforeignonly",
+      "type",
+      "tcgplayergroupid",
+      "keyrunecode",
+      "setcode",
+      "parentcode",
+      "block",
+      "isonlineonly",
+      "basesetsize",
+      "name",
+      "code",
+      "facename",
+      "mtgocode",
+      "ispartialpreview"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1373,
+    "db_id": "student_club",
+    "difficulty": "simple",
+    "gold_cols": [
+      "state",
+      "zip_code",
+      "zip",
+      "member_id"
+    ],
+    "retrieved_cols": [
+      "link_to_event",
+      "notes",
+      "link_to_major",
+      "short_state",
+      "type",
+      "source",
+      "link_to_member",
+      "city",
+      "phone",
+      "t_shirt_size",
+      "spent",
+      "position",
+      "location",
+      "zip",
+      "state"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 70,
+    "db_id": "california_schools",
+    "difficulty": "simple",
+    "gold_cols": [
+      "soc",
+      "statustype",
+      "county",
+      "school"
+    ],
+    "retrieved_cols": [
+      "edopscode",
+      "doc",
+      "soc",
+      "admemail1",
+      "county name",
+      "county",
+      "district type",
+      "admlname1",
+      "statustype",
+      "district name",
+      "city",
+      "mailcity",
+      "doctype",
+      "mailstreet",
+      "educational option type",
+      "streetabr",
+      "gsserved",
+      "district"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 1199,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "date",
+      "alb"
+    ],
+    "retrieved_cols": [
+      "cpk",
+      "tg",
+      "date",
+      "pt",
+      "examination date",
+      "c4",
+      "cre",
+      "rnp",
+      "ldh",
+      "tp",
+      "u-pro",
+      "crp",
+      "ua",
+      "hct",
+      "c3"
+    ],
+    "full_coverage": false,
+    "recall": 0.3333333333333333
+  },
+  {
+    "question_id": 720,
+    "db_id": "superhero",
+    "difficulty": "simple",
+    "gold_cols": [
+      "full_name",
+      "id",
+      "power_id",
+      "hero_id"
+    ],
+    "retrieved_cols": [
+      "height_cm",
+      "hair_colour_id",
+      "alignment",
+      "superhero_name",
+      "power_id",
+      "gender",
+      "gender_id",
+      "publisher_id",
+      "id",
+      "full_name",
+      "weight_kg",
+      "hero_id",
+      "race",
+      "race_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 847,
+    "db_id": "formula_1",
+    "difficulty": "simple",
+    "gold_cols": [
+      "surname",
+      "q2",
+      "raceid",
+      "driverid"
+    ],
+    "retrieved_cols": [
+      "qualifyid",
+      "fastestlaptime",
+      "time",
+      "q1",
+      "points",
+      "surname",
+      "driverid",
+      "grid",
+      "raceid",
+      "q3",
+      "q2",
+      "milliseconds"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 214,
+    "db_id": "toxicology",
+    "difficulty": "simple",
+    "gold_cols": [
+      "label",
+      "element",
+      "molecule_id"
+    ],
+    "retrieved_cols": [
+      "atom_id",
+      "bond_type",
+      "bond_id",
+      "atom_id2",
+      "element",
+      "label",
+      "molecule_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 616,
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "gold_cols": [
+      "score",
+      "id",
+      "postid",
+      "creationdate"
+    ],
+    "retrieved_cols": [
+      "favoritecount",
+      "date",
+      "answercount",
+      "score",
+      "lasteditdate",
+      "closeddate",
+      "creationdate",
+      "commentcount",
+      "creaiondate",
+      "communityowneddate",
+      "postid"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 133,
+    "db_id": "financial",
+    "difficulty": "simple",
+    "gold_cols": [
+      "a2",
+      "a13",
+      "district_id"
+    ],
+    "retrieved_cols": [
+      "a9",
+      "a5",
+      "a16",
+      "a7",
+      "a13",
+      "a3",
+      "a15",
+      "a2",
+      "a6",
+      "a11",
+      "a8",
+      "district_id",
+      "a12"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 864,
+    "db_id": "formula_1",
+    "difficulty": "simple",
+    "gold_cols": [
+      "raceid",
+      "time",
+      "date",
+      "driverid"
+    ],
+    "retrieved_cols": [
+      "qualifyid",
+      "time",
+      "q1",
+      "points",
+      "grid",
+      "raceid",
+      "name",
+      "year",
+      "q3",
+      "q2",
+      "milliseconds"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 491,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "mcmname",
+      "releasedate"
+    ],
+    "retrieved_cols": [
+      "originalreleasedate",
+      "manacost",
+      "mcmid",
+      "mcmname",
+      "watermark",
+      "side",
+      "flavorname",
+      "loyalty",
+      "name",
+      "mtgocode",
+      "facename",
+      "printings",
+      "mcmidextras",
+      "dueldeck",
+      "isreserved"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 1411,
+    "db_id": "student_club",
+    "difficulty": "simple",
+    "gold_cols": [
+      "link_to_member",
+      "member_id",
+      "expense_description",
+      "last_name",
+      "first_name"
+    ],
+    "retrieved_cols": [
+      "link_to_event",
+      "notes",
+      "department",
+      "short_state",
+      "link_to_budget",
+      "type",
+      "link_to_member",
+      "city",
+      "expense_description",
+      "last_name",
+      "spent",
+      "event_status",
+      "cost",
+      "first_name",
+      "state"
+    ],
+    "full_coverage": false,
+    "recall": 0.8
+  },
+  {
+    "question_id": 979,
+    "db_id": "formula_1",
+    "difficulty": "simple",
+    "gold_cols": [
+      "raceid",
+      "time"
+    ],
+    "retrieved_cols": [
+      "fastestlaptime",
+      "time",
+      "q1",
+      "date",
+      "raceid",
+      "year",
+      "q3",
+      "q2",
+      "milliseconds"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 966,
+    "db_id": "formula_1",
+    "difficulty": "simple",
+    "gold_cols": [
+      "raceid",
+      "driverid"
+    ],
+    "retrieved_cols": [
+      "qualifyid",
+      "points",
+      "q1",
+      "driverid",
+      "circuitid",
+      "raceid"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 596,
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "gold_cols": [
+      "name",
+      "userid"
+    ],
+    "retrieved_cols": [
+      "favoritecount",
+      "date",
+      "userid",
+      "reputation",
+      "score",
+      "count",
+      "userdisplayname",
+      "owneruserid",
+      "id",
+      "commentcount",
+      "postid"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 907,
+    "db_id": "formula_1",
+    "difficulty": "simple",
+    "gold_cols": [
+      "date",
+      "circuitid",
+      "name",
+      "year",
+      "country"
+    ],
+    "retrieved_cols": [
+      "time",
+      "q1",
+      "date",
+      "url",
+      "circuitid",
+      "q2",
+      "grid",
+      "raceid",
+      "name",
+      "dob",
+      "year",
+      "country",
+      "positionorder"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 348,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "name",
+      "number",
+      "uuid",
+      "text"
+    ],
+    "retrieved_cols": [
+      "flavortext",
+      "totalsetsize",
+      "format",
+      "watermark",
+      "power",
+      "asciiname",
+      "setcode",
+      "number",
+      "cardkingdomfoilid",
+      "flavorname",
+      "name",
+      "basesetsize",
+      "facename",
+      "isalternative",
+      "dueldeck"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 1133,
+    "db_id": "european_football_2",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "birthday",
+      "player_name"
+    ],
+    "retrieved_cols": [
+      "player_api_id",
+      "team_short_name",
+      "volleys",
+      "agility",
+      "player_fifa_api_id",
+      "heading_accuracy",
+      "birthday",
+      "id",
+      "player_name",
+      "name",
+      "interceptions",
+      "finishing"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 113,
+    "db_id": "financial",
+    "difficulty": "simple",
+    "gold_cols": [
+      "client_id",
+      "date",
+      "account_id",
+      "amount",
+      "birth_date"
+    ],
+    "retrieved_cols": [
+      "client_id",
+      "status",
+      "issued",
+      "date",
+      "k_symbol",
+      "payments",
+      "type",
+      "account_id",
+      "loan_id",
+      "amount",
+      "birth_date",
+      "district_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 73,
+    "db_id": "california_schools",
+    "difficulty": "simple",
+    "gold_cols": [
+      "mailstreet",
+      "frpm count (ages 5-17)",
+      "soctype",
+      "cdscode"
+    ],
+    "retrieved_cols": [
+      "edopscode",
+      "soc",
+      "mailcity",
+      "percent (%) eligible free (ages 5-17)",
+      "enrollment (ages 5-17)",
+      "free meal count (k-12)",
+      "frpm count (k-12)",
+      "mailstreet",
+      "streetabr",
+      "free meal count (ages 5-17)",
+      "mailstrabr",
+      "frpm count (ages 5-17)",
+      "mailstate",
+      "gsserved",
+      "mailzip"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 1045,
+    "db_id": "european_football_2",
+    "difficulty": "simple",
+    "gold_cols": [
+      "attacking_work_rate",
+      "player_name",
+      "player_api_id"
+    ],
+    "retrieved_cols": [
+      "overall_rating",
+      "chancecreationpositioningclass",
+      "crossing",
+      "buildupplayspeed",
+      "buildupplaypositioningclass",
+      "preferred_foot",
+      "agility",
+      "player_fifa_api_id",
+      "defensive_work_rate",
+      "shot_power",
+      "strength",
+      "attacking_work_rate",
+      "aggression",
+      "finishing",
+      "potential"
+    ],
+    "full_coverage": false,
+    "recall": 0.3333333333333333
+  },
+  {
+    "question_id": 389,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "uuid",
+      "date",
+      "originaltype"
+    ],
+    "retrieved_cols": [
+      "originaltext",
+      "originalreleasedate",
+      "totalsetsize",
+      "type",
+      "originaltype",
+      "types",
+      "flavorname",
+      "supertypes",
+      "name",
+      "text",
+      "colorindicator",
+      "dueldeck",
+      "colors",
+      "isreserved"
+    ],
+    "full_coverage": false,
+    "recall": 0.25
+  },
+  {
+    "question_id": 1329,
+    "db_id": "student_club",
+    "difficulty": "simple",
+    "gold_cols": [
+      "county",
+      "last_name",
+      "zip",
+      "first_name",
+      "zip_code"
+    ],
+    "retrieved_cols": [
+      "link_to_event",
+      "notes",
+      "county",
+      "short_state",
+      "type",
+      "link_to_member",
+      "event_id",
+      "city",
+      "event_date",
+      "expense_description",
+      "last_name",
+      "event_name",
+      "location",
+      "college",
+      "first_name",
+      "zip_code"
+    ],
+    "full_coverage": false,
+    "recall": 0.8
+  },
+  {
+    "question_id": 485,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "uuid",
+      "name",
+      "date"
+    ],
+    "retrieved_cols": [
+      "hascontentwarning",
+      "originalreleasedate",
+      "originaltext",
+      "artist",
+      "frameversion",
+      "releasedate",
+      "flavorname",
+      "dueldeck",
+      "name",
+      "facename",
+      "istimeshifted",
+      "text",
+      "cardkingdomfoilid",
+      "isreserved"
+    ],
+    "full_coverage": false,
+    "recall": 0.3333333333333333
+  },
+  {
+    "question_id": 134,
+    "db_id": "financial",
+    "difficulty": "simple",
+    "gold_cols": [
+      "account_id",
+      "a16",
+      "district_id"
+    ],
+    "retrieved_cols": [
+      "issued",
+      "status",
+      "a16",
+      "date",
+      "k_symbol",
+      "type",
+      "a13",
+      "account_id",
+      "a15",
+      "operation",
+      "a14",
+      "district_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1504,
+    "db_id": "debit_card_specializing",
+    "difficulty": "simple",
+    "gold_cols": [
+      "date",
+      "amount"
+    ],
+    "retrieved_cols": [
+      "consumption",
+      "time",
+      "date",
+      "cardid",
+      "transactionid",
+      "customerid",
+      "amount",
+      "gasstationid",
+      "name",
+      "segment",
+      "price",
+      "productid"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 170,
+    "db_id": "financial",
+    "difficulty": "simple",
+    "gold_cols": [
+      "account_id",
+      "date",
+      "operation"
+    ],
+    "retrieved_cols": [
+      "client_id",
+      "issued",
+      "card_id",
+      "date",
+      "k_symbol",
+      "type",
+      "balance",
+      "operation",
+      "birth_date",
+      "frequency",
+      "disp_id",
+      "district_id"
+    ],
+    "full_coverage": false,
+    "recall": 0.6666666666666666
+  },
+  {
+    "question_id": 1459,
+    "db_id": "student_club",
+    "difficulty": "simple",
+    "gold_cols": [
+      "link_to_major",
+      "department",
+      "major_name",
+      "last_name",
+      "major_id",
+      "first_name"
+    ],
+    "retrieved_cols": [
+      "link_to_event",
+      "category",
+      "department",
+      "county",
+      "short_state",
+      "link_to_major",
+      "source",
+      "city",
+      "phone",
+      "major_name",
+      "last_name",
+      "major_id",
+      "event_status",
+      "college",
+      "first_name",
+      "state"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1468,
+    "db_id": "student_club",
+    "difficulty": "simple",
+    "gold_cols": [
+      "city",
+      "last_name",
+      "zip",
+      "first_name",
+      "zip_code"
+    ],
+    "retrieved_cols": [
+      "link_to_event",
+      "notes",
+      "first_name",
+      "category",
+      "county",
+      "short_state",
+      "type",
+      "link_to_member",
+      "source",
+      "state",
+      "city",
+      "phone",
+      "last_name",
+      "location",
+      "zip",
+      "zip_code"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 712,
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "gold_cols": [
+      "text",
+      "id",
+      "postid",
+      "title"
+    ],
+    "retrieved_cols": [
+      "parentid",
+      "userid",
+      "score",
+      "tagname",
+      "posttypeid",
+      "id",
+      "commentcount",
+      "name",
+      "comment",
+      "postid",
+      "title"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 991,
+    "db_id": "formula_1",
+    "difficulty": "simple",
+    "gold_cols": [
+      "surname",
+      "dob",
+      "nationality",
+      "forename"
+    ],
+    "retrieved_cols": [
+      "status",
+      "q1",
+      "date",
+      "driverid",
+      "nationality",
+      "driverref",
+      "name",
+      "dob",
+      "year",
+      "q2",
+      "milliseconds"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 600,
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "gold_cols": [
+      "viewcount",
+      "id",
+      "postid"
+    ],
+    "retrieved_cols": [
+      "parentid",
+      "favoritecount",
+      "answercount",
+      "relatedpostid",
+      "count",
+      "posttypeid",
+      "wikipostid",
+      "id",
+      "viewcount",
+      "postid",
+      "title"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 296,
+    "db_id": "toxicology",
+    "difficulty": "simple",
+    "gold_cols": [
+      "bond_id",
+      "atom_id",
+      "molecule_id"
+    ],
+    "retrieved_cols": [
+      "atom_id",
+      "bond_type",
+      "bond_id",
+      "atom_id2",
+      "element",
+      "label",
+      "molecule_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 607,
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "score"
+    ],
+    "retrieved_cols": [
+      "text",
+      "favoritecount",
+      "userid",
+      "downvotes",
+      "score",
+      "userdisplayname",
+      "id",
+      "creationdate",
+      "commentcount",
+      "age",
+      "viewcount",
+      "comment",
+      "postid"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 588,
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "userid"
+    ],
+    "retrieved_cols": [
+      "upvotes",
+      "favoritecount",
+      "userid",
+      "answercount",
+      "downvotes",
+      "views",
+      "owneruserid",
+      "id",
+      "creationdate",
+      "commentcount",
+      "comment",
+      "postid"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 369,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "language",
+      "id",
+      "uuid",
+      "isreprint"
+    ],
+    "retrieved_cols": [
+      "language",
+      "hascontentwarning",
+      "isreprint",
+      "totalsetsize",
+      "isalternative",
+      "colors",
+      "power",
+      "setcode",
+      "side",
+      "hasalternativedecklimit",
+      "isonlineonly",
+      "basesetsize",
+      "istimeshifted",
+      "printings",
+      "isfullart"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 1060,
+    "db_id": "european_football_2",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "birthday"
+    ],
+    "retrieved_cols": [
+      "player_api_id",
+      "date",
+      "curve",
+      "player_fifa_api_id",
+      "agility",
+      "dribbling",
+      "heading_accuracy",
+      "birthday",
+      "id",
+      "stamina",
+      "sprint_speed",
+      "jumping",
+      "long_passing",
+      "finishing"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 447,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "code",
+      "setcode",
+      "type"
+    ],
+    "retrieved_cols": [
+      "leadershipskills",
+      "isforeignonly",
+      "type",
+      "tcgplayergroupid",
+      "keyrunecode",
+      "setcode",
+      "parentcode",
+      "block",
+      "isonlineonly",
+      "basesetsize",
+      "name",
+      "code",
+      "facename",
+      "mtgocode",
+      "mcmidextras"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1495,
+    "db_id": "debit_card_specializing",
+    "difficulty": "simple",
+    "gold_cols": [
+      "consumption",
+      "date",
+      "customerid"
+    ],
+    "retrieved_cols": [
+      "consumption",
+      "date",
+      "cardid",
+      "transactionid",
+      "customerid",
+      "gasstationid",
+      "currency",
+      "segment",
+      "chainid",
+      "productid"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1081,
+    "db_id": "european_football_2",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "country_id",
+      "name"
+    ],
+    "retrieved_cols": [
+      "country_id",
+      "team_fifa_api_id",
+      "league_id",
+      "volleys",
+      "agility",
+      "defenceaggression",
+      "heading_accuracy",
+      "marking",
+      "team_api_id",
+      "id",
+      "name",
+      "sprint_speed",
+      "defenceteamwidth"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1012,
+    "db_id": "formula_1",
+    "difficulty": "simple",
+    "gold_cols": [
+      "time",
+      "driverid",
+      "position",
+      "surname",
+      "forename"
+    ],
+    "retrieved_cols": [
+      "fastestlaptime",
+      "time",
+      "q1",
+      "fastestlap",
+      "surname",
+      "fastestlapspeed",
+      "rank",
+      "driverref",
+      "position",
+      "q3",
+      "q2",
+      "milliseconds",
+      "forename"
+    ],
+    "full_coverage": false,
+    "recall": 0.8
+  },
+  {
+    "question_id": 121,
+    "db_id": "financial",
+    "difficulty": "simple",
+    "gold_cols": [
+      "a2",
+      "account_id",
+      "district_id",
+      "date"
+    ],
+    "retrieved_cols": [
+      "issued",
+      "date",
+      "account_to",
+      "k_symbol",
+      "type",
+      "account_id",
+      "a2",
+      "frequency",
+      "district_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 950,
+    "db_id": "formula_1",
+    "difficulty": "simple",
+    "gold_cols": [
+      "points",
+      "constructorid",
+      "raceid",
+      "name"
+    ],
+    "retrieved_cols": [
+      "wins",
+      "points",
+      "q1",
+      "url",
+      "raceid",
+      "name",
+      "q2"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 1392,
+    "db_id": "student_club",
+    "difficulty": "simple",
+    "gold_cols": [
+      "source",
+      "date_received"
+    ],
+    "retrieved_cols": [
+      "remaining",
+      "notes",
+      "expense_date",
+      "date_received",
+      "department",
+      "link_to_major",
+      "link_to_budget",
+      "link_to_event",
+      "source",
+      "amount",
+      "spent",
+      "event_status",
+      "college",
+      "budget_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 312,
+    "db_id": "toxicology",
+    "difficulty": "simple",
+    "gold_cols": [
+      "label",
+      "bond_id",
+      "molecule_id"
+    ],
+    "retrieved_cols": [
+      "atom_id",
+      "bond_type",
+      "bond_id",
+      "atom_id2",
+      "element",
+      "label",
+      "molecule_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 842,
+    "db_id": "superhero",
+    "difficulty": "simple",
+    "gold_cols": [
+      "height_cm",
+      "id",
+      "alignment",
+      "alignment_id"
+    ],
+    "retrieved_cols": [
+      "height_cm",
+      "alignment",
+      "superhero_name",
+      "alignment_id",
+      "power_id",
+      "attribute_value",
+      "gender",
+      "gender_id",
+      "publisher_id",
+      "skin_colour_id",
+      "eye_colour_id",
+      "weight_kg",
+      "hero_id",
+      "race",
+      "race_id"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 1198,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "sex",
+      "diagnosis"
+    ],
+    "retrieved_cols": [
+      "ana pattern",
+      "thrombosis",
+      "ana",
+      "symptoms",
+      "ua",
+      "birthday",
+      "id",
+      "admission",
+      "acl igm",
+      "diagnosis",
+      "sex",
+      "acl igg",
+      "lac",
+      "acl iga"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1524,
+    "db_id": "debit_card_specializing",
+    "difficulty": "simple",
+    "gold_cols": [
+      "country",
+      "date",
+      "price",
+      "gasstationid"
+    ],
+    "retrieved_cols": [
+      "consumption",
+      "time",
+      "date",
+      "country",
+      "description",
+      "cardid",
+      "customerid",
+      "gasstationid",
+      "price",
+      "currency",
+      "segment",
+      "chainid"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 297,
+    "db_id": "toxicology",
+    "difficulty": "simple",
+    "gold_cols": [
+      "label",
+      "molecule_id",
+      "atom_id",
+      "element"
+    ],
+    "retrieved_cols": [
+      "atom_id",
+      "bond_type",
+      "bond_id",
+      "atom_id2",
+      "element",
+      "label",
+      "molecule_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 725,
+    "db_id": "superhero",
+    "difficulty": "simple",
+    "gold_cols": [
+      "publisher_name",
+      "publisher_id",
+      "id"
+    ],
+    "retrieved_cols": [
+      "attribute_name",
+      "alignment",
+      "publisher_name",
+      "superhero_name",
+      "colour",
+      "power_id",
+      "attribute_value",
+      "gender",
+      "gender_id",
+      "publisher_id",
+      "id",
+      "hero_id",
+      "race"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 617,
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "gold_cols": [
+      "text",
+      "id",
+      "postid",
+      "creationdate"
+    ],
+    "retrieved_cols": [
+      "userid",
+      "date",
+      "answercount",
+      "score",
+      "posttypeid",
+      "closeddate",
+      "creationdate",
+      "commentcount",
+      "creaiondate",
+      "communityowneddate",
+      "comment"
+    ],
+    "full_coverage": false,
+    "recall": 0.25
+  },
+  {
+    "question_id": 451,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "hand",
+      "availability"
+    ],
+    "retrieved_cols": [
+      "totalsetsize",
+      "istextless",
+      "life",
+      "power",
+      "side",
+      "hasalternativedecklimit",
+      "isstarter",
+      "loyalty",
+      "printings",
+      "basesetsize",
+      "hand",
+      "isonlineonly",
+      "isalternative",
+      "isfullart",
+      "availability"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 999,
+    "db_id": "formula_1",
+    "difficulty": "simple",
+    "gold_cols": [
+      "fastestlaptime",
+      "raceid",
+      "name"
+    ],
+    "retrieved_cols": [
+      "qualifyid",
+      "fastestlaptime",
+      "time",
+      "q1",
+      "fastestlap",
+      "fastestlapspeed",
+      "lap",
+      "rank",
+      "raceid",
+      "name",
+      "q3",
+      "q2",
+      "milliseconds"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1089,
+    "db_id": "european_football_2",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "country_id",
+      "name",
+      "season"
+    ],
+    "retrieved_cols": [
+      "country_id",
+      "chancecreationpositioningclass",
+      "date",
+      "team_fifa_api_id",
+      "buildupplaypositioningclass",
+      "player_fifa_api_id",
+      "away_team_goal",
+      "season",
+      "marking",
+      "away_team_api_id",
+      "name",
+      "home_team_goal"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 872,
+    "db_id": "formula_1",
+    "difficulty": "simple",
+    "gold_cols": [
+      "raceid",
+      "code",
+      "q3",
+      "driverid"
+    ],
+    "retrieved_cols": [
+      "qualifyid",
+      "fastestlaptime",
+      "time",
+      "q1",
+      "grid",
+      "raceid",
+      "q3",
+      "q2",
+      "milliseconds"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 380,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "edhrecrank",
+      "frameversion"
+    ],
+    "retrieved_cols": [
+      "hascontentwarning",
+      "originalreleasedate",
+      "availability",
+      "edhrecrank",
+      "frameversion",
+      "types",
+      "asciiname",
+      "name",
+      "frameeffects",
+      "istimeshifted",
+      "printings",
+      "colorindicator",
+      "dueldeck",
+      "colors",
+      "isreserved"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1083,
+    "db_id": "european_football_2",
+    "difficulty": "simple",
+    "gold_cols": [
+      "overall_rating",
+      "player_name",
+      "player_api_id"
+    ],
+    "retrieved_cols": [
+      "overall_rating",
+      "buildupplayspeed",
+      "balance",
+      "agility",
+      "defenceaggression",
+      "defensive_work_rate",
+      "heading_accuracy",
+      "stamina",
+      "shot_power",
+      "strength",
+      "attacking_work_rate",
+      "marking",
+      "aggression",
+      "weight",
+      "potential"
+    ],
+    "full_coverage": false,
+    "recall": 0.3333333333333333
+  },
+  {
+    "question_id": 547,
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "owneruserid",
+      "age",
+      "score"
+    ],
+    "retrieved_cols": [
+      "upvotes",
+      "favoritecount",
+      "communityowneddate",
+      "userid",
+      "answercount",
+      "downvotes",
+      "score",
+      "views",
+      "owneruserid",
+      "accountid",
+      "age",
+      "ownerdisplayname"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 1319,
+    "db_id": "student_club",
+    "difficulty": "simple",
+    "gold_cols": [
+      "college",
+      "major_id",
+      "position",
+      "link_to_major"
+    ],
+    "retrieved_cols": [
+      "link_to_event",
+      "notes",
+      "category",
+      "department",
+      "short_state",
+      "link_to_major",
+      "link_to_member",
+      "city",
+      "phone",
+      "t_shirt_size",
+      "position",
+      "location",
+      "college",
+      "state"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 1333,
+    "db_id": "student_club",
+    "difficulty": "simple",
+    "gold_cols": [
+      "city",
+      "zip_code",
+      "position",
+      "zip",
+      "state"
+    ],
+    "retrieved_cols": [
+      "link_to_event",
+      "notes",
+      "department",
+      "short_state",
+      "link_to_major",
+      "link_to_member",
+      "city",
+      "t_shirt_size",
+      "expense_description",
+      "position",
+      "location",
+      "college",
+      "zip",
+      "state"
+    ],
+    "full_coverage": false,
+    "recall": 0.8
+  },
+  {
+    "question_id": 96,
+    "db_id": "financial",
+    "difficulty": "simple",
+    "gold_cols": [
+      "account_id",
+      "frequency",
+      "type"
+    ],
+    "retrieved_cols": [
+      "client_id",
+      "status",
+      "date",
+      "account_to",
+      "k_symbol",
+      "type",
+      "operation",
+      "bank_to",
+      "amount",
+      "frequency",
+      "disp_id",
+      "a14"
+    ],
+    "full_coverage": false,
+    "recall": 0.6666666666666666
+  },
+  {
+    "question_id": 390,
+    "db_id": "card_games",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "uuid",
+      "colors",
+      "format"
+    ],
+    "retrieved_cols": [
+      "originalreleasedate",
+      "cardkingdomid",
+      "totalsetsize",
+      "originaltype",
+      "types",
+      "side",
+      "otherfaceids",
+      "number",
+      "id",
+      "name",
+      "bordercolor",
+      "coloridentity",
+      "cardkingdomfoilid",
+      "colors",
+      "colorindicator"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 1510,
+    "db_id": "debit_card_specializing",
+    "difficulty": "simple",
+    "gold_cols": [
+      "country",
+      "price",
+      "gasstationid"
+    ],
+    "retrieved_cols": [
+      "time",
+      "date",
+      "country",
+      "description",
+      "transactionid",
+      "customerid",
+      "gasstationid",
+      "amount",
+      "price",
+      "currency",
+      "segment",
+      "chainid",
+      "productid"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 537,
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "gold_cols": [
+      "displayname",
+      "id",
+      "owneruserid"
+    ],
+    "retrieved_cols": [
+      "parentid",
+      "lasteditoruserid",
+      "userid",
+      "reputation",
+      "answercount",
+      "displayname",
+      "owneruserid",
+      "id",
+      "creationdate",
+      "name",
+      "websiteurl",
+      "lasteditordisplayname",
+      "ownerdisplayname"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 645,
+    "db_id": "codebase_community",
+    "difficulty": "simple",
+    "gold_cols": [
+      "id",
+      "userid",
+      "score"
+    ],
+    "retrieved_cols": [
+      "favoritecount",
+      "userid",
+      "reputation",
+      "score",
+      "userdisplayname",
+      "id",
+      "creationdate",
+      "commentcount",
+      "text",
+      "comment",
+      "postid"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 479,
+    "db_id": "card_games",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "setcode",
+      "power",
+      "name",
+      "code",
+      "convertedmanacost"
+    ],
+    "retrieved_cols": [
+      "hascontentwarning",
+      "manacost",
+      "faceconvertedmanacost",
+      "totalsetsize",
+      "mcmname",
+      "power",
+      "side",
+      "hasalternativedecklimit",
+      "loyalty",
+      "name",
+      "translation",
+      "mtgocode",
+      "isalternative",
+      "mcmidextras",
+      "cardkingdomfoilid",
+      "colors",
+      "convertedmanacost",
+      "isreserved"
+    ],
+    "full_coverage": false,
+    "recall": 0.6
+  },
+  {
+    "question_id": 98,
+    "db_id": "financial",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "account_id",
+      "date",
+      "frequency",
+      "amount"
+    ],
+    "retrieved_cols": [
+      "issued",
+      "status",
+      "date",
+      "k_symbol",
+      "type",
+      "payments",
+      "account_id",
+      "loan_id",
+      "bank_to",
+      "amount",
+      "frequency"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 347,
+    "db_id": "card_games",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "hascontentwarning",
+      "artist",
+      "id",
+      "text",
+      "uuid"
+    ],
+    "retrieved_cols": [
+      "hascontentwarning",
+      "cardkingdomid",
+      "isreprint",
+      "artist",
+      "istextless",
+      "originaltype",
+      "types",
+      "side",
+      "otherfaceids",
+      "colors",
+      "name",
+      "facename",
+      "isalternative",
+      "ispromo",
+      "coloridentity",
+      "isfullart"
+    ],
+    "full_coverage": false,
+    "recall": 0.4
+  },
+  {
+    "question_id": 1101,
+    "db_id": "european_football_2",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "country_id",
+      "away_team_goal",
+      "team_api_id",
+      "id",
+      "away_team_api_id",
+      "name",
+      "team_long_name"
+    ],
+    "retrieved_cols": [
+      "overall_rating",
+      "home_team_goal",
+      "long_shots",
+      "team_fifa_api_id",
+      "defenceteamwidth",
+      "buildupplayspeed",
+      "volleys",
+      "agility",
+      "away_team_goal",
+      "defenceaggression",
+      "strength",
+      "name",
+      "team_long_name",
+      "away_team_api_id",
+      "vision",
+      "gk_reflexes"
+    ],
+    "full_coverage": false,
+    "recall": 0.5714285714285714
+  },
+  {
+    "question_id": 1473,
+    "db_id": "debit_card_specializing",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "segment",
+      "consumption",
+      "date",
+      "customerid"
+    ],
+    "retrieved_cols": [
+      "consumption",
+      "chainid",
+      "date",
+      "country",
+      "seq",
+      "customerid",
+      "amount",
+      "name",
+      "currency",
+      "segment",
+      "price"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1259,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "id",
+      "birthday",
+      "ra",
+      "diagnosis"
+    ],
+    "retrieved_cols": [
+      "rf",
+      "ana pattern",
+      "sc170",
+      "date",
+      "rnp",
+      "birthday",
+      "first date",
+      "admission",
+      "ra",
+      "id",
+      "diagnosis",
+      "description",
+      "thrombosis"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 565,
+    "db_id": "codebase_community",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "userid",
+      "closeddate",
+      "creationdate",
+      "id",
+      "postid"
+    ],
+    "retrieved_cols": [
+      "userid",
+      "date",
+      "displayname",
+      "score",
+      "aboutme",
+      "userdisplayname",
+      "owneruserid",
+      "closeddate",
+      "lasactivitydate",
+      "creationdate",
+      "creaiondate",
+      "ownerdisplayname",
+      "text",
+      "postid"
+    ],
+    "full_coverage": false,
+    "recall": 0.8
+  },
+  {
+    "question_id": 1195,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "id",
+      "alb",
+      "plt",
+      "diagnosis",
+      "sex"
+    ],
+    "retrieved_cols": [
+      "igm",
+      "alp",
+      "thrombosis",
+      "ana",
+      "wbc",
+      "admission",
+      "alb",
+      "plt",
+      "rvvt",
+      "sex",
+      "glu",
+      "diagnosis",
+      "ua",
+      "acl iga"
+    ],
+    "full_coverage": false,
+    "recall": 0.8
+  },
+  {
+    "question_id": 981,
+    "db_id": "formula_1",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "time",
+      "date",
+      "driverid",
+      "raceid",
+      "dob",
+      "name",
+      "year"
+    ],
+    "retrieved_cols": [
+      "qualifyid",
+      "time",
+      "q1",
+      "date",
+      "url",
+      "driverid",
+      "grid",
+      "raceid",
+      "name",
+      "dob",
+      "year",
+      "q3",
+      "q2",
+      "milliseconds"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 782,
+    "db_id": "superhero",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "hair_colour_id",
+      "superhero_name",
+      "eye_colour_id",
+      "colour",
+      "id"
+    ],
+    "retrieved_cols": [
+      "hair_colour_id",
+      "attribute_name",
+      "alignment",
+      "eye_colour_id",
+      "skin_colour_id",
+      "power_id",
+      "attribute_value",
+      "colour",
+      "gender_id",
+      "full_name",
+      "attribute_id",
+      "hero_id",
+      "race",
+      "race_id"
+    ],
+    "full_coverage": false,
+    "recall": 0.6
+  },
+  {
+    "question_id": 1480,
+    "db_id": "debit_card_specializing",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "segment",
+      "consumption",
+      "date",
+      "customerid"
+    ],
+    "retrieved_cols": [
+      "consumption",
+      "date",
+      "country",
+      "seq",
+      "customerid",
+      "gasstationid",
+      "amount",
+      "name",
+      "currency",
+      "segment",
+      "chainid"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1180,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "id",
+      "sex",
+      "gpt",
+      "date"
+    ],
+    "retrieved_cols": [
+      "date",
+      "got",
+      "examination date",
+      "gpt",
+      "sex",
+      "birthday",
+      "first date",
+      "admission",
+      "id",
+      "diagnosis",
+      "description",
+      "thrombosis"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 899,
+    "db_id": "formula_1",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "raceid",
+      "name",
+      "date",
+      "circuitid"
+    ],
+    "retrieved_cols": [
+      "date",
+      "q1",
+      "url",
+      "circuitid",
+      "grid",
+      "raceid",
+      "name",
+      "position",
+      "year",
+      "dob",
+      "q2"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 228,
+    "db_id": "toxicology",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "molecule_id",
+      "atom_id",
+      "element"
+    ],
+    "retrieved_cols": [
+      "atom_id",
+      "bond_type",
+      "bond_id",
+      "atom_id2",
+      "element",
+      "label",
+      "molecule_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 473,
+    "db_id": "card_games",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "name",
+      "code",
+      "setcode",
+      "isforeignonly"
+    ],
+    "retrieved_cols": [
+      "originalreleasedate",
+      "availability",
+      "isforeignonly",
+      "watermark",
+      "side",
+      "asciiname",
+      "setcode",
+      "flavorname",
+      "isonlineonly",
+      "loyalty",
+      "name",
+      "isalternative",
+      "isreserved"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 222,
+    "db_id": "toxicology",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "label",
+      "molecule_id"
+    ],
+    "retrieved_cols": [
+      "atom_id",
+      "bond_type",
+      "bond_id",
+      "atom_id2",
+      "element",
+      "label",
+      "molecule_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 446,
+    "db_id": "card_games",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "setcode",
+      "id",
+      "name",
+      "code",
+      "convertedmanacost"
+    ],
+    "retrieved_cols": [
+      "flavortext",
+      "manacost",
+      "faceconvertedmanacost",
+      "totalsetsize",
+      "mcmid",
+      "isalternative",
+      "subtypes",
+      "power",
+      "setcode",
+      "watermark",
+      "loyalty",
+      "name",
+      "printings",
+      "mcmidextras",
+      "colors",
+      "convertedmanacost"
+    ],
+    "full_coverage": false,
+    "recall": 0.6
+  },
+  {
+    "question_id": 1279,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "id",
+      "got",
+      "diagnosis"
+    ],
+    "retrieved_cols": [
+      "alp",
+      "thrombosis",
+      "got",
+      "ana",
+      "symptoms",
+      "gpt",
+      "cre",
+      "ua",
+      "id",
+      "ldh",
+      "tp",
+      "diagnosis",
+      "glu",
+      "lac"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1095,
+    "db_id": "european_football_2",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "team_api_id",
+      "id",
+      "team_long_name",
+      "buildupplayspeed"
+    ],
+    "retrieved_cols": [
+      "overall_rating",
+      "chancecreationpositioningclass",
+      "crossing",
+      "buildupplayspeedclass",
+      "buildupplayspeed",
+      "buildupplaypositioningclass",
+      "defencepressure",
+      "buildupplaydribbling",
+      "agility",
+      "defenceaggression",
+      "defensive_work_rate",
+      "sprint_speed",
+      "attacking_work_rate",
+      "defenceteamwidth",
+      "potential"
+    ],
+    "full_coverage": false,
+    "recall": 0.25
+  },
+  {
+    "question_id": 1053,
+    "db_id": "european_football_2",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "team_api_id",
+      "chancecreationpassingclass",
+      "team_short_name"
+    ],
+    "retrieved_cols": [
+      "chancecreationpassing",
+      "chancecreationpositioningclass",
+      "defenceaggressionclass",
+      "team_short_name",
+      "defenceteamwidthclass",
+      "short_passing",
+      "defenceaggression",
+      "chancecreationcrossingclass",
+      "defencepressureclass",
+      "chancecreationshootingclass",
+      "chancecreationpassingclass",
+      "name",
+      "team_long_name",
+      "buildupplaydribblingclass",
+      "buildupplaypassingclass"
+    ],
+    "full_coverage": false,
+    "recall": 0.6666666666666666
+  },
+  {
+    "question_id": 472,
+    "db_id": "card_games",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "language",
+      "setcode",
+      "block",
+      "id",
+      "code",
+      "translation"
+    ],
+    "retrieved_cols": [
+      "language",
+      "totalsetsize",
+      "isforeignonly",
+      "releasedate",
+      "power",
+      "block",
+      "isonlineonly",
+      "basesetsize",
+      "code",
+      "translation",
+      "mtgocode",
+      "name",
+      "istimeshifted",
+      "isfoilonly"
+    ],
+    "full_coverage": false,
+    "recall": 0.6666666666666666
+  },
+  {
+    "question_id": 1281,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "birthday",
+      "id",
+      "got"
+    ],
+    "retrieved_cols": [
+      "alp",
+      "thrombosis",
+      "got",
+      "gpt",
+      "ua",
+      "birthday",
+      "first date",
+      "admission",
+      "id",
+      "ldh",
+      "glu",
+      "description",
+      "lac",
+      "hct"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1110,
+    "db_id": "european_football_2",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "team_api_id",
+      "team_long_name",
+      "date",
+      "buildupplaypassingclass"
+    ],
+    "retrieved_cols": [
+      "date",
+      "defenceteamwidth",
+      "buildupplayspeedclass",
+      "defenceaggressionclass",
+      "defenceteamwidthclass",
+      "buildupplaypositioningclass",
+      "short_passing",
+      "season",
+      "defenceaggression",
+      "chancecreationpassingclass",
+      "buildupplaydribblingclass",
+      "buildupplaypassing",
+      "buildupplaypassingclass",
+      "long_passing"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 830,
+    "db_id": "superhero",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "attribute_name",
+      "superhero_name",
+      "attribute_value",
+      "id",
+      "attribute_id",
+      "hero_id"
+    ],
+    "retrieved_cols": [
+      "attribute_name",
+      "eye_colour_id",
+      "skin_colour_id",
+      "power_id",
+      "superhero_name",
+      "attribute_value",
+      "gender_id",
+      "id",
+      "gender",
+      "colour",
+      "attribute_id",
+      "hero_id",
+      "race",
+      "race_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1520,
+    "db_id": "debit_card_specializing",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "consumption",
+      "date",
+      "price",
+      "customerid"
+    ],
+    "retrieved_cols": [
+      "consumption",
+      "time",
+      "date",
+      "transactionid",
+      "customerid",
+      "amount",
+      "gasstationid",
+      "currency",
+      "segment",
+      "price",
+      "productid"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1109,
+    "db_id": "european_football_2",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "team_api_id",
+      "buildupplaydribblingclass",
+      "date",
+      "team_short_name"
+    ],
+    "retrieved_cols": [
+      "date",
+      "defenceteamwidth",
+      "buildupplayspeedclass",
+      "buildupplayspeed",
+      "buildupplaydribbling",
+      "gk_positioning",
+      "defencepressure",
+      "dribbling",
+      "defenceaggression",
+      "defensive_work_rate",
+      "birthday",
+      "buildupplaydribblingclass",
+      "buildupplaypassingclass",
+      "gk_kicking"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 790,
+    "db_id": "superhero",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "full_name",
+      "weight_kg"
+    ],
+    "retrieved_cols": [
+      "height_cm",
+      "attribute_name",
+      "alignment",
+      "publisher_name",
+      "power_name",
+      "superhero_name",
+      "skin_colour_id",
+      "power_id",
+      "attribute_value",
+      "gender",
+      "id",
+      "full_name",
+      "weight_kg",
+      "race",
+      "race_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 707,
+    "db_id": "codebase_community",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "text",
+      "score",
+      "id",
+      "viewcount",
+      "postid"
+    ],
+    "retrieved_cols": [
+      "text",
+      "favoritecount",
+      "userid",
+      "reputation",
+      "score",
+      "views",
+      "id",
+      "creationdate",
+      "commentcount",
+      "viewcount",
+      "comment",
+      "postid",
+      "title"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 391,
+    "db_id": "card_games",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "name",
+      "uuid",
+      "colors",
+      "originaltype"
+    ],
+    "retrieved_cols": [
+      "language",
+      "flavortext",
+      "cardkingdomid",
+      "type",
+      "multiverseid",
+      "format",
+      "originaltype",
+      "types",
+      "asciiname",
+      "name",
+      "bordercolor",
+      "coloridentity",
+      "colors",
+      "colorindicator"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 213,
+    "db_id": "toxicology",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "bond_type",
+      "bond_id",
+      "atom_id2",
+      "atom_id"
+    ],
+    "retrieved_cols": [
+      "atom_id",
+      "bond_type",
+      "bond_id",
+      "atom_id2",
+      "element",
+      "label",
+      "molecule_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1003,
+    "db_id": "formula_1",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "raceid",
+      "name",
+      "driverid",
+      "statusid"
+    ],
+    "retrieved_cols": [
+      "qualifyid",
+      "points",
+      "q1",
+      "driverid",
+      "nationality",
+      "grid",
+      "raceid",
+      "name",
+      "q3",
+      "q2"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 972,
+    "db_id": "formula_1",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "fastestlaptime",
+      "code",
+      "dob",
+      "driverid"
+    ],
+    "retrieved_cols": [
+      "fastestlaptime",
+      "time",
+      "q1",
+      "fastestlap",
+      "fastestlapspeed",
+      "driverid",
+      "nationality",
+      "rank",
+      "raceid",
+      "dob",
+      "year",
+      "q2",
+      "milliseconds"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 137,
+    "db_id": "financial",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "account_id",
+      "status",
+      "district_id"
+    ],
+    "retrieved_cols": [
+      "client_id",
+      "status",
+      "issued",
+      "card_id",
+      "date",
+      "type",
+      "k_symbol",
+      "account_id",
+      "operation",
+      "district_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1289,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "id",
+      "tp",
+      "diagnosis"
+    ],
+    "retrieved_cols": [
+      "thrombosis",
+      "hgb",
+      "rnp",
+      "first date",
+      "id",
+      "admission",
+      "t-bil",
+      "tp",
+      "diagnosis",
+      "u-pro",
+      "glu",
+      "t-cho",
+      "crp",
+      "lac"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 74,
+    "db_id": "california_schools",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "edopscode",
+      "ncesdist",
+      "low grade",
+      "cdscode"
+    ],
+    "retrieved_cols": [
+      "edopscode",
+      "doc",
+      "soc",
+      "eilcode",
+      "district type",
+      "statustype",
+      "district name",
+      "ext",
+      "ncesdist",
+      "doctype",
+      "dname",
+      "gsserved",
+      "district",
+      "ncesschool",
+      "gsoffered"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 1452,
+    "db_id": "student_club",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "link_to_member",
+      "cost",
+      "position",
+      "member_id"
+    ],
+    "retrieved_cols": [
+      "remaining",
+      "notes",
+      "category",
+      "link_to_budget",
+      "link_to_member",
+      "source",
+      "event_id",
+      "amount",
+      "expense_description",
+      "spent",
+      "position",
+      "cost"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 171,
+    "db_id": "financial",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "a3",
+      "a16"
+    ],
+    "retrieved_cols": [
+      "issued",
+      "status",
+      "a10",
+      "a16",
+      "date",
+      "type",
+      "a7",
+      "a13",
+      "account_id",
+      "a3",
+      "operation",
+      "a15",
+      "a14",
+      "a6",
+      "a8"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 242,
+    "db_id": "toxicology",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "label",
+      "atom_id",
+      "molecule_id"
+    ],
+    "retrieved_cols": [
+      "atom_id",
+      "bond_type",
+      "bond_id",
+      "atom_id2",
+      "element",
+      "label",
+      "molecule_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1162,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "description",
+      "admission",
+      "sex"
+    ],
+    "retrieved_cols": [
+      "ana pattern",
+      "thrombosis",
+      "date",
+      "examination date",
+      "sex",
+      "first date",
+      "birthday",
+      "admission",
+      "id",
+      "diagnosis",
+      "description",
+      "ua"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 245,
+    "db_id": "toxicology",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "bond_id",
+      "atom_id",
+      "element"
+    ],
+    "retrieved_cols": [
+      "atom_id",
+      "bond_type",
+      "bond_id",
+      "atom_id2",
+      "element",
+      "label",
+      "molecule_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1327,
+    "db_id": "student_club",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "link_to_event",
+      "event_id",
+      "link_to_member",
+      "member_id",
+      "last_name",
+      "event_name",
+      "first_name"
+    ],
+    "retrieved_cols": [
+      "link_to_event",
+      "notes",
+      "department",
+      "link_to_major",
+      "link_to_budget",
+      "type",
+      "link_to_member",
+      "last_name",
+      "spent",
+      "position",
+      "event_name",
+      "location",
+      "first_name"
+    ],
+    "full_coverage": false,
+    "recall": 0.7142857142857143
+  },
+  {
+    "question_id": 1219,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "id",
+      "sex",
+      "date",
+      "ua"
+    ],
+    "retrieved_cols": [
+      "igm",
+      "alp",
+      "rf",
+      "tg",
+      "got",
+      "un",
+      "gpt",
+      "cre",
+      "sex",
+      "tp",
+      "glu",
+      "u-pro",
+      "iga",
+      "fg",
+      "ua"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 824,
+    "db_id": "superhero",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "power_name",
+      "superhero_name",
+      "power_id",
+      "id",
+      "hero_id"
+    ],
+    "retrieved_cols": [
+      "publisher_name",
+      "alignment",
+      "attribute_name",
+      "power_name",
+      "superhero_name",
+      "colour",
+      "power_id",
+      "attribute_value",
+      "gender",
+      "gender_id",
+      "id",
+      "full_name",
+      "hero_id",
+      "race"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1124,
+    "db_id": "european_football_2",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "player_api_id",
+      "player_name",
+      "attacking_work_rate"
+    ],
+    "retrieved_cols": [
+      "buildupplayspeed",
+      "buildupplaypositioningclass",
+      "defencepressure",
+      "preferred_foot",
+      "buildupplaydribbling",
+      "defenceaggression",
+      "defensive_work_rate",
+      "team_api_id",
+      "id",
+      "birthday",
+      "defencedefenderlineclass",
+      "attacking_work_rate",
+      "defenceteamwidth",
+      "shoton"
+    ],
+    "full_coverage": false,
+    "recall": 0.3333333333333333
+  },
+  {
+    "question_id": 95,
+    "db_id": "financial",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "client_id",
+      "account_id",
+      "birth_date",
+      "a11",
+      "district_id"
+    ],
+    "retrieved_cols": [
+      "client_id",
+      "status",
+      "date",
+      "account_to",
+      "k_symbol",
+      "type",
+      "account_id",
+      "gender",
+      "bank_to",
+      "a6",
+      "birth_date",
+      "frequency",
+      "a11"
+    ],
+    "full_coverage": false,
+    "recall": 0.8
+  },
+  {
+    "question_id": 751,
+    "db_id": "superhero",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "power_name",
+      "gender",
+      "power_id",
+      "gender_id",
+      "id",
+      "hero_id"
+    ],
+    "retrieved_cols": [
+      "height_cm",
+      "attribute_name",
+      "alignment",
+      "power_name",
+      "superhero_name",
+      "power_id",
+      "attribute_value",
+      "gender",
+      "gender_id",
+      "full_name",
+      "id",
+      "attribute_id",
+      "hero_id",
+      "race"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 739,
+    "db_id": "superhero",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "power_name",
+      "superhero_name",
+      "power_id",
+      "id",
+      "hero_id"
+    ],
+    "retrieved_cols": [
+      "height_cm",
+      "publisher_name",
+      "alignment",
+      "attribute_name",
+      "power_name",
+      "superhero_name",
+      "colour",
+      "power_id",
+      "gender",
+      "gender_id",
+      "full_name",
+      "attribute_id",
+      "hero_id",
+      "race"
+    ],
+    "full_coverage": false,
+    "recall": 0.8
+  },
+  {
+    "question_id": 928,
+    "db_id": "formula_1",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "driverid",
+      "rank",
+      "raceid",
+      "driverref",
+      "name",
+      "year",
+      "surname",
+      "forename"
+    ],
+    "retrieved_cols": [
+      "qualifyid",
+      "fastestlaptime",
+      "time",
+      "q1",
+      "url",
+      "points",
+      "circuitref",
+      "driverid",
+      "constructorref",
+      "nationality",
+      "grid",
+      "driverref",
+      "name",
+      "q3",
+      "q2",
+      "milliseconds"
+    ],
+    "full_coverage": false,
+    "recall": 0.375
+  },
+  {
+    "question_id": 1038,
+    "db_id": "european_football_2",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "league_id",
+      "away_team_goal",
+      "id",
+      "name",
+      "home_team_goal"
+    ],
+    "retrieved_cols": [
+      "overall_rating",
+      "home_team_api_id",
+      "country_id",
+      "chancecreationpositioningclass",
+      "team_fifa_api_id",
+      "buildupplaypositioningclass",
+      "goal",
+      "player_fifa_api_id",
+      "away_team_goal",
+      "season",
+      "team_api_id",
+      "id",
+      "home_team_goal"
+    ],
+    "full_coverage": false,
+    "recall": 0.6
+  },
+  {
+    "question_id": 459,
+    "db_id": "card_games",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "name",
+      "convertedmanacost"
+    ],
+    "retrieved_cols": [
+      "originaltext",
+      "manacost",
+      "faceconvertedmanacost",
+      "subtypes",
+      "power",
+      "flavorname",
+      "otherfaceids",
+      "dueldeck",
+      "name",
+      "facename",
+      "text",
+      "cardkingdomfoilid",
+      "convertedmanacost",
+      "isreserved"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1085,
+    "db_id": "european_football_2",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "player_name",
+      "player_api_id",
+      "crossing"
+    ],
+    "retrieved_cols": [
+      "overall_rating",
+      "possession",
+      "chancecreationpassing",
+      "chancecreationpositioningclass",
+      "crossing",
+      "player_api_id",
+      "buildupplayspeed",
+      "buildupplaypositioningclass",
+      "chancecreationcrossingclass",
+      "defensive_work_rate",
+      "id",
+      "player_name",
+      "attacking_work_rate",
+      "chancecreationcrossing",
+      "potential"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 25,
+    "db_id": "california_schools",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "charter funding type",
+      "district name",
+      "sname",
+      "cdscode",
+      "cds",
+      "avgscrmath"
+    ],
+    "retrieved_cols": [
+      "cname",
+      "mailcity",
+      "city",
+      "avgscrread",
+      "school",
+      "soctype",
+      "charter funding type",
+      "district type",
+      "fundingtype",
+      "sname",
+      "numge1500",
+      "school type",
+      "soc",
+      "county name",
+      "county",
+      "avgscrwrite",
+      "edopsname",
+      "avgscrmath",
+      "numtsttakr",
+      "gsserved"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 1263,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "id",
+      "hct",
+      "acl iga"
+    ],
+    "retrieved_cols": [
+      "acl igg",
+      "dna-ii",
+      "ana",
+      "hgb",
+      "rbc",
+      "id",
+      "acl igm",
+      "admission",
+      "u-pro",
+      "iga",
+      "crp",
+      "thrombosis",
+      "hct",
+      "acl iga"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 180,
+    "db_id": "financial",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "client_id",
+      "account_id",
+      "a3",
+      "birth_date",
+      "district_id"
+    ],
+    "retrieved_cols": [
+      "client_id",
+      "date",
+      "account_to",
+      "type",
+      "account_id",
+      "a3",
+      "bank_to",
+      "birth_date",
+      "district_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1225,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "id",
+      "sex",
+      "t-bil"
+    ],
+    "retrieved_cols": [
+      "sc170",
+      "pt",
+      "hgb",
+      "id",
+      "admission",
+      "tp",
+      "centromea",
+      "u-pro",
+      "sex",
+      "t-cho",
+      "t-bil",
+      "ua",
+      "hct"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1487,
+    "db_id": "debit_card_specializing",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "consumption",
+      "date",
+      "customerid",
+      "currency",
+      "segment"
+    ],
+    "retrieved_cols": [
+      "consumption",
+      "date",
+      "country",
+      "cardid",
+      "transactionid",
+      "customerid",
+      "price",
+      "currency",
+      "segment",
+      "chainid",
+      "productid"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1052,
+    "db_id": "european_football_2",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "preferred_foot",
+      "weight",
+      "id",
+      "player_api_id"
+    ],
+    "retrieved_cols": [
+      "overall_rating",
+      "positioning",
+      "defenceteamwidth",
+      "balance",
+      "defencepressure",
+      "preferred_foot",
+      "agility",
+      "defenceaggression",
+      "defensive_work_rate",
+      "marking",
+      "strength",
+      "attacking_work_rate",
+      "aggression",
+      "weight",
+      "potential"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 1285,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "id",
+      "first date",
+      "ldh"
+    ],
+    "retrieved_cols": [
+      "thrombosis",
+      "date",
+      "got",
+      "symptoms",
+      "birthday",
+      "first date",
+      "admission",
+      "id",
+      "ldh",
+      "diagnosis",
+      "description",
+      "lac"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 474,
+    "db_id": "card_games",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "language",
+      "setcode",
+      "id",
+      "basesetsize",
+      "code",
+      "translation"
+    ],
+    "retrieved_cols": [
+      "language",
+      "totalsetsize",
+      "isalternative",
+      "istextless",
+      "colors",
+      "power",
+      "setcode",
+      "number",
+      "basesetsize",
+      "translation",
+      "istimeshifted",
+      "printings",
+      "isfullart"
+    ],
+    "full_coverage": false,
+    "recall": 0.6666666666666666
+  },
+  {
+    "question_id": 1300,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "moderate",
+    "gold_cols": [
+      "id",
+      "tg",
+      "diagnosis"
+    ],
+    "retrieved_cols": [
+      "alp",
+      "tg",
+      "gpt",
+      "hgb",
+      "id",
+      "admission",
+      "plt",
+      "diagnosis",
+      "glu",
+      "fg",
+      "t-cho",
+      "cpk",
+      "thrombosis",
+      "hct"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1011,
+    "db_id": "formula_1",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "time_in_seconds",
+      "time",
+      "driverid",
+      "min_time_in_seconds",
+      "surname",
+      "forename"
+    ],
+    "retrieved_cols": [
+      "fastestlaptime",
+      "time",
+      "q1",
+      "fastestlap",
+      "surname",
+      "date",
+      "driverid",
+      "lap",
+      "driverref",
+      "q3",
+      "q2",
+      "milliseconds"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 277,
+    "db_id": "toxicology",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "bond_id",
+      "atom_id",
+      "element"
+    ],
+    "retrieved_cols": [
+      "atom_id",
+      "bond_type",
+      "bond_id",
+      "atom_id2",
+      "element",
+      "label",
+      "molecule_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 835,
+    "db_id": "superhero",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "publisher_name",
+      "alignment",
+      "alignment_id",
+      "id",
+      "publisher_id"
+    ],
+    "retrieved_cols": [
+      "height_cm",
+      "publisher_name",
+      "alignment",
+      "attribute_name",
+      "superhero_name",
+      "alignment_id",
+      "power_id",
+      "attribute_value",
+      "gender",
+      "gender_id",
+      "publisher_id",
+      "weight_kg",
+      "id",
+      "hero_id",
+      "race"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1189,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "ana pattern",
+      "acl igm",
+      "thrombosis"
+    ],
+    "retrieved_cols": [
+      "igm",
+      "ana pattern",
+      "acl igg",
+      "thrombosis",
+      "ana",
+      "symptoms",
+      "kct",
+      "acl igm",
+      "admission",
+      "ra",
+      "rvvt",
+      "iga",
+      "diagnosis",
+      "lac",
+      "acl iga"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 330,
+    "db_id": "toxicology",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "label",
+      "bond_type",
+      "element",
+      "molecule_id"
+    ],
+    "retrieved_cols": [
+      "atom_id",
+      "bond_type",
+      "bond_id",
+      "atom_id2",
+      "element",
+      "label",
+      "molecule_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1202,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "examination date",
+      "id",
+      "admission",
+      "diagnosis",
+      "sex"
+    ],
+    "retrieved_cols": [
+      "ana pattern",
+      "thrombosis",
+      "date",
+      "ana",
+      "symptoms",
+      "examination date",
+      "sex",
+      "first date",
+      "id",
+      "admission",
+      "acl igm",
+      "diagnosis",
+      "description",
+      "ua"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 28,
+    "db_id": "california_schools",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "doc",
+      "fundingtype",
+      "enrollment (k-12)",
+      "enrollment (ages 5-17)",
+      "cdscode",
+      "school"
+    ],
+    "retrieved_cols": [
+      "latitude",
+      "soctype",
+      "doc",
+      "virtual",
+      "soc",
+      "fundingtype",
+      "enrollment (ages 5-17)",
+      "free meal count (k-12)",
+      "enrollment (k-12)",
+      "frpm count (k-12)",
+      "enroll12",
+      "free meal count (ages 5-17)",
+      "school type",
+      "gsserved",
+      "gsoffered"
+    ],
+    "full_coverage": false,
+    "recall": 0.6666666666666666
+  },
+  {
+    "question_id": 772,
+    "db_id": "superhero",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "hair_colour_id",
+      "publisher_name",
+      "eye_colour_id",
+      "skin_colour_id",
+      "gender",
+      "gender_id",
+      "id",
+      "publisher_id"
+    ],
+    "retrieved_cols": [
+      "hair_colour_id",
+      "publisher_name",
+      "alignment",
+      "attribute_name",
+      "eye_colour_id",
+      "skin_colour_id",
+      "power_id",
+      "gender",
+      "colour",
+      "gender_id",
+      "full_name",
+      "attribute_id",
+      "hero_id",
+      "race"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 1292,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "id",
+      "acl igm",
+      "sex",
+      "acl igg",
+      "ua",
+      "acl iga"
+    ],
+    "retrieved_cols": [
+      "alp",
+      "thrombosis",
+      "dna-ii",
+      "ana",
+      "sex",
+      "first date",
+      "acl igm",
+      "admission",
+      "glu",
+      "u-pro",
+      "iga",
+      "acl igg",
+      "ua",
+      "centromea",
+      "acl iga"
+    ],
+    "full_coverage": false,
+    "recall": 0.8333333333333334
+  },
+  {
+    "question_id": 416,
+    "db_id": "card_games",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "language",
+      "id",
+      "uuid",
+      "power"
+    ],
+    "retrieved_cols": [
+      "language",
+      "manacost",
+      "totalsetsize",
+      "life",
+      "power",
+      "isstarter",
+      "number",
+      "isonlineonly",
+      "loyalty",
+      "isoversized",
+      "isalternative",
+      "ispromo",
+      "cardkingdomfoilid",
+      "colors"
+    ],
+    "full_coverage": false,
+    "recall": 0.5
+  },
+  {
+    "question_id": 1295,
+    "db_id": "thrombosis_prediction",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "ana pattern",
+      "id",
+      "t-bil"
+    ],
+    "retrieved_cols": [
+      "ana pattern",
+      "thrombosis",
+      "tg",
+      "pt",
+      "ana",
+      "c4",
+      "cre",
+      "hgb",
+      "ra",
+      "tp",
+      "rvvt",
+      "t-cho",
+      "t-bil",
+      "ua",
+      "centromea"
+    ],
+    "full_coverage": false,
+    "recall": 0.6666666666666666
+  },
+  {
+    "question_id": 268,
+    "db_id": "toxicology",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "bond_id",
+      "atom_id",
+      "element"
+    ],
+    "retrieved_cols": [
+      "atom_id",
+      "bond_type",
+      "bond_id",
+      "atom_id2",
+      "element",
+      "label",
+      "molecule_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 880,
+    "db_id": "formula_1",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "fastestlapspeed",
+      "driverid",
+      "raceid",
+      "surname",
+      "forename"
+    ],
+    "retrieved_cols": [
+      "fastestlaptime",
+      "time",
+      "q1",
+      "fastestlap",
+      "fastestlapspeed",
+      "points",
+      "raceid",
+      "name",
+      "driverref",
+      "q2",
+      "milliseconds",
+      "forename"
+    ],
+    "full_coverage": false,
+    "recall": 0.6
+  },
+  {
+    "question_id": 506,
+    "db_id": "card_games",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "language",
+      "isnonfoilonly",
+      "setcode",
+      "id",
+      "code"
+    ],
+    "retrieved_cols": [
+      "language",
+      "manacost",
+      "hasfoil",
+      "isreprint",
+      "totalsetsize",
+      "isnonfoilonly",
+      "isonlineonly",
+      "loyalty",
+      "basesetsize",
+      "translation",
+      "hasnonfoil",
+      "isalternative",
+      "isfoilonly",
+      "colors"
+    ],
+    "full_coverage": false,
+    "recall": 0.4
+  },
+  {
+    "question_id": 328,
+    "db_id": "toxicology",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "bond_type",
+      "element",
+      "molecule_id"
+    ],
+    "retrieved_cols": [
+      "atom_id",
+      "bond_type",
+      "bond_id",
+      "atom_id2",
+      "element",
+      "label",
+      "molecule_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1042,
+    "db_id": "european_football_2",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "league_id",
+      "away_team_goal",
+      "season",
+      "id",
+      "name",
+      "home_team_goal"
+    ],
+    "retrieved_cols": [
+      "overall_rating",
+      "home_team_api_id",
+      "defenceteamwidth",
+      "volleys",
+      "agility",
+      "away_team_goal",
+      "season",
+      "heading_accuracy",
+      "marking",
+      "away_team_api_id",
+      "name",
+      "vision",
+      "home_team_goal",
+      "potential"
+    ],
+    "full_coverage": false,
+    "recall": 0.6666666666666666
+  },
+  {
+    "question_id": 334,
+    "db_id": "toxicology",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "label",
+      "molecule_id",
+      "atom_id",
+      "element"
+    ],
+    "retrieved_cols": [
+      "atom_id",
+      "bond_type",
+      "bond_id",
+      "atom_id2",
+      "element",
+      "label",
+      "molecule_id"
+    ],
+    "full_coverage": true,
+    "recall": 1.0
+  },
+  {
+    "question_id": 1457,
+    "db_id": "student_club",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "link_to_budget",
+      "link_to_member",
+      "phone",
+      "member_id",
+      "last_name",
+      "cost",
+      "budget_id",
+      "first_name"
+    ],
+    "retrieved_cols": [
+      "remaining",
+      "expense_date",
+      "notes",
+      "link_to_event",
+      "link_to_budget",
+      "link_to_member",
+      "phone",
+      "amount",
+      "expense_description",
+      "last_name",
+      "spent",
+      "location",
+      "cost",
+      "first_name"
+    ],
+    "full_coverage": false,
+    "recall": 0.75
+  },
+  {
+    "question_id": 1437,
+    "db_id": "student_club",
+    "difficulty": "challenging",
+    "gold_cols": [
+      "link_to_event",
+      "expense_date",
+      "approved",
+      "link_to_member",
+      "member_id"
+    ],
+    "retrieved_cols": [
+      "link_to_event",
+      "notes",
+      "expense_date",
+      "date_received",
+      "link_to_budget",
+      "approved",
+      "link_to_member",
+      "event_status",
+      "phone",
+      "event_date",
+      "location"
+    ],
+    "full_coverage": false,
+    "recall": 0.8
+  }
+]
