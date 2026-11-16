@@ -20,6 +20,9 @@ def main():
     ap.add_argument("--data", default=None, help="system-b-data folder (validation mode)")
     ap.add_argument("--dev_json", default=None, help="BIRD dev.json (dev mode)")
     ap.add_argument("--dev_db_root", default=None, help="folder holding {db_id}/{db_id}.sqlite for dev")
+    ap.add_argument("--system", choices=["a", "c"], default="a",
+                    help="dev mode prompt: a = full schema, c = schema-aware retrieval context")
+    ap.add_argument("--prompts_cache", default=None, help="dev mode, system c: reuse prompts saved by an earlier run")
     ap.add_argument("--match", default=None, help="earlier results/predictions JSON: score exactly the same question_ids")
     ap.add_argument("--n", type=int, default=300)
     ap.add_argument("--adapter", default=None, help="folder inside the hub repo, e.g. epoch-1 or latest")
@@ -54,14 +57,46 @@ def main():
         raw = raw["per_example"] if isinstance(raw, dict) else raw
         want = {e["question_id"] for e in raw}
         rows, ddl = [], {}
-        for ex in json.load(open(args.dev_json)):
-            if ex["question_id"] not in want:
-                continue
+        dev_examples = [ex for ex in json.load(open(args.dev_json)) if ex["question_id"] in want]
+        retr = {}
+        if args.system == "c":
+            cache = json.load(open(args.prompts_cache)) if args.prompts_cache else {}
+            if len(cache) < len(dev_examples):          # need to build retrieval contexts
+                sys.path.insert(0, os.path.join(ROOT, "retriever"))
+                from schema_kb import build_schema_kb, find_value_matches
+                from doc_builder import build_documents
+                from retriever import SchemaRetriever
+                from context_builder import build_retrieved_context
+                kbs, rets = {}, {}
+                for db in sorted(os.listdir(args.dev_db_root)):
+                    if os.path.isdir(f"{args.dev_db_root}/{db}") and not db.startswith("__"):
+                        kbs[db] = build_schema_kb(args.dev_db_root, db)
+                        rets[db] = SchemaRetriever(build_documents(db, kbs[db])["column_docs"])
+                print(f"retrievers ready for {len(rets)} databases", flush=True)
+                t_r = time.time()
+                for n_done, ex in enumerate(dev_examples, 1):
+                    qid, db = str(ex["question_id"]), ex["db_id"]
+                    if qid in cache:
+                        continue
+                    evid = ex.get("evidence", "")
+                    vm = find_value_matches(f"{args.dev_db_root}/{db}/{db}.sqlite", ex["question"])
+                    got = rets[db].retrieve_columns(ex["question"] + " " + evid, top_k=15, value_matches=vm)
+                    ctx = build_retrieved_context(kbs[db], got, top_m_tables=6)
+                    cache[qid] = build_prompt(ctx, ex["question"], evid)
+                    if n_done % 100 == 0:
+                        print(f"retrieval {n_done}/{len(dev_examples)}  {time.time()-t_r:.0f}s", flush=True)
+                json.dump(cache, open(f"{args.out}/{args.tag}_prompts.json", "w"))
+            retr = cache
+        for ex in dev_examples:
             db = ex["db_id"]
-            ddl.setdefault(db, get_schema_ddl(f"{args.dev_db_root}/{db}/{db}.sqlite"))
+            if args.system == "c":
+                prompt = retr[str(ex["question_id"])]
+            else:
+                ddl.setdefault(db, get_schema_ddl(f"{args.dev_db_root}/{db}/{db}.sqlite"))
+                prompt = build_prompt(ddl[db], ex["question"], ex.get("evidence", ""))
             rows.append({"id": ex["question_id"], "question_id": ex["question_id"], "db_id": db,
-                         "difficulty": ex.get("difficulty"), "completion": ex["SQL"],
-                         "prompt": build_prompt(ddl[db], ex["question"], ex.get("evidence", ""))})
+                         "difficulty": ex.get("difficulty"), "completion": ex["SQL"], "prompt": prompt,
+                         "prompt_tokens": len(tok(prompt)["input_ids"])})
         print(f"dev mode: {len(rows)} questions (matched {len(want)} ids)", flush=True)
         db_root = args.dev_db_root
     else:                                  # ---- validation mode ----
@@ -84,7 +119,8 @@ def main():
 
     json.dump(preds, open(f"{args.out}/preds_{args.tag}.json", "w"))   # keep predictions even if scoring fails
     examples = [{"id": r["id"], "question_id": r.get("question_id"), "difficulty": r.get("difficulty"),
-                 "db_id": r["db_id"], "gold_sql": r["completion"], "pred_sql": preds[i]}
+                 "prompt_tokens": r.get("prompt_tokens"), "db_id": r["db_id"], "gold_sql": r["completion"],
+                 "pred_sql": preds[i]}
                 for i, r in enumerate(rows)]
     res = score_dataset(examples, db_root, timeout=30, n_workers=4)
     print(f"\n[{args.tag}] EX {res['execution_accuracy']:.3f} | valid {res['valid_sql_rate']:.3f} | "
