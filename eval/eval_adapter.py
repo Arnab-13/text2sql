@@ -17,7 +17,10 @@ def main():
     import torch
     from transformers import AutoModelForCausalLM, AutoTokenizer
     ap = argparse.ArgumentParser()
-    ap.add_argument("--data", required=True)
+    ap.add_argument("--data", default=None, help="system-b-data folder (validation mode)")
+    ap.add_argument("--dev_json", default=None, help="BIRD dev.json (dev mode)")
+    ap.add_argument("--dev_db_root", default=None, help="folder holding {db_id}/{db_id}.sqlite for dev")
+    ap.add_argument("--match", default=None, help="earlier results/predictions JSON: score exactly the same question_ids")
     ap.add_argument("--n", type=int, default=300)
     ap.add_argument("--adapter", default=None, help="folder inside the hub repo, e.g. epoch-1 or latest")
     ap.add_argument("--hub_name", default="text2sql-lora-b")
@@ -45,8 +48,26 @@ def main():
         model = PeftModel.from_pretrained(model, os.path.join(d, args.adapter))
     model.eval()
 
-    rows = [json.loads(l) for l in open(f"{args.data}/val.jsonl")]
-    rows = rows[::max(1, len(rows) // args.n)][:args.n]
+    if args.dev_json:                      # ---- BIRD dev mode: same prompt as System A (full schema) ----
+        from common.prompts import build_prompt, get_schema_ddl
+        raw = json.load(open(args.match))
+        raw = raw["per_example"] if isinstance(raw, dict) else raw
+        want = {e["question_id"] for e in raw}
+        rows, ddl = [], {}
+        for ex in json.load(open(args.dev_json)):
+            if ex["question_id"] not in want:
+                continue
+            db = ex["db_id"]
+            ddl.setdefault(db, get_schema_ddl(f"{args.dev_db_root}/{db}/{db}.sqlite"))
+            rows.append({"id": ex["question_id"], "question_id": ex["question_id"], "db_id": db,
+                         "difficulty": ex.get("difficulty"), "completion": ex["SQL"],
+                         "prompt": build_prompt(ddl[db], ex["question"], ex.get("evidence", ""))})
+        print(f"dev mode: {len(rows)} questions (matched {len(want)} ids)", flush=True)
+        db_root = args.dev_db_root
+    else:                                  # ---- validation mode ----
+        rows = [json.loads(l) for l in open(f"{args.data}/val.jsonl")]
+        rows = rows[::max(1, len(rows) // args.n)][:args.n]
+        db_root = f"{args.data}/val_databases"
     texts = [tok.apply_chat_template([{"role": "user", "content": r["prompt"]}], tokenize=False,
                                      add_generation_prompt=True) for r in rows]
     order = sorted(range(len(rows)), key=lambda i: len(texts[i]))      # similar lengths together = less padding
@@ -62,12 +83,13 @@ def main():
         print(f"{min(b + args.bs, len(order))}/{len(order)}  {time.time()-t0:.0f}s", flush=True)
 
     json.dump(preds, open(f"{args.out}/preds_{args.tag}.json", "w"))   # keep predictions even if scoring fails
-    examples = [{"id": r["id"], "db_id": r["db_id"], "gold_sql": r["completion"], "pred_sql": preds[i]}
+    examples = [{"id": r["id"], "question_id": r.get("question_id"), "difficulty": r.get("difficulty"),
+                 "db_id": r["db_id"], "gold_sql": r["completion"], "pred_sql": preds[i]}
                 for i, r in enumerate(rows)]
-    res = score_dataset(examples, f"{args.data}/val_databases", timeout=30, n_workers=4)
+    res = score_dataset(examples, db_root, timeout=30, n_workers=4)
     print(f"\n[{args.tag}] EX {res['execution_accuracy']:.3f} | valid {res['valid_sql_rate']:.3f} | "
           f"scored {res['n_scored']} (skipped {res['n_skipped_bad_gold']} bad gold)")
-    json.dump({k: v for k, v in res.items()}, open(f"{args.out}/val_{args.tag}.json", "w"))
+    json.dump({k: v for k, v in res.items()}, open(f"{args.out}/{args.tag}_results.json", "w"))
 
 
 # The guard matters: the scoring step starts worker processes that re-import this file.
